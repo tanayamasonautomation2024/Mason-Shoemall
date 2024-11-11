@@ -1,0 +1,12 @@
+{
+    "signin_dailog_text" : "Welcome!",
+    "forgot_password_text" : "Forgot Password?",
+    "forgot_password_paragraph" : "Please enter your email address. We will then send you a link to reset your password.",
+    "forgot_password_submission_text" : "If you have an account with us, you will receive an email with a link to reset your password.",
+    "login_fail_message":"The supplied email address or password is incorrect.",
+    "invalid_email":"Please enter a valid email",
+    "signin_success_text" : "You have been successfully signed in to your account",
+    "signout_success_text" : "You have been successfully logged out",
+    "invalid_login_errormessage" : "The supplied email address or password is incorrect.",
+    "null_email_message":"Enter an email address"
+}

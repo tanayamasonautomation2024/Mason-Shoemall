@@ -1,0 +1,23 @@
+{
+    "homepage_searchbarplaceholder" : "Search for shoes, clothing & more",
+    "homepage_searchbutton" : "Search",
+    "homepage_signin" : "//img[@alt='My Account']",
+    "homepage_cart" :"Mini Cart Cart",
+    "homepage_category" : "Departments",
+    "homepage_l1category":"#mainMenu > ul > li",
+    "l1categoryText":"//nav[@role='navigation']/ul/li/div",
+    "l2category":"//*[@id='mainMenu']/ul/li[${index + 1}]/div/ul/li",
+    "l2categoryText":"//*[@id='mainMenu']/ul/li[${index + 1}]/div/ul/li/div",
+    "l3categoryText":"//*[@id='mainMenu']/ul/li[${index + 1}]/div/ul/li/ul/li/div",
+    "l3category":"//*[@id='mainMenu']/ul/li[${index + 1}]/div/ul/li/ul/li",
+    "l1breadcrumb":"nav[aria-label='Breadcrumb']",
+    "page_underneath":"//body/div[1]/div[2]",
+    "stickyheader_pdp" : "//section[@class='fixed inset-x-0 top-0 z-30 flex justify-center bg-white py-5 shadow-md']",
+    "minicart_drawer_heading" : "My Bag",
+    "minicart_drawer_subtotalsection" : "Subtotal0 Item$",
+    "minicart_drawer_viewcart_button" : "View Bag",
+    "minicart_drawer_checkout_button" : "Check Out",
+    "footer_signupemail_textbox" : "Email Address",
+    "footer_signup_button" : "Sign Up"
+
+}

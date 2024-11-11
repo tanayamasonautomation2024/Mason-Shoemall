@@ -1,0 +1,933 @@
+{
+  "cookies": [
+    {
+      "name": "_cls_cfgver",
+      "value": "9a47ae9c",
+      "domain": "report.mason.gbqofs.io",
+      "path": "/reporting/a977fde0-58e6-10f0-1ebf-9f5706ae545e",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cls_s",
+      "value": "035ac1da-f7ae-4a42-81c1-e77d13f2a28b:0",
+      "domain": "report.mason.gbqofs.io",
+      "path": "/reporting/a977fde0-58e6-10f0-1ebf-9f5706ae545e",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cls_v",
+      "value": "fcb43c92-f257-46e4-8bbc-692a5805cd4a",
+      "domain": "report.mason.gbqofs.io",
+      "path": "/reporting/a977fde0-58e6-10f0-1ebf-9f5706ae545e",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "rto",
+      "value": "c0",
+      "domain": "report.mason.gbqofs.io",
+      "path": "/reporting/a977fde0-58e6-10f0-1ebf-9f5706ae545e",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "taboola_session_id",
+      "value": "v2_1e06806dab60745b4969647617a89b5e_c1b6dbd2-ddf1-49ae-ba95-8332793aecf7-tuctdc5b2aa_1724656938_1724656938_CNawjgYQiMRYGOHoweyYMiABKAEwZziY0QpA548QSKDx1gNQ____________AVgAYABoo8TAhomQj-SVAXAB",
+      "domain": ".taboola.com",
+      "path": "/shoemall-sccnx/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "locale",
+      "value": "en",
+      "domain": "www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1727076160.704921,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "QMw8eXegYql3T5czqXX8vnVHYWbZLdfz.5hM2bjjUgE-1724656930-1.0.1.1-U.RvPGuLvs1TOQBTqoMB0sxcvDBjo.YR7iKkwmYuUKl5BB55LHghpTti76KvCDTcicZ.iKDmiVx1XFMEfYbA5w",
+      "domain": ".shoemall.com",
+      "path": "/",
+      "expires": 1724658732.400324,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ALGOLIA",
+      "value": "anonymous-a41e48f5-6177-468c-8331-10c34eef55b3",
+      "domain": "www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1740208934,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "zipCode",
+      "value": "93101",
+      "domain": "www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1724743362,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "TAPID",
+      "value": "mason/main>01918d905f5100b0cd70e4a452380506f0033067007e8|",
+      "domain": ".tealiumiq.com",
+      "path": "/",
+      "expires": 1756192960.918916,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga_GRWEKETN8Q",
+      "value": "GS1.1.1724656937.1.0.1724656937.60.0.1239731715",
+      "domain": ".www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1759216937.788893,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1707972346.1724656937",
+      "domain": ".www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1759216937.790266,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_caid",
+      "value": "bac3b485-3d9e-4d72-b4a3-0cb32f6f90b4",
+      "domain": ".www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1727248938,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_cavisit",
+      "value": "1918d906c60|",
+      "domain": ".www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1724660538,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "rmStore",
+      "value": "amid:37847",
+      "domain": "www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1727248938,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "uid",
+      "value": "a14f0863-9f72-4cee-8020-0cc486fa1aa5",
+      "domain": ".criteo.com",
+      "path": "/",
+      "expires": 1758352937.769166,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "receive-cookie-deprecation",
+      "value": "1",
+      "domain": ".criteo.com",
+      "path": "/",
+      "expires": 1758352937.76925,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_uetsid",
+      "value": "ed8a48e0637b11efa051edfa43e55e21",
+      "domain": ".www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1724743338,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_uetvid",
+      "value": "ed8a9040637b11ef9fcc09f294a890f7",
+      "domain": ".www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1758352938,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "cto_bundle",
+      "value": "FnczY19FTXdMRXJoYnRLQzRuSDNFd0Z6OUtaJTJCVUJqV3hiNiUyQjZKTkZVN3B6WGRKSm5MeEZLZE9td04wUVo1RU53akxHUDk2STY4NWpYMjZsWDNVaCUyQkRqdzBSQ3ZHUVVzVmJKQ29RbG9FT1NXbjVrOFJ0YnNFYkNSYTdiUyUyQnlmUGxieUJsJTJGZWoxS3REYzRBdE1kJTJGOU1ueE5uWENIRWZmS3FXMFN3T2hLbW1zdWZSd0xFdUVwSVFObkFHJTJCN1NRS2I0MW9mZQ",
+      "domain": ".www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1758820938,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_cfuvid",
+      "value": "JyDnzI8Tu8kJRAJux3B2AtdNcKqzCSDq8sNyiVxpZNY-1724656936864-0.0.1.1-604800000",
+      "domain": ".d.email.shoemall.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cfuvid",
+      "value": "qrW_GNz3FjsQmlnHJhXWFOzsEPhBo8U3z2nd2rj9E0A-1724656936886-0.0.1.1-604800000",
+      "domain": ".lightboxcdn.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "2FE4FB4EE6B16A691329EFA9E7A46B88",
+      "domain": ".bing.com",
+      "path": "/",
+      "expires": 1758352943.698772,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".bat.bing.com",
+      "path": "/",
+      "expires": 1725261739.725528,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "rmuid",
+      "value": "eb3ece1f-c0d4-48dd-b05f-cedbf8438f15",
+      "domain": ".linksynergy.com",
+      "path": "/",
+      "expires": 1756192940.984472,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "h1o6ujsRyXx8b8oaRKW6BOExC8dw763ow_83rpAVqio-1724656937-1.0.1.1-Ifm6_aDw2KJanxYZg2Mjl..RATfJRf3HOORAtgZrUbYsnFPSZ9pwH91wEB36lsQt4.PMl7N3gMB4oy91ulwqsw",
+      "domain": ".d.email.shoemall.com",
+      "path": "/",
+      "expires": 1724658740.198765,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cls_s",
+      "value": "035ac1da-f7ae-4a42-81c1-e77d13f2a28b:0",
+      "domain": "www-stg2.shoemall.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "v2_shoemall-sandbox",
+      "value": "{%22bid%22:%22f27c13b8-d8bb-44de-8bd5-3af4530be8a5%22}",
+      "domain": ".shoemall.com",
+      "path": "/",
+      "expires": 1756192940,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUmL7qN0nw6sppZBqhMuEbmGqSqi0wMaLYsmWl7bXQXVtDS6eQ1g9GTu4CfI",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1759216940.507842,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "pxrc",
+      "value": "CKrasLYGEgUI6AcQABIGCOTrARAA",
+      "domain": ".rlcdn.com",
+      "path": "/",
+      "expires": 1729840942.79362,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "TiPMix",
+      "value": "11.3384633018909",
+      "domain": ".api.lightboxcdn.com",
+      "path": "/",
+      "expires": 1724660540.920807,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "x-ms-routing-name",
+      "value": "self",
+      "domain": ".api.lightboxcdn.com",
+      "path": "/",
+      "expires": 1724660540.920952,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "icts",
+      "value": "2024-08-26T07:22:18Z",
+      "domain": ".linksynergy.com",
+      "path": "/",
+      "expires": 1756192940.984572,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "t_gid",
+      "value": "c1b6dbd2-ddf1-49ae-ba95-8332793aecf7-tuctdc5b2aa",
+      "domain": ".taboola.com",
+      "path": "/",
+      "expires": 1756192942.92046,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "t_pt_gid",
+      "value": "c1b6dbd2-ddf1-49ae-ba95-8332793aecf7-tuctdc5b2aa",
+      "domain": ".taboola.com",
+      "path": "/",
+      "expires": 1756192942.920704,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "receive-cookie-deprecation",
+      "value": "1",
+      "domain": ".taboola.com",
+      "path": "/",
+      "expires": 1756192942.20496,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "rto",
+      "value": "c0",
+      "domain": "www-stg2.shoemall.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "rlas3",
+      "value": "uiee3025JhQZu8F5Tj+IdTL7Mh2aZDts1c+tWXh7l4g=",
+      "domain": ".rlcdn.com",
+      "path": "/",
+      "expires": 1756192942.793453,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "UID",
+      "value": "c74467f38b1821fd26fb528fa181101",
+      "domain": ".ads.stickyadstv.com",
+      "path": "/",
+      "expires": 1727248942.86164,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "uid-bp-11554",
+      "value": "k-zoe5rUBsfrguC9r0AX4nHMB76Fct5-RVvTYZYg",
+      "domain": ".ads.stickyadstv.com",
+      "path": "/",
+      "expires": 1729840942.861771,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "pid",
+      "value": "993215332469873217",
+      "domain": ".smartadserver.com",
+      "path": "/",
+      "expires": 1758871342.895226,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "TestIfCookieP",
+      "value": "ok",
+      "domain": ".smartadserver.com",
+      "path": "/",
+      "expires": 1758871342.895387,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "csync",
+      "value": "79:k-jHW9b0BsfrguC9r0AX4nHMB76Fdnzydin7G5HQ",
+      "domain": ".smartadserver.com",
+      "path": "/",
+      "expires": 1756192942.895462,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CMID",
+      "value": "ZswtLBdaRMgAACUVDH8XGgAA",
+      "domain": ".casalemedia.com",
+      "path": "/",
+      "expires": 1756192943.139451,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CMPS",
+      "value": "5509",
+      "domain": ".casalemedia.com",
+      "path": "/",
+      "expires": 1732432942.902224,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CMPRO",
+      "value": "5509",
+      "domain": ".casalemedia.com",
+      "path": "/",
+      "expires": 1732432943.139576,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "XANDR_PANID",
+      "value": "NYpFICfVFxMq2aOP__qDDRBE94qTpQb060cEbK6ruFPw0-rSrYyQMQMKa_2U5RT7odZsnsdN54P_692yxNqnd6PkJ0Q5V3aeX_WOq8m40Qk.",
+      "domain": ".adnxs.com",
+      "path": "/",
+      "expires": 1732432943.435071,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "receive-cookie-deprecation",
+      "value": "1",
+      "domain": ".adnxs.com",
+      "path": "/",
+      "expires": 1759216943.435312,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "uuid2",
+      "value": "183081930029534213",
+      "domain": ".adnxs.com",
+      "path": "/",
+      "expires": 1732432943.435384,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "tuuid",
+      "value": "6e70a3cb-6a2d-4d85-8aa6-2b6bd18de694",
+      "domain": ".bidswitch.net",
+      "path": "/",
+      "expires": 1756192943.28585,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "c",
+      "value": "1724656940",
+      "domain": ".bidswitch.net",
+      "path": "/",
+      "expires": 1756192943.085023,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "tuuid_lu",
+      "value": "1724656940",
+      "domain": ".bidswitch.net",
+      "path": "/",
+      "expires": 1756192943.285972,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "criteo_dsp",
+      "value": "k-GwC2OEBsfrguC9r0AX4nHMB76Fd4AgYG3w3LbQ",
+      "domain": ".adingo.jp",
+      "path": "/",
+      "expires": 1727248943.101682,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "uid",
+      "value": "26737977.1724656940748",
+      "domain": ".dable.io",
+      "path": "/",
+      "expires": 1733296943.125609,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SOC",
+      "value": "ZswtLMCo5rcAAMeKfykAAAAA",
+      "domain": ".socdm.com",
+      "path": "/",
+      "expires": 1759216943.129291,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor-id",
+      "value": "3676585402125473000V10",
+      "domain": ".media.net",
+      "path": "/",
+      "expires": 1756192943.298315,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "data-c-ts",
+      "value": "1724656940",
+      "domain": ".media.net",
+      "path": "/",
+      "expires": 1727248943.298513,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "data-c",
+      "value": "k-SRH29EBsfrguC9r0AX4nHMB76FfCvoenwy1Hzw~~3",
+      "domain": ".media.net",
+      "path": "/",
+      "expires": 1727248943.298587,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "anj",
+      "value": "dTM7k!M4/rCxrEQF']wIg2E><gNU<%!]tbPl@/D!9hy6]/Cv]ndZ-c!lWr3:1+#0e_L3l=dFiMJkC+lq2RPb(7Q-2g/2e3?B`_x%'KXQa*bpRz*qF1`*bd2!+i67E",
+      "domain": ".adnxs.com",
+      "path": "/",
+      "expires": 1732432943.43526,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KRTBCOOKIE_97",
+      "value": "3385-uid:k-JlkKnUBsfrguC9r0AX4nHMB76FcgBXhWdLpiRg&KRTB&23037-uid:k-JlkKnUBsfrguC9r0AX4nHMB76FcgBXhWdLpiRg&KRTB&23144-uid:k-JlkKnUBsfrguC9r0AX4nHMB76FcgBXhWdLpiRg&KRTB&23286-uid:k-JlkKnUBsfrguC9r0AX4nHMB76FcgBXhWdLpiRg",
+      "domain": ".pubmatic.com",
+      "path": "/",
+      "expires": 1727248943.515125,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "PugT",
+      "value": "1724656939",
+      "domain": ".pubmatic.com",
+      "path": "/",
+      "expires": 1727248943.515249,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "tuuid",
+      "value": "aad6cdf6-5d1d-45a4-b65c-0c50fe6765ff",
+      "domain": ".360yield.com",
+      "path": "/",
+      "expires": 1732432943.551624,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "tuuid_lu",
+      "value": "1724656941",
+      "domain": ".360yield.com",
+      "path": "/",
+      "expires": 1732432943.551748,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "tt_viewer",
+      "value": "aacddee3-aa20-4b2c-af67-91f90bb7f325",
+      "domain": ".teads.tv",
+      "path": "/",
+      "expires": 1756106543.652243,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "tluidp",
+      "value": "4576731628432731780189",
+      "domain": ".3lift.com",
+      "path": "/",
+      "expires": 1732432943.815146,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "tluid",
+      "value": "4576731628432731780189",
+      "domain": ".3lift.com",
+      "path": "/",
+      "expires": 1732432943.815287,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "audit_p",
+      "value": "1|jB+9ar2EZm3u3M4aTbG2Lh381RVfgCJXEUI4Rt1hAD5MNNatMDOaw19FMAeyZH3hq4hxHCeeOAqM1KxoLazIt+aleybw1oy9Ba0etFFpiE1n6cdCzJ1U38hUhEV3tLpJ2hXzxxzTMTLZ342r1ZPQF5fEThjDLrXfeHK1RrNxxATmQdVc7iIhNLYPAdWGRZ6V8p4Q5rMwDzg=",
+      "domain": ".rubiconproject.com",
+      "path": "/",
+      "expires": 1756192943.696575,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "khaos",
+      "value": "M0AO7OSA-1F-E8G3",
+      "domain": ".rubiconproject.com",
+      "path": "/",
+      "expires": 1756192943.696774,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "khaos_p",
+      "value": "M0AO7OSA-1F-E8G3",
+      "domain": ".rubiconproject.com",
+      "path": "/",
+      "expires": 1756192943.696844,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "audit",
+      "value": "1|jB+9ar2EZm3u3M4aTbG2Lh381RVfgCJXEUI4Rt1hAD5MNNatMDOaw19FMAeyZH3hq4hxHCeeOAqM1KxoLazIt+aleybw1oy9Ba0etFFpiE1n6cdCzJ1U38hUhEV3tLpJ2hXzxxzTMTLZ342r1ZPQF5fEThjDLrXfeHK1RrNxxATmQdVc7iIhNLYPAdWGRZ6V8p4Q5rMwDzg=",
+      "domain": ".rubiconproject.com",
+      "path": "/",
+      "expires": 1756192943.696897,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "receive-cookie-deprecation",
+      "value": "1",
+      "domain": ".rubiconproject.com",
+      "path": "/",
+      "expires": 1732432943.696948,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1725261743.698924,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sspid",
+      "value": "0effdc34-ddd5-3a2b-a29c-a0e8c9b61e2d",
+      "domain": ".aralego.com",
+      "path": "/",
+      "expires": 1756192943.744501,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "yieldmo_id",
+      "value": "VmwZ9OxffNxSe9ttv77i%7C1724630400000%7C0",
+      "domain": ".yieldmo.com",
+      "path": "/",
+      "expires": 1756192943.934962,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ptrcriteo",
+      "value": "k-1bSzvUBsfrguC9r0AX4nHMB76FfyEtTbcBBAFw",
+      "domain": ".ads.yieldmo.com",
+      "path": "/",
+      "expires": 1756192943.935183,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "um",
+      "value": "!38,mDLpQkm3mk95JDzUdaZcJbU7da1Q3NQ8vcfdfrS0M9UVVIoNmPwQYx2.uIDCBRpt0OQlHrxo,1732432941",
+      "domain": ".360yield.com",
+      "path": "/",
+      "expires": 1732432944.058382,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "umeh",
+      "value": "!38,0,1786864941,-1",
+      "domain": ".360yield.com",
+      "path": "/",
+      "expires": 1732432944.058524,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SCM",
+      "value": "da2b789a2c",
+      "domain": ".smaato.net",
+      "path": "/",
+      "expires": 1726471344.084031,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SCM1001851",
+      "value": "da2b789a2c",
+      "domain": ".smaato.net",
+      "path": "/",
+      "expires": 1726471344.084157,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_rxuuid",
+      "value": "%7B%22rx_uuid%22%3A%22RX-ea8a6d1e-1270-4f24-9391-999209f46427-004%22%7D",
+      "domain": ".1rx.io",
+      "path": "/",
+      "expires": 1756192944.179916,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_rxuuid",
+      "value": "%7B%22rx_uuid%22%3A%22RX-ea8a6d1e-1270-4f24-9391-999209f46427-004%22%7D",
+      "domain": ".targeting.unrulymedia.com",
+      "path": "/",
+      "expires": 1756192944.868823,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.730839893.1724656940.611733406.1724656951.1724656959",
+      "domain": ".www-stg2.shoemall.com",
+      "path": "/",
+      "expires": 1732432940,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "frontastic-session",
+      "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhbm9ueW1vdXNJZCI6ImEyOTNiYTBjLTE0NjUtNDA5Ny04OTUxLWE5ZWU3OTc0MmMwZiIsImNoZWNrb3V0VG9rZW4iOnsidG9rZW4iOiI0aDBtWEo3STFVLTdtR0VtVFFkSjlaTUh4eXJ4LVJodCIsImV4cGlyYXRpb25UaW1lIjoxNzI0NjY3NzMzNDY3LCJyZWZyZXNoVG9rZW4iOiJtYXNvbi1jb21wYW5pZXMtc3RhZ2luZy0wMDE6M2VoVXN2Ui1oMjNCUjk2dVZ1TjZiR2pvYk4zNTJlSmNMS0dUbExjWklHYyJ9LCJjYXJ0SWQiOiIwODdlN2EyOC00OTYzLTRiZTktYmIzZC0yOTE5NTZjNDc5OGYiLCJ2ZXJzaW9uSWQiOjEsImlzQ3JlZGl0Q3VzdG9tZXIiOmZhbHNlLCJhY2NvdW50Ijp7ImFjY291bnRJZCI6IjhkZTM0ZjE0LTFlY2UtNDE0YS1iYzliLWI5NjU3NTYzNjllNyIsImVtYWlsIjoib3JkZXJfc3luY0BnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJzdXJiaGkiLCJsYXN0TmFtZSI6Imt1bWFyaSIsImNvbmZpcm1lZCI6dHJ1ZSwiYWRkcmVzc2VzIjpbXSwiYXRnUHJvZmlsZUlkIjoiQ1RTTTcwNDI2MjI0NCJ9LCJsYXN0T3JkZXJJZCI6bnVsbCwicmVjZW50bHlWaWV3ZWRQcm9kdWN0SWRzIjoie1wicHJvZHVjdElkc1wiOltcIjEzODI3ODktMVwiXX0iLCJjdXN0b21lcklkIjoiMTA1MDA0ODc0IiwiYXZhaWxhYmxlQ3JlZGl0IjoiMC4wMCIsIndpc2hsaXN0SWQiOiIwMThhYTQ4NC00ZWNmLTQ2MDctYjM3My1kZTEwMTdlMzFiOTYiLCJzYXZlRm9yTGF0ZXJJZCI6IjczMDEyNWQ5LWYwOTYtNGRlYy1iMzliLTMwZDk4NWVhNDIzNyJ9.SgYhE4XzdCFcSbfK9ivvAqWrBpih8QvN4lqpj2B69oc",
+      "domain": "www-stg2.shoemall.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www-stg2.shoemall.com",
+      "localStorage": [
+        {
+          "name": "_bcnctkn",
+          "value": "a6a9154c323a96f25665281c87bf5bb3aa70"
+        },
+        {
+          "name": "gb_unbound.app.conf",
+          "value": "eyJjb25maWd1cmF0aW9uIjp7InBhZ2VBdHRyaWJ1dGVSdWxlcyI6W3siaWQiOiI0MzMiLCJuYW1lIjoidXRhZ19kYXRhLnBhZ2VfbmFtZSIsInJ1bGVzIjpbeyJ0eXBlIjoiZ2xvYmFsT2JqZWN0IiwiZGVsaW1pdGVyIjoiLCIsInBhdGhzIjpbInV0YWdfZGF0YS5wYWdlX25hbWUiXX1dLCJwYWdlVXJsIjoiKnNob2VtYWxsLmNvbS8qIiwiZGVsaW1pdGVyIjoiLCJ9LHsiaWQiOiI0MzAiLCJuYW1lIjoidXRhZ19kYXRhLnBhZ2VfdHlwZSIsInJ1bGVzIjpbeyJ0eXBlIjoiZ2xvYmFsT2JqZWN0IiwiZGVsaW1pdGVyIjoiLCIsInBhdGhzIjpbInV0YWdfZGF0YS5wYWdlX3R5cGUiXX1dLCJwYWdlVXJsIjoiaHR0cHM6Ly93d3cuc2hvZW1hbGwuY29tLyoiLCJkZWxpbWl0ZXIiOiIsIn1dLCJoYXNoIjoiOWE0N2FlOWMifSwiYXBwSWQiOjl9"
+        },
+        {
+          "name": "gb.sid",
+          "value": "035ac1da-f7ae-4a42-81c1-e77d13f2a28b:0"
+        },
+        {
+          "name": "gb.recording.bychance.prev_th",
+          "value": "1"
+        },
+        {
+          "name": "algoliasearch-client-js-4.22.1-E07W2V3ZN1",
+          "value": "{\"{\\\"protocol\\\":\\\"https\\\",\\\"url\\\":\\\"E07W2V3ZN1-dsn.algolia.net\\\",\\\"accept\\\":1}\":{\"timestamp\":1724656935720,\"value\":{\"protocol\":\"https\",\"url\":\"E07W2V3ZN1-dsn.algolia.net\",\"accept\":1,\"status\":3,\"lastUpdate\":1724656935720}}}"
+        },
+        {
+          "name": "rmStore",
+          "value": "{\"/\":\"amid:37847\"}"
+        },
+        {
+          "name": "taboola global:user-id",
+          "value": "c1b6dbd2-ddf1-49ae-ba95-8332793aecf7-tuctdc5b2aa"
+        },
+        {
+          "name": "gb.recording.bychance.enabled",
+          "value": "true"
+        },
+        {
+          "name": "tealium_va_mason_main",
+          "value": "{\"metrics\":{\"15\":1,\"21\":1,\"22\":3,\"28\":1,\"29\":1,\"12132\":1,\"307112\":0},\"dates\":{\"23\":1724656933069,\"300883\":1724656955111,\"308145\":1724656933069,\"audience_mason_main_172_count_ts\":1724656933191},\"properties\":{\"17\":\"https://www-stg2.shoemall.com/\",\"12818\":\"1707972346.1724656937\",\"51823\":\"SM\",\"profile\":\"main\",\"account\":\"mason\"},\"flags\":{\"5554\":false,\"7179\":false,\"7750\":false,\"7752\":false,\"7754\":false,\"7756\":false,\"10237\":false,\"10239\":false,\"10241\":false,\"10243\":false,\"10245\":false,\"10249\":false,\"12820\":true,\"170708\":false,\"170710\":false,\"170714\":false,\"171674\":false},\"current_visit\":{\"metrics\":{\"7\":3,\"12\":0.3673666666666667,\"80\":0},\"dates\":{\"10\":1724656933069,\"11\":1724656955111},\"properties\":{\"5\":\"https://www-stg2.shoemall.com/\",\"44\":\"Chrome\",\"45\":\"Windows\",\"46\":\"Windows desktop\",\"47\":\"browser\",\"48\":\"Chrome\",\"5565\":\"generic\",\"32671\":\"SM\"},\"flags\":{\"14\":true,\"5494\":false,\"5496\":false,\"5498\":false,\"5500\":false,\"5502\":false,\"5504\":false,\"5506\":false,\"5508\":false,\"5510\":false,\"5514\":false,\"5516\":false,\"5518\":false,\"5664\":true,\"6169\":false,\"6171\":false,\"7709\":true,\"7713\":false,\"7715\":false,\"7717\":false,\"7780\":false,\"7782\":false,\"7784\":false,\"7786\":false,\"7788\":false,\"7790\":false,\"7792\":false,\"7794\":false,\"7796\":false,\"7798\":false,\"7800\":false,\"10247\":false,\"10319\":false,\"10321\":false,\"10323\":false,\"10325\":false,\"10327\":false,\"10329\":false,\"10485\":false,\"10489\":false,\"10495\":false,\"10499\":false,\"10501\":false,\"10505\":false,\"10781\":false,\"10783\":false,\"10785\":false,\"10787\":false,\"10789\":false,\"10791\":false,\"10793\":false,\"10795\":false,\"10797\":false,\"10799\":false,\"10801\":false,\"10803\":false,\"10805\":false,\"10807\":false,\"10809\":false,\"10811\":false,\"10813\":false,\"10817\":false,\"10819\":false,\"10821\":false,\"10823\":false,\"11764\":false,\"11768\":false,\"11772\":false,\"11778\":false,\"11780\":false,\"11784\":false,\"11788\":false,\"11794\":false,\"11796\":false,\"11800\":false,\"11804\":false,\"11810\":false,\"11812\":false,\"11814\":false,\"11816\":false,\"11820\":false,\"11824\":false,\"11830\":false,\"11832\":false,\"11838\":false,\"11842\":false,\"11848\":false,\"11850\":false,\"11854\":false,\"11858\":false,\"11866\":false,\"11904\":false,\"11918\":false,\"11922\":false,\"11926\":false,\"11932\":false,\"11934\":false,\"11938\":false,\"11942\":false,\"11948\":false,\"11954\":false,\"11958\":false,\"11964\":false,\"16119\":false,\"16123\":false,\"16129\":false,\"16135\":false,\"16141\":false,\"16970\":false,\"16974\":false,\"16980\":false,\"16990\":false,\"16994\":false,\"16998\":false,\"17008\":false,\"17016\":false,\"17020\":false,\"17026\":false,\"17028\":false,\"17030\":false,\"17034\":false,\"17038\":false,\"17044\":false,\"17050\":false,\"17060\":false,\"17062\":false,\"17066\":false,\"17072\":false,\"17076\":false,\"17078\":false,\"17082\":false,\"32663\":false,\"32665\":false,\"32667\":false,\"65748\":false,\"65758\":false,\"65806\":false,\"65808\":false,\"65824\":false,\"66750\":false,\"66754\":false,\"66758\":false,\"66764\":false,\"66768\":false,\"66770\":false,\"66774\":false,\"66778\":false,\"66784\":false,\"66788\":false},\"property_sets\":{\"49\":[\"Chrome\"],\"50\":[\"Windows\"],\"51\":[\"Windows desktop\"],\"52\":[\"browser\"],\"53\":[\"Chrome\"]},\"metric_sets\":{\"5566\":{\"Home\":1,\"generic\":2}}},\"badges\":{\"59279\":true,\"60204\":true,\"288526\":true},\"audiences\":{\"mason_main_172\":\"All Visitors\"}}"
+        },
+        {
+          "name": "_uetvid_exp",
+          "value": "Sat, 20 Sep 2025 07:22:18 GMT"
+        },
+        {
+          "name": "tealium_timing",
+          "value": "{\"domain\":\"www-stg2.shoemall.com\",\"pathname\":\"/\",\"query_string\":\"\",\"timestamp\":1724656960746,\"dns\":84,\"connect\":571,\"response\":268,\"dom_loading_to_interactive\":962,\"dom_interactive_to_complete\":9418,\"load\":20,\"time_to_first_byte\":5325,\"front_end\":10122,\"fetch_to_response\":5984,\"fetch_to_complete\":16374,\"fetch_to_interactive\":6956}"
+        },
+        {
+          "name": "xdibx",
+          "value": "N4Ig-mBGAeDGCuAnRIBcoAOGAuBnNAjAOwBMALAGwCsFAnGQAy0DMDANCBgG6wB22hDrnypi5anUYt2nLrj4DRHREgA2aECA6q1GgPRaQqvIVKUa9Jqw4ZdqANogDAXQC-HCDAyIAplzSgACYAhgCeIvZi5pJWRG4eUNB-PvwiwO7gibAAloEaBJCBsAwAZoG0ALQAHBQUJRVkVWQEFcFVkBQVVMFEkLC0JAxEsCUMFVESLLQUjSCuQA"
+        },
+        {
+          "name": "cto_bundle",
+          "value": "FnczY19FTXdMRXJoYnRLQzRuSDNFd0Z6OUtaJTJCVUJqV3hiNiUyQjZKTkZVN3B6WGRKSm5MeEZLZE9td04wUVo1RU53akxHUDk2STY4NWpYMjZsWDNVaCUyQkRqdzBSQ3ZHUVVzVmJKQ29RbG9FT1NXbjVrOFJ0YnNFYkNSYTdiUyUyQnlmUGxieUJsJTJGZWoxS3REYzRBdE1kJTJGOU1ueE5uWENIRWZmS3FXMFN3T2hLbW1zdWZSd0xFdUVwSVFObkFHJTJCN1NRS2I0MW9mZQ"
+        },
+        {
+          "name": "__rmco",
+          "value": "{\"channelIds\":{\"attr_sid\":\"114659\",\"aff_mid\":\"37847\"},\"scope\":\"\",\"version\":\"2\",\"productConsents\":{\"ranTrkInt\":true,\"ranTrkExt\":true,\"ranAut\":true,\"ranCGE\":true,\"rtbRet\":true,\"rtbPro\":true,\"cadTrk\":true,\"dspTrk\":true},\"execStatus\":1,\"consentSought\":false,\"sourceDomain\":\"www-stg2.shoemall.com\",\"rmPurposeConsents\":[],\"rmVendorConsents\":[],\"id\":\"8ea2ed8a-b568-4033-816e-c6a1286316f2\",\"scnt\":0,\"maxAge\":1724658738742}"
+        },
+        {
+          "name": "gb.performanceRecord.bychance.enabled",
+          "value": "false"
+        },
+        {
+          "name": "1450504:session-data",
+          "value": "v2_1e06806dab60745b4969647617a89b5e_c1b6dbd2-ddf1-49ae-ba95-8332793aecf7-tuctdc5b2aa_1724656938_1724656938_CNawjgYQiMRYGOHoweyYMiABKAEwZziY0QpA548QSKDx1gNQ____________AVgAYABoo8TAhomQj-SVAXAB"
+        },
+        {
+          "name": "gb.cors_ready",
+          "value": "true"
+        },
+        {
+          "name": "_uetsid_exp",
+          "value": "Tue, 27 Aug 2024 07:22:18 GMT"
+        },
+        {
+          "name": "tealium_va_update",
+          "value": "1"
+        },
+        {
+          "name": "gb.performanceRecord.bychance.prev_th",
+          "value": "0.05"
+        },
+        {
+          "name": "_uetvid",
+          "value": "ed8a9040637b11ef9fcc09f294a890f7"
+        },
+        {
+          "name": "tealium_va",
+          "value": "{\"metrics\":{\"15\":1,\"21\":1,\"22\":3,\"28\":1,\"29\":1,\"12132\":1,\"307112\":0},\"dates\":{\"23\":1724656933069,\"300883\":1724656955111,\"308145\":1724656933069,\"audience_mason_main_172_count_ts\":1724656933191},\"properties\":{\"17\":\"https://www-stg2.shoemall.com/\",\"12818\":\"1707972346.1724656937\",\"51823\":\"SM\",\"profile\":\"main\",\"account\":\"mason\"},\"flags\":{\"5554\":false,\"7179\":false,\"7750\":false,\"7752\":false,\"7754\":false,\"7756\":false,\"10237\":false,\"10239\":false,\"10241\":false,\"10243\":false,\"10245\":false,\"10249\":false,\"12820\":true,\"170708\":false,\"170710\":false,\"170714\":false,\"171674\":false},\"current_visit\":{\"metrics\":{\"7\":3,\"12\":0.3673666666666667,\"80\":0},\"dates\":{\"10\":1724656933069,\"11\":1724656955111},\"properties\":{\"5\":\"https://www-stg2.shoemall.com/\",\"44\":\"Chrome\",\"45\":\"Windows\",\"46\":\"Windows desktop\",\"47\":\"browser\",\"48\":\"Chrome\",\"5565\":\"generic\",\"32671\":\"SM\"},\"flags\":{\"14\":true,\"5494\":false,\"5496\":false,\"5498\":false,\"5500\":false,\"5502\":false,\"5504\":false,\"5506\":false,\"5508\":false,\"5510\":false,\"5514\":false,\"5516\":false,\"5518\":false,\"5664\":true,\"6169\":false,\"6171\":false,\"7709\":true,\"7713\":false,\"7715\":false,\"7717\":false,\"7780\":false,\"7782\":false,\"7784\":false,\"7786\":false,\"7788\":false,\"7790\":false,\"7792\":false,\"7794\":false,\"7796\":false,\"7798\":false,\"7800\":false,\"10247\":false,\"10319\":false,\"10321\":false,\"10323\":false,\"10325\":false,\"10327\":false,\"10329\":false,\"10485\":false,\"10489\":false,\"10495\":false,\"10499\":false,\"10501\":false,\"10505\":false,\"10781\":false,\"10783\":false,\"10785\":false,\"10787\":false,\"10789\":false,\"10791\":false,\"10793\":false,\"10795\":false,\"10797\":false,\"10799\":false,\"10801\":false,\"10803\":false,\"10805\":false,\"10807\":false,\"10809\":false,\"10811\":false,\"10813\":false,\"10817\":false,\"10819\":false,\"10821\":false,\"10823\":false,\"11764\":false,\"11768\":false,\"11772\":false,\"11778\":false,\"11780\":false,\"11784\":false,\"11788\":false,\"11794\":false,\"11796\":false,\"11800\":false,\"11804\":false,\"11810\":false,\"11812\":false,\"11814\":false,\"11816\":false,\"11820\":false,\"11824\":false,\"11830\":false,\"11832\":false,\"11838\":false,\"11842\":false,\"11848\":false,\"11850\":false,\"11854\":false,\"11858\":false,\"11866\":false,\"11904\":false,\"11918\":false,\"11922\":false,\"11926\":false,\"11932\":false,\"11934\":false,\"11938\":false,\"11942\":false,\"11948\":false,\"11954\":false,\"11958\":false,\"11964\":false,\"16119\":false,\"16123\":false,\"16129\":false,\"16135\":false,\"16141\":false,\"16970\":false,\"16974\":false,\"16980\":false,\"16990\":false,\"16994\":false,\"16998\":false,\"17008\":false,\"17016\":false,\"17020\":false,\"17026\":false,\"17028\":false,\"17030\":false,\"17034\":false,\"17038\":false,\"17044\":false,\"17050\":false,\"17060\":false,\"17062\":false,\"17066\":false,\"17072\":false,\"17076\":false,\"17078\":false,\"17082\":false,\"32663\":false,\"32665\":false,\"32667\":false,\"65748\":false,\"65758\":false,\"65806\":false,\"65808\":false,\"65824\":false,\"66750\":false,\"66754\":false,\"66758\":false,\"66764\":false,\"66768\":false,\"66770\":false,\"66774\":false,\"66778\":false,\"66784\":false,\"66788\":false},\"property_sets\":{\"49\":[\"Chrome\"],\"50\":[\"Windows\"],\"51\":[\"Windows desktop\"],\"52\":[\"browser\"],\"53\":[\"Chrome\"]},\"metric_sets\":{\"5566\":{\"Home\":1,\"generic\":2}}},\"badges\":{\"59279\":true,\"60204\":true,\"288526\":true},\"audiences\":{\"mason_main_172\":\"All Visitors\"}}"
+        },
+        {
+          "name": "_uetsid",
+          "value": "ed8a48e0637b11efa051edfa43e55e21"
+        }
+      ]
+    }
+  ]
+}

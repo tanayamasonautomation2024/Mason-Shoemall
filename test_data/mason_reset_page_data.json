@@ -1,0 +1,10 @@
+{
+    "info_icon_text" : "To achieve a strong password, your password must contain at least",
+    "password_criteria_text":"Your Password must contain at least",
+    "password_criteria1" : "^1 number$",
+    "password_criteria2" : "^8 characters$",
+    "password_criteria3" : "^1 letter$",
+    "enter_password_text": "Enter a password."
+
+
+}

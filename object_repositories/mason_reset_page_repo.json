@@ -1,0 +1,9 @@
+{
+  
+    "reset_password_textbox":"*New Password",
+    "reset_password_info_icon":"tooltip",
+    "reset_password_show_link":"Show",
+    "reset_password_hide_link":"Hide",
+    "reset_password_button": "Reset Password",
+    "reset_password_info_icon_xpath": "//div[contains(@class, 'data-')]/section[contains(@class, 'tooltip-scrollbar')]/section/p[2]"
+}
