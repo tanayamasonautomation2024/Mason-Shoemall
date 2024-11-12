@@ -76,7 +76,7 @@ test.describe("Mason PLP Scenarios", () => {
     //test.slow();
     const homePage = new HomePage(page);
     const plpPage = new MasonPLPPage(page);
-    await homePage.selectRandomSubCategory();
+    await page.goto(plp_data.plp_url_with_size_color);
     await plpPage.validateItemCount();
     await plpPage.validatePresenceOfFilter();
     await plpPage.validateFiltersForAllTypes();
@@ -126,7 +126,7 @@ test.describe("Mason PLP Scenarios", () => {
     const plpPage = new MasonPLPPage(page);
     const homePageNew = new HomePageNew(page);
     const homePage = new HomePage(page);
-    await homePage.selectRandomSubCategory();
+    await page.goto(plp_data.plp_url);
     await plpPage.validateItemCount();
     await plpPage.validatePresenceOfFilter();
     await plpPage.validateFiltersForAllTypes();

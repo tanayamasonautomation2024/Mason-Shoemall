@@ -129,7 +129,7 @@ exports.MasonBLPPage = class MasonBLPPage {
         if (currentUrl === new URL(href, this.page.url()).href) {
             console.log(`Navigation successful: ${currentUrl}`);
         } else {
-            console.error(`Navigation failed. Expected ${new URL(href, page.url()).href}, but got ${currentUrl}`);
+            console.error(`Navigation failed. Expected ${new URL(href, this.page.url()).href}, but got ${currentUrl}`);
         }
 
 
