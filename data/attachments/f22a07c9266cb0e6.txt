@@ -1,0 +1,3 @@
+Alphabet 'X' is not present.
+Selected Link: JSHandle@<a title="Naot" href="/brands/naot" class="hover:underline"> Naot</a>
+Selected Brand: Naot
