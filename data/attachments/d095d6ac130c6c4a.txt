@@ -1,0 +1,29 @@
+2
+Found 12 grid items.
+Item 1 Title: Sandals
+Item 1 href/link: /categories/women/womens-shoes/sandals
+Item 2 Title: Athletic Shoes
+Item 2 href/link: /categories/women/womens-shoes/sneakers-and-athletic
+Item 3 Title: Slip-Ons
+Item 3 href/link: /categories/women/womens-shoes/loafers-and-slip-ons
+Item 4 Title: Pumps
+Item 4 href/link: /categories/women/womens-shoes/heels-and-pumps
+Item 5 Title: Clogs
+Item 5 href/link: /categories/women/womens-shoes/clogs
+Item 6 Title: Hikers
+Item 6 href/link: /categories/women/womens-shoes/outdoor-shoes
+Item 7 Title: Slippers
+Item 7 href/link: /categories/women/womens-shoes/slippers
+Item 8 Title: Boots
+Item 8 href/link: /categories/women/womens-shoes/boots
+Item 9 Title: Tops
+Item 9 href/link: /categories/women/womens-shoes/boots
+Item 10 Title: Bottoms
+Item 10 href/link: /categories/women/womens-clothing?facet=refinementStyle%3AJeans%2CPants%2CShorts%2CLeggings
+Item 11 Title: Activewear
+Item 11 href/link: /categories/women/womens-clothing/activewear
+Item 12 Title: Accessories
+Item 12 href/link: /categories/women/womens-accessories
+Found 12 grid items.
+Randomly selected href: /categories/women/womens-shoes/clogs
+Navigation succeeded: https://www-stg2.shoemall.com/categories/women/womens-shoes/clogs
