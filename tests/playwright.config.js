@@ -52,14 +52,14 @@ export default defineConfig({
 
     // Collect trace when retrying the failed test.
     trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
+    screenshot: 'on',
     video: 'retain-on-failure',
     acceptDownloads: true,
     },
   // Configure projects for major browsers.
   projects: [
     {
-      name: 'Mason',
+      name: 'Mason Shoemall',
       use: {
         ...devices['Desktop Chrome'],
         //viewport: { width: 1920, height: 1080 },
