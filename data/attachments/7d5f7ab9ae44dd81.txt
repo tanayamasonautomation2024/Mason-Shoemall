@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a class="hover:underline" title="Leather Classics" href="/brands/leather-classics"> Leather Classics</a>
-Selected Brand: Leather Classics
