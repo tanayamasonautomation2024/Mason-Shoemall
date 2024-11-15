@@ -1,10 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 import { config } from 'dotenv';
 
-if (process.env.ENV === 'stage'){
-  require('dotenv').config({path: '.env'});
-}
-
 config();
 
 // dotenv.config({
@@ -52,7 +48,7 @@ export default defineConfig({
 
     // Collect trace when retrying the failed test.
     trace: 'on-first-retry',
-    screenshot: 'on',
+    screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     acceptDownloads: true,
     },
