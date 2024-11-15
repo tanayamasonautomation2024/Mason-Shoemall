@@ -86,7 +86,7 @@ test.describe("Mason Cart Page Guest User", () => {
 
     const pdpPage = new PDPPage(page);
     const cartDrawerPage = new CartDrawerPage(page);
-    await page.goto(pdp_data.pdp_url);
+    await page.goto(pdp_data.pdp_url_reviews);
     const cartItemCount = await pdpPage.getCartItemCount();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();
@@ -164,7 +164,7 @@ test.describe("Mason Cart Page Guest User", () => {
 
     const pdpPage = new PDPPage(page);
     const cartDrawerPage = new CartDrawerPage(page);
-    await page.goto(pdp_data.pdp_url);
+    await page.goto(pdp_data.pdp_url_reviews);
     const cartItemCount = await pdpPage.getCartItemCount();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();

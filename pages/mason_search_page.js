@@ -52,7 +52,11 @@ exports.SearchPage = class SearchPage {
     }
 
     async validateSearchBreadCrumb(search_value) {
-        await (this.page.getByText(`Results for"${search_value}"`, { exact: true })).waitFor({ state: "visible" });
+        //await (this.page.getByText(`Results for"${search_value}"`, { exact: true })).waitFor({ state: "visible" });
+        // Locate and validate the breadcrumb item containing the search value ("Results for" + search_value)
+        const breadcrumbText = `Results for"${search_value}"`;
+        const breadcrumbLocator = this.page.locator(`ol.mb-2 li:has-text("Results for\\"${search_value}\\"")`);
+        await expect(breadcrumbLocator).toBeVisible();
         await expect(this.page.locator('span').filter({ hasText: `"${search_value}"` })).toBeVisible();
 
     }
@@ -161,7 +165,7 @@ exports.SearchPage = class SearchPage {
     }
 
 
-    async validateItemCount() {
+    async validateItemCountOld() {
         await expect(this.search_result_title).toBeVisible();
         //const regex = /(\d+) Items/;
         const regex = /(\d+) items/i;
@@ -171,6 +175,30 @@ exports.SearchPage = class SearchPage {
         // Check if the actual text contains the search value
         const containsSearchValue = regex.test(actualText);
         expect(containsSearchValue).toBe(true);
+    }
+
+    async validateItemCount() {
+        // Ensure the search result title (heading) is visible
+        await expect(this.search_result_title).toBeVisible();
+    
+        // Locate the <p> element containing the item count (379 items)
+        const itemCountText = await this.page.locator('h1.text-\\[25px\\] + p.text-sm').innerText();
+        console.log(itemCountText);  // Log the item count text for debugging
+    
+        // Regex to extract the number of items
+        const regex = /(\d+)\s*(items?)/i;
+        const match = itemCountText.match(regex);
+    
+        // Ensure a match is found and validate the item count
+        expect(match).not.toBeNull();
+    
+        if (match) {
+            const itemCount = match[1];  // Extract the item count number
+            console.log(`Item count: ${itemCount}`);
+            
+            // // Ensure that the item count is greater than 0
+            // expect(Number(itemCount)).toBeGreaterThan(0);
+        }
     }
 
 

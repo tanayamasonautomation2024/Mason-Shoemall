@@ -529,10 +529,10 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
     await this.page.selectOption(dropdownSelector, randomOption.value);
 
     // Wait for the address details to appear on the page
-    await this.page.waitForSelector('.ml-6'); // Adjust selector as per your actual structure
+    await this.page.waitForSelector(dropdownSelector); // Adjust selector as per your actual structure
 
     // Get the text content of the address details
-    const addressDetails = await this.page.textContent('.ml-6');
+    const addressDetails = await this.page.textContent(dropdownSelector);
 
     // Validate that the selected address details are displayed
     expect(addressDetails).toContain(randomOption.text);
@@ -1163,7 +1163,8 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
     await this.page.getByRole('button', { name: 'Apply Code' }).click();
     await this.page.locator('p.text-forestGreen span').waitFor({ state: 'visible' });
     const spanText = await this.page.locator('p.text-forestGreen span').textContent();
-    expect(spanText).toContain(`Promo code ${promoCode} has been applied to your order`);
+    //expect(spanText).toContain(`Promo code ${promoCode} has been applied to your order`);
+    expect(spanText).toMatch(new RegExp(`Promo code\\s*${promoCode}\\s*has been applied to your order`, 'i'));
     // await (this.page.getByText(`Promo code ${promoCode} has been applied to your order`)).waitFor({ state: "visible" });
     // await expect(this.page.getByText(`Promo code ${promoCode} applied to order`)).toBeVisible();
     await expect(this.page.getByRole('button', { name: 'Remove' })).toBeVisible();

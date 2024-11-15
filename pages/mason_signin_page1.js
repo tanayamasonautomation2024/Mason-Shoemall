@@ -122,7 +122,7 @@ exports.SignInPageNew = class SignInPageNew {
     }
 
     async invalidUserLoginValidation(invalidLoginErrorMessage) {
-        await expect(this.page.getByText(invalidLoginErrorMessage)).toBeVisible();
+        await (this.page.getByText(invalidLoginErrorMessage)).waitFor({state:"visible"});
     }
 
     async validateLoginError() {

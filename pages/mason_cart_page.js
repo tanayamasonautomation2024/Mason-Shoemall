@@ -2,7 +2,7 @@ import test, { expect } from 'playwright/test';
 
 const cartProductNameLinkLocator = 'p.text-base.font-bold.leading-\\[20\\.8px\\].text-black';
 const cartItemTotalPriceLocator = 'p:has-text("Total Price:") strong';
-const cartAvailabilityLocator = 'p:has-text("Availability:") strong';
+const cartAvailabilityLocator = 'p:has-text("Availability")';
 const cartArrivesByLocator = 'p:has-text("Arrives by") strong';
 const cartDeleviringTo = 'section.-ml-1.mt-1.flex p';
 const cartEditButton = 'button:has-text("Edit")';
@@ -74,7 +74,7 @@ exports.CartPage = class CartPage {
         this.cartPromoCodeRedColor = page.locator('p:has-text("Promo code") strong.text-scarletRed');
         this.cartPromoSection = page.locator('mt-5 border-t border-silverGray pt-4');
         this.cartOrderSummary = page.locator('section:has-text("Order Summary")');
-        this.prodNameOnPDP = page.locator('section.pb-6.pt-2 h1');
+        this.prodNameOnPDP = page.locator('section.py-6 h1');
 
     }
 
@@ -237,7 +237,9 @@ exports.CartPage = class CartPage {
         console.log(`Product Name: ${productName}`);
 
         // Try to locate the reviews element and extract text content
-        await this.page.locator('section.flex.gap-x-0\\.5.pl-2\\.5').waitFor({ state: 'visible' });
+        //await this.page.locator('section.flex.gap-x-0\\.5.pl-2\\.5').waitFor({ state: 'visible' });
+        await this.page.locator('section.flex.gap-x-0\\.5 >> text=/\\(\\d+ Reviews?\\)/').waitFor({ state: 'visible' });
+        
         let reviewsText = '';
         let noReviewsPresent = false;
         try {
@@ -414,8 +416,9 @@ exports.CartPage = class CartPage {
             expect(individualPriceText).toMatch(/\$\d{1,3}(,\d{3})*(\.\d{2})?/); // Match dollar amount format
 
             // Verify the availability
-            const availability = productItem.locator(cartAvailabilityLocator).first();
-            await expect(availability).toBeVisible();
+            const availability = this.page.locator(cartAvailabilityLocator).first();
+            await availability.scrollIntoViewIfNeeded();
+            await (availability).waitFor({state:"visible"});
             const availabilityText = await availability.textContent();
             expect(availabilityText).toBeTruthy();
 

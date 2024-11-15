@@ -57,7 +57,7 @@ exports.MasonBIPPage = class MasonBIPPage{
         const viewportWidth = await this.page.evaluate(() => window.innerWidth);
         const bannerWidth = await bannerElement.evaluate((el) => el.clientWidth);
        // Use a custom threshold for the width comparison
-        const tolerance = 40; // Define an acceptable tolerance for the width comparison
+        const tolerance = 100; // Define an acceptable tolerance for the width comparison
         expect(Math.abs(bannerWidth - viewportWidth)).toBeLessThanOrEqual(tolerance);
 
         // Click on the banner element

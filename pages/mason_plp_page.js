@@ -544,19 +544,37 @@ exports.MasonPLPPage = class MasonPLPPage {
 
     async clickAddToCartInChooseOptionDrawer() {
         try {
-            // Wait for the button to appear (if necessary)
-            await this.page.waitForSelector('(//section[contains(@class, "sticky")]//button)[2]');
+        
 
-            // Get the second "Add to Cart" button's inner text
-            const buttonText = await this.page.evaluate(() => {
-                const button = document.evaluate('(//section[contains(@class, "sticky")]//button)[2]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-                return button.textContent.trim();
-            });
+        await this.page.waitForSelector('button[type="submit"]');
+
+        // Get the button's inner text by evaluating it on the page
+        const buttonText = await this.page.evaluate(() => {
+            // Find all buttons with the specified type and class
+            const buttons = Array.from(document.querySelectorAll('button.inline-flex[type="submit"]'));
+            // Loop through the buttons and find the one with the correct text
+            for (let button of buttons) {
+                const text = button.textContent.trim();
+                if (text === "Add to Bag" || text === "Personalize") {
+                    return text; // Return the matching button's text
+                }
+            }
+            return null; // Return null if no button matched
+        });
+
+        // Log the button's inner text
+        if (buttonText) {
+            console.log('Inner text of the button:', buttonText);
+        } else {
+            console.log('Button not found or no text content.');
+        }
+
 
             // Check if the inner text is "Add to Cart"
             if (buttonText === "Add to Bag") {
                 // Click the button
-                await this.page.click('(//section[contains(@class, "sticky")]//button)[2]');
+                // await this.page.click('(//section[contains(@class, "custom-scrollbar")]//button)[2]');
+                await this.page.click('button.inline-flex[type="submit"]:has-text("Add to Bag")');
                 console.log('Clicked the "Add to Bag" button');
                 await this.page.getByText("My Bag").waitFor({ state: "visible" });
             } else {
@@ -570,12 +588,17 @@ exports.MasonPLPPage = class MasonPLPPage {
     }
 
 
-
     async validateChooseOptionDrawer() {
         //await (this.page.getByText('Choose Options')).waitFor({ State: "visible" });
         //await (this.page.getByRole('button', { name: 'Add to Cart' })).waitFor({state:"visible"});
-        const button = await this.page.locator('section.sticky').getByText('Choose Options').locator('button');
-        await button.waitFor({ state: 'visible' });
+        // const button = await this.page.locator('section.sticky').getByText('Choose Options').locator('button');
+        // await button.waitFor({ state: 'visible' });
+        const drawer = await this.page.locator('[role="dialog"][data-state="open"]');
+    await drawer.waitFor({ state: 'visible' });
+
+    // Find the "Choose Options" button within the drawer
+    const chooseOptionsButton = await drawer.locator('button', { hasText: 'Choose Options' });
+    await chooseOptionsButton.waitFor({ state: 'visible' });
 
 
         try {
