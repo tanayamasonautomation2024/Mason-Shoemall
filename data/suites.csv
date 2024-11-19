@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","14181","Validate the brands logos present below the full width banner","Mason Shoemall","Tue Nov 19 14:31:17 UTC 2024","passed","Tue Nov 19 14:31:31 UTC 2024","Mason Commerce Tool Site","mason_bip.auth.spec.js","",""
+"","13744","Validate the full-width banner present below the page title which supports images and videos","Mason Shoemall","Tue Nov 19 14:31:17 UTC 2024","passed","Tue Nov 19 14:31:30 UTC 2024","Mason Commerce Tool Site","mason_bip.auth.spec.js","",""
+"","15473","Validate Home -> Brand breadcrumbs are shown in BIP","Mason Shoemall","Tue Nov 19 14:31:17 UTC 2024","passed","Tue Nov 19 14:31:32 UTC 2024","Mason Commerce Tool Site","mason_bip.auth.spec.js","",""
+"","5658","Validate the row of alphabet links below the top brands present","Mason Shoemall","Tue Nov 19 14:31:30 UTC 2024","passed","Tue Nov 19 14:31:36 UTC 2024","Mason Commerce Tool Site","mason_bip.auth.spec.js","",""
+"","6687","Validate navigation to BLP from Top Brands in homepage and breadcrumbs are shown in BLP","Mason Shoemall","Tue Nov 19 14:31:32 UTC 2024","passed","Tue Nov 19 14:31:39 UTC 2024","Mason BLP Page","mason_blp.auth.spec.js","",""
+"","12205","Validate under each alphabets the brand name starting with that letter is present","Mason Shoemall","Tue Nov 19 14:31:31 UTC 2024","passed","Tue Nov 19 14:31:43 UTC 2024","Mason Commerce Tool Site","mason_bip.auth.spec.js","",""
