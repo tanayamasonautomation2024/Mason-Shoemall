@@ -1,0 +1,41 @@
+Error navigating to a brands under alphabet 'W': locator.waitFor: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for getByText('HomeBrands') to be visible
+
+    at MasonBLPPage.validateNavigationFromBIP (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_blp_page.js:183:55)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_blp.auth.spec.js:45:5 {
+  [Symbol(step)]: {
+    stepId: 'pw:api@46',
+    location: {
+      file: '/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_blp_page.js',
+      line: 183,
+      column: 55,
+      function: 'MasonBLPPage.validateNavigationFromBIP'
+    },
+    category: 'pw:api',
+    title: "locator.getByText('HomeBrands').waitFor",
+    apiName: 'locator.waitFor',
+    params: {
+      selector: 'internal:text="HomeBrands"i',
+      strict: true,
+      omitReturnValue: true,
+      State: 'visible'
+    },
+    boxedStack: undefined,
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1732026889974,
+    error: {
+      message: 'Error: locator.waitFor: Test timeout of 90000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for getByText('HomeBrands') to be visible\x1B[22m\n",
+      stack: 'Error: locator.waitFor: Test timeout of 90000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for getByText('HomeBrands') to be visible\x1B[22m\n" +
+        '\n' +
+        '    at MasonBLPPage.validateNavigationFromBIP (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_blp_page.js:183:55)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_blp.auth.spec.js:45:5',
+      cause: undefined
+    }
+  }
+}
