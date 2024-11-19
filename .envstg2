@@ -1,0 +1,20 @@
+ENV = dev
+WEB_URL = https://dev--stoneberry-masoncompanies.netlify.app/
+USERNAME = tommy24@gmail.com
+PASSWORD = Test@1234
+INVALIDUSERNAME = test1_mason@gmail.coms
+INVALIDPASSWORD = Test@12343
+DASHBOARD_URL = https://dev--stoneberry-masoncompanies.netlify.app/account/dashboard/
+PAYMENT_USERNAME = blackbox@test.com
+PAYMENT_PASSWORD = Test1234
+RESET_USERNAME = reset_password_qa_automation@account.com
+RESET_LINK =  https://stage--stoneberry-masoncompanies.netlify.app/resetpassword?t=YP1H7IrIMrWCbIS0u6RJaDCsHWju0lzV8hJAej4q
+MY_PROFILE_URL = https://dev--stoneberry-masoncompanies.netlify.app/account/myprofile/
+NON_CREDIT_USER = tommy24@gmail.com
+NON_CREDIT_PASSWORD = Test@1234
+USERNAMEWITHADDRSS=tommy24@gmail.com
+CREDIT_USER=km.mason@gmail.com
+CREDIT_USER_PASSWORD=Test@1234
+NEW_USER=newuser@gmail.com
+MY_PROFILE_USER = profile_user@auto.com
+PROFILE_PASSWORD = Test@1234

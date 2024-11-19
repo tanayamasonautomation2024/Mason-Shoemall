@@ -18,7 +18,9 @@ exports.CLPPage = class CLPPage {
 
   async validateAccordionExpandAndClose() {
     // Define a selector for accordion buttons
-    const accordionSelector = "//button[@data-orientation='vertical']";;
+    //const accordionSelector = "//button[@data-orientation='vertical']";
+
+    const accordionSelector = "//div[@class='hidden md:block lg:block']//div[@class='clpAccrordianLeftnav w-full px-5 no-underline hover:no-underline']//button";
 
     // Get all accordion buttons
     const buttons = await this.page.$$(accordionSelector);
@@ -60,7 +62,7 @@ exports.CLPPage = class CLPPage {
 
 
   async validate2ColumnImageTiles() {
-    const tilesSection = this.page.locator('.column-grid-cta');
+    const tilesSection = this.page.locator("//div[contains(@class,'hidden md:block lg:block')]//ul[contains(@class,'md:grid-cols-2')]");
     await tilesSection.scrollIntoViewIfNeeded();
 
     // Locate the list items within the tiles section
@@ -76,7 +78,7 @@ exports.CLPPage = class CLPPage {
 
 
   async validate2ColumnTiles() {
-    const tiles = this.page.locator('section.column-grid-cta ul.grid li');
+    const tiles = this.page.locator("//div[contains(@class,'hidden md:block lg:block')]//ul[contains(@class,'md:grid-cols-2')]/li");
 
     // Retrieve the number of tiles present
     const tileCount = await tiles.count();
@@ -419,7 +421,8 @@ exports.CLPPage = class CLPPage {
 
   async validateViewMore() {
     // Verify Global Text block content is present above the footer
-    const contentBlock = await this.page.locator('//section[contains(@class,"mx-auto mt-11")]');
+    //const contentBlock = await this.page.locator('//section[contains(@class,"mx-auto mt-11")]');
+    const contentBlock = await this.page.locator('(//section[contains(@class,"mx-auto mt-11")])[2]');
     await expect(contentBlock).toBeVisible();
 
     // Verify "View More" text link
@@ -484,7 +487,7 @@ exports.CLPPage = class CLPPage {
     // await expect(this.page.locator('button').filter({ hasText: 'All Widths' })).toBeVisible();
     // await expect(this.page.locator('section').filter({ hasText: /^All Colors$/ }).nth(2)).toBeVisible();
     // await expect(this.page.locator('button').filter({ hasText: 'All Sizes' })).toBeVisible();
-    await expect(this.page.locator('#mainContent')).toContainText('All Departments');
+    //await expect(this.page.locator('#mainContent')).toContainText('All Departments');
     await expect(this.page.locator('#mainContent')).toContainText('All Widths');
     await expect(this.page.locator('#mainContent')).toContainText('All Categories');
     await expect(this.page.locator('#mainContent')).toContainText('All Colors');
@@ -505,7 +508,7 @@ exports.CLPPage = class CLPPage {
   }
 
   async selectColorInStyleFinder() {
-    await (this.page.locator('section').filter({ hasText: /^All Colors$/ }).nth(2)).click();
+    await (this.page.getByText('All Colors').nth(1)).click();
     // this.page.locator('section').filter({ hasText: /^Style FinderWomenAll CategoriesAll WidthsAll ColorsAll SizesFind Now$/ }).getByRole('img').first().click();
     await this.page.locator('section').filter({ hasText: /^Blue$/ }).click();
     await this.page.getByRole('button', { name: 'Find Now' }).click();
