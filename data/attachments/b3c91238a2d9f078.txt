@@ -1,1 +1,0 @@
-Navigation failed. Expected https://www-stg2.shoemall.com/brands/the-north-face, but got https://www-stg2.shoemall.com/brands/the-north-face?ajaxNavigation=true
