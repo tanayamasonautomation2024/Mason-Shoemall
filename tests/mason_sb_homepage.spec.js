@@ -4,6 +4,7 @@ import { HomePageNew } from '../pages/mason_home_page1';
 import { SignInPageNew } from '../pages/mason_signin_page1';
 import { MyAccountPage } from '../pages/mason_myaccount_page';
 import { CartDrawerPage } from '../pages/mason_cart_drawer_page';
+import { HomePage } from '../pages/mason_home_page';
 import { allure } from 'allure-playwright';
 require('dotenv').config();
 
@@ -228,7 +229,7 @@ test.describe("Mason Guest User Home Page", () => {
   //Global Persistent Header (Guest) - Mega Menu Navigation-SB-GPH002
   test("GPH-Mega Menu Navigation - Verify Mega Menu Navigation opens on hovering within the CTA and on selecting the subcategory it redirected to the corresponding PLP", async ({ page }, testInfo) => {
     //test.slow();
-    const homePage = new HomePageNew(page);
+    const homePage = new HomePage(page);
     await homePage.selectRandomSubCategory();
     const cartDrawerPage = new CartDrawerPage(page);
     await cartDrawerPage.clickAddtoCartPLP();

@@ -30,7 +30,7 @@ const cartNeedHelp = 'Need Help?';
 exports.CartPage = class CartPage {
     constructor(page) {
         this.page = page;
-        this.cartShoppingCartHeaderText = page.locator('strong', { hasText: 'Shopping Bag' });
+        this.cartShoppingCartHeaderText = page.locator('h1', { hasText: 'Shopping Bag' });
         this.cartTotalItems = this.cartShoppingCartHeaderText.locator('xpath=following-sibling::p[1]');
         this.cartOrderTotalText = page.locator('p.text-base.font-normal.leading-\\[22\\.4px\\]', { hasText: 'Order Total' });
         this.cartOrderTotal = this.cartOrderTotalText.locator('xpath=preceding-sibling::strong[1]');

@@ -38,10 +38,10 @@ exports.PDPPage = class PDPPage {
         this.creditMessageLocator = page.locator('section.mt-4.py-5');
         // this.qtyMinusButton = page.locator('button[aria-label="Decrease Quantity"]');
         // this.qtyPlusButton = page.locator('button[aria-label="Increase Quantity"]');
-        // this.defaultQtyPlusButton = page.locator('button[aria-label="Increase Quantity"]');
+         this.defaultQtyPlusButton = page.locator('button[aria-label="Increase quantity"]');
         this.qtyMinusButton = page.locator('.whitespace-nowrap').first();
         this.qtyPlusButton = page.getByRole('button', { name: '+' });
-        this.defaultQtyPlusButton = page.locator('div.flex > button:nth-child(3)').first();
+       // this.defaultQtyPlusButton = page.locator('div.flex > button:nth-child(3)').first();
         this.qtyInputTextBox = page.locator('input.numberInputCounter');
         this.qtyText = page.getByText('Qty:');
         this.availabilityText = page.getByText('Availability:');
@@ -608,9 +608,20 @@ exports.PDPPage = class PDPPage {
         const sectionCount = await sections.count();
         expect(sectionCount).toBe(4); // Ensure there are 4 sections
 
+
+        // Scroll to the middle of the page
+    await this.page.evaluate(() => {
+        window.scrollTo(0, document.body.scrollHeight / 2);
+    });
+
+    // Wait for the page to load properly
+    await this.page.waitForTimeout(1000); 
+
         // Validate each section's content
         for (let i = 0; i < sectionCount; i++) {
             const section = sections.nth(i);
+
+            
 
             // Validate the image with href
             const image = section.locator('a > img');
@@ -622,7 +633,8 @@ exports.PDPPage = class PDPPage {
 
             // Validate the title text and description
             const title = section.locator('section.py-4.text-center a > strong');
-            await expect(title).toBeVisible();
+            await title.scrollIntoViewIfNeeded();
+            await (title).waitFor({state:"visible"});
 
             const description = section.locator('section.py-4.text-center p > a');
             await expect(description).toBeVisible();
@@ -634,6 +646,13 @@ exports.PDPPage = class PDPPage {
     }
 
     async validateReviews() {
+                // Scroll to the middle of the page
+    await this.page.evaluate(() => {
+        window.scrollTo(0, document.body.scrollHeight / 2);
+    });
+
+    // Wait for the page to load properly
+    await this.page.waitForTimeout(1000); 
         await this.page.locator('section.flex.flex-wrap.items-center.gap-2\\.5.pt-4').first().waitFor({ state: 'visible' });
         await this.page.locator('button:has-text("Reviews")').waitFor({ state: 'visible' });
         const reviewsButton = await this.page.locator('button:has-text("Reviews")');
@@ -741,12 +760,24 @@ exports.PDPPage = class PDPPage {
         await this.qtyText.waitFor({ state: 'visible' });
         await this.clickOnMultiplePDPSizeVariantButton();
 
-        // Check if the Plus button is displayed and enabled
-        const isPlusButtonDisplayed = await this.page.locator('.whitespace-nowrap').nth(1).isVisible();
-        const isPlusButtonDisabled = isPlusButtonDisplayed ? await this.page.locator('.whitespace-nowrap').nth(1).isDisabled() : true;
+        // // Check if the Plus button is displayed and enabled
+        // const isPlusButtonDisplayed = await this.page.locator('.whitespace-nowrap').nth(1).isVisible();
+        // const isPlusButtonDisabled = isPlusButtonDisplayed ? await this.page.locator('.whitespace-nowrap').nth(1).isDisabled() : true;
 
-        // Check if the Minus button is enabled
-        const isMinusButtonDisabled = await this.page.locator('.whitespace-nowrap').first().isDisabled();
+        // // Check if the Minus button is enabled
+        // const isMinusButtonDisabled = await this.page.locator('.whitespace-nowrap').first().isDisabled();
+
+        // Locate buttons by aria-label to be more specific
+    const plusButton = await this.page.locator('[aria-label="Increase quantity"]');
+    const minusButton = await this.page.locator('[aria-label="Decrease quantity"]');
+    
+    // Check if the Plus button is displayed and enabled
+    const isPlusButtonDisplayed = await plusButton.isVisible();
+    const isPlusButtonDisabled = isPlusButtonDisplayed ? await plusButton.isDisabled() : true;
+
+    // Check if the Minus button is displayed and enabled
+    const isMinusButtonDisplayed = await minusButton.isVisible();
+    const isMinusButtonDisabled = isMinusButtonDisplayed ? await minusButton.isDisabled() : true;
 
         // Get the initial input value
         const initialInputValue = await this.qtyInputTextBox.inputValue();
@@ -894,12 +925,23 @@ exports.PDPPage = class PDPPage {
     }
 
     async validateSimilarItem() {
-        await this.page.waitForSelector('section[id="similarItems"]');
+       // await this.page.waitForSelector('section[id="similarItems"]');
+        // Locate the 'Related Items' section
+        await this.page.evaluate(() => {
+            window.scrollTo(0, document.body.scrollHeight / 2);
+        });
+        const similarItemsSection = this.page.locator('section[id="relatedItems"]');
+        
+        // Scroll the 'Related Items' section into view if it's not already visible
+        await similarItemsSection.scrollIntoViewIfNeeded();
+       await this.page.waitForSelector('section[id="relatedItems"]');
         // Locate the 'Similar Items' section
-        const similarItemsSection = this.page.locator('section[id="similarItems"]');
+        //const similarItemsSection = this.page.locator('section[id="similarItems"]');
+        //const similarItemsSection = this.page.locator('section[id="relatedItems"]');
 
         // Assert that the 'Similar Items' header is present
-        const similarItemsHeader = this.page.locator('strong:text("Similar Items")');
+       // const similarItemsHeader = this.page.locator('strong:text("Similar Items")');
+       const similarItemsHeader = this.page.locator('strong:text("Related Products")');
         await expect(similarItemsHeader).toBeVisible();
 
         // Locate all similar item products

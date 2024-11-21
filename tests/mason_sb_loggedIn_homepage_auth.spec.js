@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test';
 import { HomePageNew } from '../pages/mason_home_page1';
 import { SignInPageNew } from '../pages/mason_signin_page1';
 import { MyAccountPage } from '../pages/mason_myaccount_page';
+import { HomePage } from '../pages/mason_home_page';
 import { allure } from 'allure-playwright';
 import fs from 'fs';
 require('dotenv').config();
@@ -53,7 +54,7 @@ test.describe("Mason LoggedIn User HomePage", () => {
   })
 
   //Global Persistent Header (Logged In) - Stoneberry Logo Redirect-SB-GPH012
-  test("GPH-Stoneberry Logo Redirect - Verify the appearance and accesibility of the Stoneberry logo at the lefthand side", async ({ page }, testInfo) => {
+  test("GPH-Shoemall Logo Redirect - Verify the appearance and accesibility of the Stoneberry logo at the lefthand side", async ({ page }, testInfo) => {
     //test.slow();
     if (!loginSuccessful) {
       test.skip('Skipping test due to failed login');
@@ -86,7 +87,7 @@ test.describe("Mason LoggedIn User HomePage", () => {
     if (!loginSuccessful) {
       test.skip('Skipping test due to failed login');
     }
-    const homePage = new HomePageNew(page);
+    const homePage = new HomePage(page);
     await homePage.selectRandomSubCategory();
 
   })

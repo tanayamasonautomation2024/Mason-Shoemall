@@ -229,7 +229,7 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
 
   async validateReturnToCart() {
     await this.page.getByText(return_to_cart_link).click();
-    const shoppingCartElement = this.page.locator('strong:has-text("Shopping Bag")');
+    const shoppingCartElement = this.page.locator('h1:has-text("Shopping Bag")');
     await expect(shoppingCartElement).toBeVisible({ timeout: 10000 });
   }
 
@@ -1353,6 +1353,34 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
 
     // If 'Place Order' button is not visible, proceed with PayPal payment flow
     await this.checkoutpaypaloption.click();
+    //await this.paypalpageheader.waitFor({ state: 'visible' });
+    await this.paypalemailplaceholder.fill(paypalID);
+    await this.paypalnextbutton.click();
+    await this.paypalpassword.fill(password);
+    await this.paypalloginbutton.click();
+    await this.submitpaypalbutton.waitFor({ state: 'visible' });
+    await this.submitpaypalbutton.click();
+    await this.paypalpaymentmethod.waitFor({ state: 'visible' });
+
+    console.log('PayPal payment completed');
+  }
+
+
+  async paypalPaymentGuest(paypalID, password) {
+    // Check if the 'Place Order' button is visible
+    const placeOrderButtonVisible = await this.page.getByRole('button', { name: 'Place Order' }).first().isVisible();
+
+    // If 'Place Order' button is visible, click it and return from the function
+    if (placeOrderButtonVisible) {
+      await this.page.getByRole('button', { name: 'Place Order' }).first().click();
+      console.log('Place Order button clicked');
+      return; // Exit the function after clicking 'Place Order'
+    }
+
+    // If 'Place Order' button is not visible, proceed with PayPal payment flow
+    await this.checkoutpaypaloption.click();
+    await this.enterEmailDetails(paypalID);
+    await this.page.getByRole('button', { name: 'Continue to Review' }).click();
     //await this.paypalpageheader.waitFor({ state: 'visible' });
     await this.paypalemailplaceholder.fill(paypalID);
     await this.paypalnextbutton.click();

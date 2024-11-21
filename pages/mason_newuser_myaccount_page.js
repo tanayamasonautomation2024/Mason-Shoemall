@@ -13,7 +13,8 @@ const newuser_myaccount_paymentpage_dobradiobutton="Date of birth";
 const newuser_myaccount_paymentpage_dobtextbox="*Date of Birth (MM/DD/YYYY)";
 const newuser_myaccount_paymentpage_continuebutton="Continue";
 const newuser_myaccount_orderspage_breadcrumb="HomeMy AccountOrders";
-const newuser_myaccount_orderspage_headertext="//section[@class='flex items-center gap-2']//p[contains(text(),'Orders')]";
+//const newuser_myaccount_orderspage_headertext="//section[@class='flex items-center gap-2']//p[contains(text(),'Orders')]";
+const newuser_myaccount_orderspage_headertext="Orders";
 const newuser_myaccount_orderspage_norecentordertext="There are no recent orders in your account, but let’s see if we can find the order you’re looking for.";
 const newuser_myaccount_addresspage_breadcrumb="HomeMy AccountAddresses";
 const newuser_myaccount_addresspage_headertext="//section[@class='flex items-center gap-x-4']//h1[contains(text(),'Addresses')]";
@@ -26,7 +27,7 @@ const newuser_myaccount_saveccpage_addnewccbuttondd="(//button[contains(text(),'
 const newuser_myaccount_saveccpage_savedefaultcccheckbox="(//button[@role='checkbox'])[1]";
 const newuser_myaccount_saveccpage_savedefaultbillshipcheckbox="(//button[@role='checkbox'])[2]";
 const newuser_myaccount_wishlistpage_breadcrumb="HomeMy AccountWishlist";
-const newuser_myaccount_wishlistpage_headertext="Wish List0 Items";
+const newuser_myaccount_wishlistpage_headertext="Wish List";
 const newuser_myaccount_wishlistpage_norecentcctext="There are currently no items saved to your wish list.";
 
 
@@ -45,7 +46,7 @@ exports.NewUserMyAccountPage = class NewUserMyAccountPage{
         this.newuser_myaccount_paymentpage_dobtextbox=page.getByText(newuser_myaccount_paymentpage_dobtextbox);
         this.newuser_myaccount_paymentpage_continuebutton=page.getByRole('button', { name: newuser_myaccount_paymentpage_continuebutton });
         this.newuser_myaccount_orderspage_breadcrumb=page.getByText(newuser_myaccount_orderspage_breadcrumb);
-        this.newuser_myaccount_orderspage_headertext=page.locator(newuser_myaccount_orderspage_headertext);
+        this.newuser_myaccount_orderspage_headertext=page.locator(`h1:has-text("${newuser_myaccount_orderspage_headertext}")`);
         this.newuser_myaccount_orderspage_norecentordertext=page.getByText(newuser_myaccount_orderspage_norecentordertext);
         this.newuser_myaccount_addresspage_breadcrumb=page.getByText(newuser_myaccount_addresspage_breadcrumb);
         this.newuser_myaccount_addresspage_headertext=page.locator(newuser_myaccount_addresspage_headertext);
@@ -58,9 +59,9 @@ exports.NewUserMyAccountPage = class NewUserMyAccountPage{
         this.newuser_myaccount_saveccpage_savedefaultcccheckbox=page.locator(newuser_myaccount_saveccpage_savedefaultcccheckbox);
         this.newuser_myaccount_saveccpage_savedefaultbillshipcheckbox=page.locator(newuser_myaccount_saveccpage_savedefaultbillshipcheckbox);
         this.newuser_myaccount_wishlistpage_breadcrumb=page.getByText(newuser_myaccount_wishlistpage_breadcrumb);
-        this.newuser_myaccount_wishlistpage_headertext=page.getByText(newuser_myaccount_wishlistpage_headertext);
+        this.newuser_myaccount_wishlistpage_headertext=page.locator(`h1:has-text("${newuser_myaccount_wishlistpage_headertext}")`);
         this.newuser_myaccount_wishlistpage_norecentcctext=page.getByText(newuser_myaccount_wishlistpage_norecentcctext);
-        this.newuser_myaccount_wishlistpage_wishlistimgicon=page.locator('section').filter({ hasText: /^Wish List0 Items$/ }).getByRole('img');
+        this.newuser_myaccount_wishlistpage_wishlistimgicon=page.locator('section').filter({ hasText: /^Wish List$/ }).getByRole('img');
     }
 
     async validateNewUserStoneBerryCreditSection(firstLinkName,secondLinkName){
@@ -153,13 +154,13 @@ exports.NewUserMyAccountPage = class NewUserMyAccountPage{
     async validateNoRecentOrdersSection(){
         await expect(this.newuser_myaccount_orderspage_breadcrumb).toBeVisible();
         await expect(this.newuser_myaccount_orderspage_headertext).toBeVisible();
-        await expect(this.newuser_myaccount_orderspage_norecentordertext).toBeVisible();
+        await (this.newuser_myaccount_orderspage_norecentordertext).waitFor({state:"visible"});
     }
 
     async validateNoRecentAddressesSection(){
-        await expect(this.newuser_myaccount_addresspage_breadcrumb).toBeVisible();
-        await expect(this.newuser_myaccount_addresspage_headertext).toBeVisible();
-        await expect(this.newuser_myaccount_addresspage_norecentaddresstext).toBeVisible();
+        await (this.newuser_myaccount_addresspage_breadcrumb).waitFor({state:"visible"});
+        await (this.newuser_myaccount_addresspage_headertext).waitFor({state:"visible"});
+        await (this.newuser_myaccount_addresspage_norecentaddresstext).waitFor({state:"visible"});
     }
 
     async validateNoSavedCCSection(){

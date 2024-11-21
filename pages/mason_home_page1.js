@@ -505,14 +505,19 @@ exports.HomePageNew = class HomePageNew {
         // Scroll to the carousel section
         //await this.page.locator('section.seasonalSavings section.auc-Recommend').first().scrollIntoViewIfNeeded();
         await this.page.getByRole('heading', { name: 'Top Brands' }).scrollIntoViewIfNeeded();
-        await expect(this.page.getByText('Now Trending: Western Boots').first()).toBeVisible();
+        await (this.page.getByText('Now Trending: Western Boots').first()).waitFor({state:"visible"});
         // Locate the section containing the "Spring Favorites" text
         const sectionLocator = this.page.locator('section:has(strong:text("Now Trending: Western Boots"))').first();
+        await sectionLocator.waitFor({ state: 'visible' });  
 
         // Select the product items within the carousel
         //const productItems = this.page.locator('.swiper-slide');
-        await sectionLocator.locator('div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.mySwiper.multiSlide').waitFor({ state: 'visible' });
-        const productItems = await sectionLocator.locator('div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.mySwiper.multiSlide');
+        //await sectionLocator.locator('div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.mySwiper.multiSlide').waitFor({ state: 'visible' });
+        const swiperElement = sectionLocator.locator('div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.mySwiper.multiSlide');
+        await swiperElement.waitFor({ state: 'attached' });
+        await swiperElement.waitFor({ state: 'visible' });
+
+        const productItems = await swiperElement.locator('div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.mySwiper.multiSlide');
         const productCount = await productItems.count();
         console.log(`Number of products: ${productCount}`);
 
@@ -548,8 +553,8 @@ exports.HomePageNew = class HomePageNew {
         }
 
         // Validate the carousel button
-        const carouselButton = productItems.locator('div.swiper-button-next'); // Assuming there is a next button
-        await expect(carouselButton).toBeVisible();
+        const carouselButton = swiperElement.locator('div.swiper-button-next'); // Assuming there is a next button
+        await (carouselButton).waitFor({state:"visible"});
         await carouselButton.click();
 
     }

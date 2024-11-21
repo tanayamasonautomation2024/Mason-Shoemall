@@ -1,6 +1,7 @@
 const { chromium } = require('playwright');
 import { test, expect } from '@playwright/test';
 import { HomePageNew } from '../pages/mason_home_page1';
+import { HomePage } from '../pages/mason_home_page';
 import { SignInPageNew } from '../pages/mason_signin_page1';
 import { MyAccountPage } from '../pages/mason_myaccount_page';
 import { PDPPage } from '../pages/mason_pdp_page';
@@ -38,7 +39,7 @@ test.describe("Mason Cart Drawer", () => {
   //Cart Drawer - Adding a product with variations to the cart - Test Cases ID-SB-Cart006/SB-Cart007
   test("Cart Drawer - Adding a product with variations to the cart - Verify Choose Options drawer gets open when user click on add to cart against a product which has multiple variants from PLP and after adding to cart Cart Drawer opens", async ({ page }, testInfo) => {
 
-    const homePage = new HomePageNew(page);
+    const homePage = new HomePage(page);
     const cartDrawerPage = new CartDrawerPage(page);
     const pdpPage = new PDPPage(page);
     await homePage.selectRandomSubCategory();

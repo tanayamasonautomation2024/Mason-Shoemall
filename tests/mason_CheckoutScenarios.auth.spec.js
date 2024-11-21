@@ -202,7 +202,7 @@ test.describe("Mason Checkout - Guest and LoggedIn Users - Scenarios", () => {
       await guestCheckoutPage.addShippingAddress();
       await guestCheckoutPage.clickOnContinueToPayment();
       await guestCheckoutPage.validateAddressVerification();
-      await guestCheckoutPage.paypalPayment(checkout_data.paypal_loginid,checkout_data.paypal_password);
+      await guestCheckoutPage.paypalPaymentGuest(checkout_data.paypal_loginid,checkout_data.paypal_password);
       await guestCheckoutPage.clickOnPlaceOrderButton();
       const orderConfPage = new OrderConfirmationPage(page);
       await orderConfPage.validateOrderConfOrderDetails();

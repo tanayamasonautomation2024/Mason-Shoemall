@@ -116,7 +116,7 @@ test.describe("Mason MyAccount New User", () => {
     await myaccountPage.redirectToMyAccount();
     await myaccountPage.clickMyAccountSavedCCLink();
     const newuser_myaccountPage = new NewUserMyAccountPage(page);
-    //await newuser_myaccountPage.clickAddNewCCButton();
+    await newuser_myaccountPage.clickAddNewCCButton();
     await myaccountPage.validateNewCCSection();
     await newuser_myaccountPage.defaultSaveCCCheckboxDisplay();
     await newuser_myaccountPage.defaultSaveCCBillShipAddressCheckboxDisplay();

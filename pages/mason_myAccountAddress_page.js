@@ -26,7 +26,7 @@ exports.MyAccountAddressPage = class MyAccountAddressPage{
         await this.clickMyAccountAddressLink();
         await expect(this.page).toHaveURL(/.*addresses/);
         await this.displayAddressSection();
-        await expect(this.myaccount_addnewaddress_button).toBeVisible();
+        await (this.myaccount_addnewaddress_button).waitFor({state:"visible"});
         await expect(this.address_breadcrumb).toBeVisible();
     }
 

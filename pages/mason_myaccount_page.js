@@ -1569,8 +1569,8 @@ exports.MyAccountPage = class MyAccountPage {
         await this.page.getByRole('button', { name: myaccountpage_locator.myaccount_savedaddress_remove_button }).nth(deleteAddressCount).waitFor({ state: 'visible' });
         await this.page.getByRole('button', { name: myaccountpage_locator.myaccount_savedaddress_remove_button }).nth(deleteAddressCount).click();
         //await this.page.waitForTimeout(3000);
-        await expect(this.page.getByText('Address deleted successfully')).toBeVisible();
-        await this.page.locator('.text-forestGreen').filter({ hasText: 'Address deleted successfully' }).waitFor({ state: 'hidden' });
+        await (this.page.getByText('Address deleted successfully')).waitFor({state:"visible"});
+        //await this.page.locator('.text-forestGreen').filter({ hasText: 'Address deleted successfully' }).waitFor({ state: 'hidden' });
 
         // Verify that the form submission was successful
         const successMessage = await this.page.getByText('Address deleted successfully');

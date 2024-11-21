@@ -157,7 +157,7 @@ exports.CLPPage = class CLPPage {
 
   async validateBestSellerWidgetNew() {
     // Locate the section containing the "Best Sellers" heading and be more specific in your selector
-    const bestSellersSection = this.page.locator('strong.text-2xl:has-text("Best Sellers")');
+    const bestSellersSection = this.page.locator('strong.text-lg:has-text("Best Sellers")');
 
     // Ensure the section is visible and scroll into view if needed
     await bestSellersSection.scrollIntoViewIfNeeded();
@@ -200,7 +200,7 @@ exports.CLPPage = class CLPPage {
 
   async validateBestSellerWidget() {
     // Locate the heading for "Best Sellers"
-    const bestSellersHeading = this.page.locator('strong.text-2xl:has-text("Best Sellers")');
+    const bestSellersHeading = this.page.locator('strong.text-lg:has-text("Best Sellers")');
 
     // Ensure the heading is visible and scroll into view if needed
     await bestSellersHeading.scrollIntoViewIfNeeded();
