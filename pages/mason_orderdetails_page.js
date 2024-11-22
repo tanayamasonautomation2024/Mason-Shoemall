@@ -4,17 +4,17 @@ const orderStatus_ReturnedText = 'Returned on';
 const orderStatus_CancenceledText = 'Canceled';
 const orderStatus_DeliveredText = 'Delivered on';
 const orderStatus_ShippedText = 'Shipped on';
-const orderStatus_PendingShipmentText = 'Pending Shipment';
-const order_Section = 'section.mb-7.border';
-const product_Section = 'section.mt-4.flex.items-center';
+const orderStatus_PendingShipmentText = 'Processing';
+const order_Section = 'section.rounded-md.border';
+const product_Section = 'section.mt-4.flex.items-center';   
 const order_SummaryText = 'Order Summary';
 const cancelOrderModal_Text = 'Are you sure you want to cancel your order?';
 const cancelOrderModal_HeadingText = 'Cancel order';
 const cancelItemModal_HeadingText = 'Cancel Item';
 const cancelItemModal_Text = 'Are you sure you want to cancel this item?';
-const orderDetailsAwatingShipmentSection = 'Pending Shipment';
+const orderDetailsAwatingShipmentSection = 'Processing';
 const orderDetails_CanceledItem_SuccessMessage = 'Your Item has been canceled.';
-const orderDetailsOrderSummarySubTotal = /^Subtotal\s*\(\d+\s*items\):\s*$/;
+const orderDetailsOrderSummarySubTotal = /^Subtotal\s*\(\d+\s*items?\):\s*$/;
 const orderDetailsOrderSummaryShipping = 'Shipping:';
 const orderDetailsOrderSummaryEstSurcharge = 'Shipping Surcharge:';
 const orderDetailsOrderSummarySalesTax = 'Sales Tax:';
@@ -527,11 +527,8 @@ exports.OrderDetailsPage = class OrderDetailsPage {
         const phoneText = await billingAddressSection.locator('p').nth(4).textContent();
         expect(phoneText.trim()).toBeTruthy();
 
-        // Extract and validate the email address
-        const contactInfoText = await billingAddressSection.locator('p').nth(5).textContent();
-        expect(contactInfoText.trim()).toBeTruthy();
-
-        const emailText = await billingAddressSection.locator('p').nth(6).textContent();
+        
+        const emailText = await billingAddressSection.locator('p.gbmask').textContent();
         expect(emailText.trim()).toBeTruthy();
     }
 

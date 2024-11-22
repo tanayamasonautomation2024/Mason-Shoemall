@@ -951,8 +951,8 @@ exports.MyAccountPage = class MyAccountPage {
     }
 
     async clickOnProductNamePlacedOrder() {
-        await this.page.locator('section.truncate a.text-sm').first().click();
-        await expect(this.page).toHaveURL(/.*\/account\/orders\/orderdetails\//);
+        await this.page.locator('a.text-sm').first().click();
+        await expect(this.page).toHaveURL(/\/account\/orders\/orderdetails/);
     }
 
     async validateDefaultShippingandBillingAddressSection() {
@@ -1120,6 +1120,7 @@ exports.MyAccountPage = class MyAccountPage {
         for (const item of productItems) {
             // Find the image within the current <li>
             const img = await item.$('img');
+            await img.waitForState('visible');
 
             // Ensure the image element exists
             expect(img).not.toBeNull();
@@ -1901,7 +1902,7 @@ exports.MyAccountPage = class MyAccountPage {
         if (!buttonVisible) {
             throw new Error('Failed to find the "Set as Default" button after multiple attempts');
         } else {
-            const defaultCardNumber = await this.page.locator('section.m-4.rounded-md p.font-semibold').nth(1).textContent();
+            const defaultCardNumber = await this.page.locator('section.my-4.rounded-md p.font-semibold').nth(1).textContent();
             console.log('Default Card Number:' + defaultCardNumber);
 
             // Click on the first "Set as Default" button
@@ -1910,8 +1911,8 @@ exports.MyAccountPage = class MyAccountPage {
             await expect(this.page.getByText('Your default credit card was successfully updated')).toBeVisible();
             await expect(this.page.getByText('Default Credit Card', { exact: true })).toBeVisible();
             await this.page.reload();
-            await this.page.locator('section.m-4.rounded-md p.font-semibold').first().waitFor({ state: 'visible' });
-            const setDefaultCreditCardNumber = await this.page.locator('section.m-4.rounded-md p.font-semibold').nth(0).textContent();
+            await this.page.locator('section.my-4.rounded-md p.font-semibold').first().waitFor({ state: 'visible' });
+            const setDefaultCreditCardNumber = await this.page.locator('section.my-4.rounded-md p.font-semibold').nth(0).textContent();
             expect(setDefaultCreditCardNumber).toMatch(defaultCardNumber);
 
         }
@@ -1919,8 +1920,8 @@ exports.MyAccountPage = class MyAccountPage {
     }
 
     async removeCreditCard() {
-        await this.page.locator('section.m-4').first().waitFor({ state: 'visible' });
-        const addressSections = await this.page.locator('section.m-4');
+        await this.page.locator('section.my-4.rounded-md').first().waitFor({ state: 'visible' });
+        const addressSections = await this.page.locator('section.my-4.rounded-md');
         const addressSectionsCount = await addressSections.count();
         const deleteAddressCount = (addressSectionsCount - 1);
         console.log('Total Saved Address Count:', addressSectionsCount);
@@ -1928,10 +1929,10 @@ exports.MyAccountPage = class MyAccountPage {
 
         await this.page.getByRole('button', { name: myaccountpage_locator.myaccount_savedaddress_remove_button }).nth(deleteAddressCount).click();
         await expect(this.page.locator('.text-forestGreen').filter({ hasText: 'Your credit card was successfully removed.' })).toBeVisible();
-        await this.page.locator('.text-forestGreen').filter({ hasText: 'Your credit card was successfully removed.' }).waitFor({ state: 'hidden' });
+       // await this.page.locator('.text-forestGreen').filter({ hasText: 'Your credit card was successfully removed.' }).waitFor({ state: 'hidden' });
         const successMessage = await this.page.$('.text-forestGreen');
         if (successMessage) {
-            const deletedAddressSections = await this.page.locator('section.m-4');
+            const deletedAddressSections = await this.page.locator('section.my-4.rounded-md');
             const deletedAddressSectionsCount = await deletedAddressSections.count();
             //await expect(deletedAddressSections).toHaveCount(deleteAddressCount);
             console.log('Your credit card was successfully removed.!');
@@ -1944,8 +1945,8 @@ exports.MyAccountPage = class MyAccountPage {
 
     async undoRemoveCreditCard() {
         //await this.page.reload();
-        await this.page.locator('section.m-4').first().waitFor({ state: 'visible' });
-        const addressSections = await this.page.locator('section.m-4');
+        await this.page.locator('section.my-4.rounded-md').first().waitFor({ state: 'visible' });
+        const addressSections = await this.page.locator('section.my-4.rounded-md');
         const addressSectionsCount = await addressSections.count();
         let nthIndex = 0;
         if (addressSectionsCount > 1) {

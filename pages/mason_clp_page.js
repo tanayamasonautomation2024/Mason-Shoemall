@@ -37,7 +37,7 @@ exports.CLPPage = class CLPPage {
 
           if (!isExpanded) {
             // Click to expand
-            await svg.click();
+            await button.click();
             console.log(`Expanded: ${await button.evaluate(el => el.getAttribute('aria-controls'))}`);
 
             // Wait for content to expand
@@ -46,7 +46,7 @@ exports.CLPPage = class CLPPage {
 
           // Click to collapse if it was expanded
           if (await button.evaluate(el => el.getAttribute('aria-expanded') === 'true')) {
-            await svg.click();
+            await button.click();
             console.log(`Collapsed: ${await button.evaluate(el => el.getAttribute('aria-controls'))}`);
 
             // Wait for content to collapse
@@ -61,16 +61,71 @@ exports.CLPPage = class CLPPage {
   }
 
 
+  async validateAccordionExpandAndCloseOld() {
+
+
+    // Locate the accordion section using your XPath
+    const accordionSection = this.page.locator(
+      "//div[@class='hidden md:block lg:block']//div[@class='clpAccrordianLeftnav w-full px-5 no-underline hover:no-underline']"
+    );
+
+
+
+    // Locate all accordion buttons within that section
+    const accordionButtons = accordionSection.locator('button[aria-expanded][aria-controls]:not([aria-haspopup="dialog"])');
+
+
+
+    // Loop through each accordion button and perform expand/collapse actions
+    for (let i = 0; i < await accordionButtons.count(); i++) {
+      const button = accordionButtons.nth(i);
+
+
+
+      // Get the corresponding accordion content by the aria-controls attribute
+      const contentId = await button.getAttribute('aria-controls');
+      // Use XPath to target the content with the dynamic ID, handle special characters
+      const content = this.page.locator(`//div[@id="${contentId}"]`);
+
+      // Ensure the accordion is initially collapsed
+      await expect(content).toHaveAttribute('hidden', '');
+      await expect(button).toHaveAttribute('aria-expanded', 'false');
+
+
+
+      // Click to expand the accordion
+      await button.click();
+
+      // Wait for the content to expand and verify it is visible
+      await expect(content).toBeVisible();
+      await expect(button).toHaveAttribute('aria-expanded', 'true');
+
+
+
+      // Wait a moment (optional), then click to collapse the accordion
+      await button.click();
+
+
+
+      // Ensure the accordion content is collapsed again
+      await expect(content).toHaveAttribute('hidden', '');
+      await expect(button).toHaveAttribute('aria-expanded', 'false');
+    }
+
+  }
+
+
+
   async validate2ColumnImageTiles() {
     const tilesSection = this.page.locator("//div[contains(@class,'hidden md:block lg:block')]//ul[contains(@class,'md:grid-cols-2')]");
     await tilesSection.scrollIntoViewIfNeeded();
 
     // Locate the list items within the tiles section
-    const listItems = tilesSection.locator('ul > li');
+    const listItems = tilesSection.locator('li');
 
     // Get the count of list items
     const count = await listItems.count();
-    console.log(count);
+    console.log(`Found ${count} list items.`);
 
     // Assert that there are exactly 2 list items
     expect(count).toBe(2);
@@ -79,6 +134,7 @@ exports.CLPPage = class CLPPage {
 
   async validate2ColumnTiles() {
     const tiles = this.page.locator("//div[contains(@class,'hidden md:block lg:block')]//ul[contains(@class,'md:grid-cols-2')]/li");
+
 
     // Retrieve the number of tiles present
     const tileCount = await tiles.count();
@@ -157,7 +213,7 @@ exports.CLPPage = class CLPPage {
 
   async validateBestSellerWidgetNew() {
     // Locate the section containing the "Best Sellers" heading and be more specific in your selector
-    const bestSellersSection = this.page.locator('strong.text-lg:has-text("Best Sellers")');
+    const bestSellersSection = this.page.locator('strong.text-2xl:has-text("Best Sellers")');
 
     // Ensure the section is visible and scroll into view if needed
     await bestSellersSection.scrollIntoViewIfNeeded();
@@ -257,7 +313,7 @@ exports.CLPPage = class CLPPage {
 
   async validateCategoryGrid() {
     // Use XPath to select the grid
-    const gridXPath = '//ul[contains(@class,"sm:grid-cols-3 lg:grid-cols-4")]';
+    const gridXPath = ('//ul[contains(@class,"sm:grid-cols-3 lg:grid-cols-4")][2]');
     const grid = await this.page.locator(gridXPath);
 
     // Get all grid items
@@ -296,7 +352,7 @@ exports.CLPPage = class CLPPage {
   async validateNavigationFromHref() {
     try {
 
-      const gridXPath = '//ul[contains(@class,"sm:grid-cols-3 lg:grid-cols-4")]';
+      const gridXPath = '('//ul[contains(@class,"sm:grid-cols-3 lg:grid-cols-4")][2]')';
       const grid = await this.page.locator(gridXPath);
 
       // Get all grid items
@@ -421,7 +477,6 @@ exports.CLPPage = class CLPPage {
 
   async validateViewMore() {
     // Verify Global Text block content is present above the footer
-    //const contentBlock = await this.page.locator('//section[contains(@class,"mx-auto mt-11")]');
     const contentBlock = await this.page.locator('(//section[contains(@class,"mx-auto mt-11")])[2]');
     await expect(contentBlock).toBeVisible();
 
@@ -487,7 +542,7 @@ exports.CLPPage = class CLPPage {
     // await expect(this.page.locator('button').filter({ hasText: 'All Widths' })).toBeVisible();
     // await expect(this.page.locator('section').filter({ hasText: /^All Colors$/ }).nth(2)).toBeVisible();
     // await expect(this.page.locator('button').filter({ hasText: 'All Sizes' })).toBeVisible();
-    //await expect(this.page.locator('#mainContent')).toContainText('All Departments');
+   // await expect(this.page.locator('#mainContent')).toContainText('All Departments');
     await expect(this.page.locator('#mainContent')).toContainText('All Widths');
     await expect(this.page.locator('#mainContent')).toContainText('All Categories');
     await expect(this.page.locator('#mainContent')).toContainText('All Colors');

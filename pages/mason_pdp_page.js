@@ -45,7 +45,7 @@ exports.PDPPage = class PDPPage {
         this.qtyInputTextBox = page.locator('input.numberInputCounter');
         this.qtyText = page.getByText('Qty:');
         this.availabilityText = page.getByText('Availability:');
-        this.addtoCartButton = page.getByRole('button', { name: 'Add to Bag' });
+        this.addtoCartButton = page.getByRole('button', { name: 'Add to Bag' }).nth(1);
         this.addtoWishListButton = page.getByRole('button', { name: 'Add to Wish List' });
         this.miniCartHeaderText = page.getByRole('button', { name: 'My Bag' });
         this.miniCart = page.locator('img[alt="Mini Cart"]');

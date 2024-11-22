@@ -180,7 +180,7 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
   }
 
   async clickAddToCart() {
-    await this.page.getByRole('button', { name: add_to_cart }).click();
+    await this.page.getByRole('button', { name: 'Add to Bag' }).nth(1).click();
   }
 
   async clickCheckoutOnMyCart() {

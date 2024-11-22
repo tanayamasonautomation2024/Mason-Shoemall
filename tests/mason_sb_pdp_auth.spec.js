@@ -16,6 +16,8 @@ const signinpage_data = JSON.parse(JSON.stringify(require('../test_data/mason_si
 const signoutpage_data = JSON.parse(JSON.stringify(require('../test_data/mason_signout_page_data.json')));
 const myaccountpage_data = JSON.parse(JSON.stringify(require('../test_data/mason_sb_myaccount_page_data.json')));
 const pdp_data = JSON.parse(JSON.stringify(require('../test_data/mason_pdp_page_data.json')));
+const plp_data = JSON.parse(JSON.stringify(require('../test_data/mason_plp_page_data.json')));
+
 
 let loginSuccessful = false;
 test.describe("Mason PDP", () => {
@@ -203,8 +205,7 @@ test.describe("Mason PDP", () => {
   //Navigation to PDP from PLP, product image link, or configured link-SB-PDP005
   test("Navigation to PDP from PLP - Verify that Clicking on product image, name, or link redirected to the PDP", async ({ page }, testInfo) => {
     //test.slow();
-    const homePage = new HomePageNew(page);
-    await homePage.selectRandomSubCategory();
+    await page.goto(plp_data.plp_url);
     const cartDrawerPage = new CartDrawerPage(page);
     await cartDrawerPage.navigateToPDPFromPLP();
     const pdpPage = new PDPPage(page);
