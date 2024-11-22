@@ -1,0 +1,1 @@
+L2 or L3 subcategory not visible within the timeout for L1 category at index 3.
