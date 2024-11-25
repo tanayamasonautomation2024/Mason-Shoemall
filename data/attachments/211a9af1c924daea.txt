@@ -1,3 +1,0 @@
-Found 2 list items.
-Number of pagination bullets in the first container: 2
-Number of swiper-slide divs: 5

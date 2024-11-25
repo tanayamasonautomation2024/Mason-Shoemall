@@ -1,0 +1,122 @@
+Error validating brands under alphabet 'N': ExpectError: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 1
++ Received  + 1
+
+@@ -7,11 +7,11 @@
+    "New Balance",
+    "NFL",
+    "Nine West",
+    "Nixon",
+    "Noble House",
++   "The North Face",
+    "NoSoX",
+    "Not Rated",
+    "Nunn Bush",
+    "Nurse Mates",
+-   "The North Face",
+  ]
+    at MasonBIPPage.validateBrandsUnderRandomAlphabet (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_bip_page.js:166:50)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_bip.auth.spec.js:59:5 {
+  matcherResult: {
+    actual: [
+      'Naot',           'NASA',
+      'Naturalizer',    'Nautilus',
+      'NCAA',           'New Balance',
+      'NFL',            'Nine West',
+      'Nixon',          'Noble House',
+      'The North Face', 'NoSoX',
+      'Not Rated',      'Nunn Bush',
+      'Nurse Mates'
+    ],
+    expected: [
+      'Naot',           'NASA',
+      'Naturalizer',    'Nautilus',
+      'NCAA',           'New Balance',
+      'NFL',            'Nine West',
+      'Nixon',          'Noble House',
+      'NoSoX',          'Not Rated',
+      'Nunn Bush',      'Nurse Mates',
+      'The North Face'
+    ],
+    message: '\x1B[2mexpect(\x1B[22m\x1B[31mreceived\x1B[39m\x1B[2m).\x1B[22mtoEqual\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m) // deep equality\x1B[22m\n' +
+      '\n' +
+      '\x1B[32m- Expected  - 1\x1B[39m\n' +
+      '\x1B[31m+ Received  + 1\x1B[39m\n' +
+      '\n' +
+      '\x1B[33m@@ -7,11 +7,11 @@\x1B[39m\n' +
+      '\x1B[2m    "New Balance",\x1B[22m\n' +
+      '\x1B[2m    "NFL",\x1B[22m\n' +
+      '\x1B[2m    "Nine West",\x1B[22m\n' +
+      '\x1B[2m    "Nixon",\x1B[22m\n' +
+      '\x1B[2m    "Noble House",\x1B[22m\n' +
+      '\x1B[31m+   "The North Face",\x1B[39m\n' +
+      '\x1B[2m    "NoSoX",\x1B[22m\n' +
+      '\x1B[2m    "Not Rated",\x1B[22m\n' +
+      '\x1B[2m    "Nunn Bush",\x1B[22m\n' +
+      '\x1B[2m    "Nurse Mates",\x1B[22m\n' +
+      '\x1B[32m-   "The North Face",\x1B[39m\n' +
+      '\x1B[2m  ]\x1B[22m',
+    name: 'toEqual',
+    pass: false
+  },
+  [Symbol(step)]: {
+    stepId: 'expect@68',
+    category: 'expect',
+    title: 'expect.toEqual',
+    params: { expected: [Array] },
+    infectParentStepsWithError: undefined,
+    boxedStack: undefined,
+    location: {
+      file: '/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_bip_page.js',
+      line: 166,
+      column: 50,
+      function: 'MasonBIPPage.validateBrandsUnderRandomAlphabet'
+    },
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1732519251890,
+    error: {
+      message: 'Error: \x1B[2mexpect(\x1B[22m\x1B[31mreceived\x1B[39m\x1B[2m).\x1B[22mtoEqual\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m) // deep equality\x1B[22m\n' +
+        '\n' +
+        '\x1B[32m- Expected  - 1\x1B[39m\n' +
+        '\x1B[31m+ Received  + 1\x1B[39m\n' +
+        '\n' +
+        '\x1B[33m@@ -7,11 +7,11 @@\x1B[39m\n' +
+        '\x1B[2m    "New Balance",\x1B[22m\n' +
+        '\x1B[2m    "NFL",\x1B[22m\n' +
+        '\x1B[2m    "Nine West",\x1B[22m\n' +
+        '\x1B[2m    "Nixon",\x1B[22m\n' +
+        '\x1B[2m    "Noble House",\x1B[22m\n' +
+        '\x1B[31m+   "The North Face",\x1B[39m\n' +
+        '\x1B[2m    "NoSoX",\x1B[22m\n' +
+        '\x1B[2m    "Not Rated",\x1B[22m\n' +
+        '\x1B[2m    "Nunn Bush",\x1B[22m\n' +
+        '\x1B[2m    "Nurse Mates",\x1B[22m\n' +
+        '\x1B[32m-   "The North Face",\x1B[39m\n' +
+        '\x1B[2m  ]\x1B[22m',
+      stack: 'Error: \x1B[2mexpect(\x1B[22m\x1B[31mreceived\x1B[39m\x1B[2m).\x1B[22mtoEqual\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m) // deep equality\x1B[22m\n' +
+        '\n' +
+        '\x1B[32m- Expected  - 1\x1B[39m\n' +
+        '\x1B[31m+ Received  + 1\x1B[39m\n' +
+        '\n' +
+        '\x1B[33m@@ -7,11 +7,11 @@\x1B[39m\n' +
+        '\x1B[2m    "New Balance",\x1B[22m\n' +
+        '\x1B[2m    "NFL",\x1B[22m\n' +
+        '\x1B[2m    "Nine West",\x1B[22m\n' +
+        '\x1B[2m    "Nixon",\x1B[22m\n' +
+        '\x1B[2m    "Noble House",\x1B[22m\n' +
+        '\x1B[31m+   "The North Face",\x1B[39m\n' +
+        '\x1B[2m    "NoSoX",\x1B[22m\n' +
+        '\x1B[2m    "Not Rated",\x1B[22m\n' +
+        '\x1B[2m    "Nunn Bush",\x1B[22m\n' +
+        '\x1B[2m    "Nurse Mates",\x1B[22m\n' +
+        '\x1B[32m-   "The North Face",\x1B[39m\n' +
+        '\x1B[2m  ]\x1B[22m\n' +
+        '    at MasonBIPPage.validateBrandsUnderRandomAlphabet (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_bip_page.js:166:50)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_bip.auth.spec.js:59:5',
+      cause: undefined,
+      matcherResult: [Object]
+    }
+  }
+}
