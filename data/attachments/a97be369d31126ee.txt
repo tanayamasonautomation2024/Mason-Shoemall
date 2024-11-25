@@ -1,0 +1,11 @@
+Address Element Value: 2 JJ Rd
+City Element Value: Charlotte
+State Element Value: AR
+ZipCode Element Value: 72522-9645
+PhoneNumber Element Value: (306) 851-3603
+Address verification modal did not appear or is not open.
+Address updated successfully!
+First Name: Coby Pagac
+Last Name: Coby Pagac
+Address: 138C Gg25 Rd 
+City: Fall River,  KS 67047-4721

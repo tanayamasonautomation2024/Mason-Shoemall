@@ -1,0 +1,5 @@
+Wish List | ShoeMall
+248
+Clicked the first "Move to Bag" button.
+Choose Option drawer is visible. Product has variants.
+Neither "My Cart" nor "Choose Options" drawers are visible.

@@ -1,0 +1,43 @@
+Error during test execution: locator.textContent: Test timeout of 210000ms exceeded.
+Call log:
+  - waiting for locator('section.flex.w-1\\/2.flex-col.gap-8').locator('p').first()
+
+    at OrderConfirmationPage.validateOrderConfirmationPayment (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_order_confirmation_page.js:275:76)
+    at action (/home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:128:31)
+    at expectWithTimeoutHandling (/home/runner/work/Mason-Shoemall/Mason-Shoemall/utils/errorHandling.js:7:11)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:127:40 {
+  [Symbol(step)]: {
+    stepId: 'pw:api@137',
+    location: {
+      file: '/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_order_confirmation_page.js',
+      line: 275,
+      column: 76,
+      function: 'OrderConfirmationPage.validateOrderConfirmationPayment'
+    },
+    category: 'pw:api',
+    title: 'locator.textContent(section.flex.w-1\\/2.flex-col.gap-8 >> p >> nth=0)',
+    apiName: 'locator.textContent',
+    params: {
+      selector: 'section.flex.w-1\\/2.flex-col.gap-8 >> p >> nth=0',
+      strict: true
+    },
+    boxedStack: undefined,
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1732551644624,
+    error: {
+      message: 'Error: locator.textContent: Test timeout of 210000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('section.flex.w-1\\\\/2.flex-col.gap-8').locator('p').first()\x1B[22m\n",
+      stack: 'Error: locator.textContent: Test timeout of 210000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('section.flex.w-1\\\\/2.flex-col.gap-8').locator('p').first()\x1B[22m\n" +
+        '\n' +
+        '    at OrderConfirmationPage.validateOrderConfirmationPayment (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_order_confirmation_page.js:275:76)\n' +
+        '    at action (/home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:128:31)\n' +
+        '    at expectWithTimeoutHandling (/home/runner/work/Mason-Shoemall/Mason-Shoemall/utils/errorHandling.js:7:11)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:127:40',
+      cause: undefined
+    }
+  }
+}

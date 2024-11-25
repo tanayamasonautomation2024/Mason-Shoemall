@@ -1,0 +1,26 @@
+Validated <p> tag content: PUMA Men's Serve It Tee
+Validated <p> tag content: Item #: 728536WHTL
+Validated <p> tag content: White
+Validated <p> tag content: L
+Validated <p> tag content: 1 x $22.97 $24.95
+Validated <p> tag content: Total Price: $22.97
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blt1d1f4ff5cd0b9bae/66c5ec628b499a24511f615e/1374605-1-A0.jpg?width=150&quality=75
+Validated product image alt text: PUMA Men's Serve It Tee
+Validated product detail: White
+Validated product detail: L
+Validated product detail: 1 x $22.97 $24.95
+Validated product detail: Total Price: $22.97
+Validated <p> tag content: PUMA Men's Graphic Circular Tee
+Validated <p> tag content: Item #: 728530LGHXL
+Validated <p> tag content: Light Grey Heather
+Validated <p> tag content: XL
+Validated <p> tag content: 1 x $24.95
+Validated <p> tag content: Total Price: $24.95
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/bltb24b89b0b23dab9e/66c5ec5676af276a7f5470c7/1374602-1-A0.jpg?width=150&quality=75
+Validated product image alt text: PUMA Men's Graphic Circular Tee
+Validated product detail: Light Grey Heather
+Validated product detail: XL
+Validated product detail: 1 x $24.95
+Validated product detail: Total Price: $24.95
