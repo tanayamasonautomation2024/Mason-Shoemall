@@ -584,10 +584,10 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
 
 
   async validateShippingSectionAbovePaymentSection() {
-    await this.page.waitForSelector(`//h1[contains(text(), "${shipping}")]`, { visible: true });
-    await this.page.waitForSelector(`//h1[contains(text(), "${payment}")]`, { visible: true });
-    const shippingSection = await this.page.$(`//h1[contains(text(), "${shipping}")]`);
-    const paymentForm = await this.page.$(`//h1[contains(text(), "${payment}")]`);
+    await this.page.waitForSelector(`//h2[contains(text(), "${shipping}")]`, { visible: true });
+    await this.page.waitForSelector(`//h2[contains(text(), "${payment}")]`, { visible: true });
+    const shippingSection = await this.page.$(`//h2[contains(text(), "${shipping}")]`);
+    const paymentForm = await this.page.$(`//h2[contains(text(), "${payment}")]`);
 
     const shippingBox = await shippingSection.boundingBox();
     const paymentBox = await paymentForm.boundingBox();

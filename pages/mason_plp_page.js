@@ -24,6 +24,7 @@ const sortingOptions = [
 ];
 
 
+
 exports.MasonPLPPage = class MasonPLPPage {
     constructor(page) {
         this.page = page;
@@ -34,6 +35,8 @@ exports.MasonPLPPage = class MasonPLPPage {
         this.qtyMinusButton = page.getByRole('button', { name: 'Decrease quantity' });
         this.qtyPlusButton = page.getByRole('button', { name: 'Increase quantity' });
         //this.qtyPlusButton = page.locator('section.flex.items-center.gap-2 > div > button:nth-of-type(2)');
+        this.addtoCartButton = page.getByRole('button', { name: 'Add to Bag' });
+        this.availabilityText = page.getByText('Availability:');
 
     }
 
@@ -454,7 +457,7 @@ exports.MasonPLPPage = class MasonPLPPage {
     }
 
     async validateSortBy() {
-        await (this.page.getByText('Sort By:').nth(1)).waitFor({ state: "visible" });
+        await (this.page.getByText('Sort By:')).waitFor({ state: "visible" });
     }
 
     async validateFeatureIsDefaultSort() {
@@ -544,7 +547,16 @@ exports.MasonPLPPage = class MasonPLPPage {
 
     async clickAddToCartInChooseOptionDrawer() {
         try {
-        
+        //     // Wait for the button to appear (if necessary)
+        //    // await this.page.waitForSelector('(//section[contains(@class, "sticky")]//button)[2]');
+        //    await this.page.waitForSelector('button[type="submit"]:has-text("Add to Bag"), button[type="submit"]:has-text("Personalize")');
+
+
+        //     // Get the second "Add to Cart" button's inner text
+        //     const buttonText = await this.page.evaluate(() => {
+        //         const button = document.evaluate('(//section[contains(@class, "custom-scrollbar")]//button)[2]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+        //         return button.textContent.trim();
+        //     });
 
         await this.page.waitForSelector('button[type="submit"]');
 
@@ -569,6 +581,8 @@ exports.MasonPLPPage = class MasonPLPPage {
             console.log('Button not found or no text content.');
         }
 
+        
+
 
             // Check if the inner text is "Add to Cart"
             if (buttonText === "Add to Bag") {
@@ -588,17 +602,20 @@ exports.MasonPLPPage = class MasonPLPPage {
     }
 
 
+
     async validateChooseOptionDrawer() {
-        //await (this.page.getByText('Choose Options')).waitFor({ State: "visible" });
-        //await (this.page.getByRole('button', { name: 'Add to Cart' })).waitFor({state:"visible"});
+        // //await (this.page.getByText('Choose Options')).waitFor({ State: "visible" });
+        // //await (this.page.getByRole('button', { name: 'Add to Cart' })).waitFor({state:"visible"});
         // const button = await this.page.locator('section.sticky').getByText('Choose Options').locator('button');
         // await button.waitFor({ state: 'visible' });
+        
         const drawer = await this.page.locator('[role="dialog"][data-state="open"]');
-    await drawer.waitFor({ state: 'visible' });
-
-    // Find the "Choose Options" button within the drawer
-    const chooseOptionsButton = await drawer.locator('button', { hasText: 'Choose Options' });
-    await chooseOptionsButton.waitFor({ state: 'visible' });
+        await drawer.waitFor({ state: 'visible' });
+    
+        // Find the "Choose Options" button within the drawer
+        const chooseOptionsButton = await drawer.locator('button', { hasText: 'Choose Options' });
+        await chooseOptionsButton.waitFor({ state: 'visible' });
+        
 
 
         try {
@@ -836,7 +853,107 @@ exports.MasonPLPPage = class MasonPLPPage {
             await expect(this.qtyPlusButton).toBeVisible();
         }
         await expect(this.qtyInputTextBox).toBeVisible();
+}
 
+async clickOnMultiplePDPSizeVariantButton() {
+    await this.page.waitForTimeout(5000);
+    await this.page.locator('section.flex.flex-wrap.items-center.gap-2\\.5.pt-4').first().waitFor({ state: 'visible' });
+    // Locate all sections that contain the size variants
+    const sections = await this.page.locator('section.flex.flex-wrap.items-center.gap-2\\.5.pt-4');
+
+    // Get the total number of sections
+    const sectionCount = await sections.count();
+
+    for (let i = 0; i < sectionCount; i++) {
+        // Wait for the current section to be visible
+        await sections.nth(i).waitFor({ state: 'visible' });
+
+        // Find all enabled size variant buttons within the current section
+        const enabledButtons = await sections.nth(i).locator('button:not([disabled])');
+
+        // Check the count of enabled buttons
+        const enabledButtonCount = await enabledButtons.count();
+
+        if (enabledButtonCount > 0) {
+            let addToCartButtonEnabled = false;
+
+            while (!addToCartButtonEnabled) {
+                // Select a random enabled button
+                const randomIndex = Math.floor(Math.random() * enabledButtonCount);
+
+                // Click the randomly selected enabled button
+                await enabledButtons.nth(randomIndex).click();
+                console.log(`Clicked enabled button with index: ${randomIndex} in section: ${i}`);
+
+                // Check if the Add to Cart button is enabled
+                addToCartButtonEnabled = await this.addtoCartButton.isEnabled();
+
+                if (addToCartButtonEnabled) {
+                    console.log('Add to Cart button is enabled.');
+                    return; // Exit the function once the Add to Cart button is enabled
+                }
+            }
+        } else {
+            console.log(`No enabled buttons found in section: ${i}`);
+        }
     }
+
+    console.log('No enabled buttons found in any section');
+}
+
+
+async clickOnPDPSizeVariantButton() {
+    // Wait for the size variant section to be visible
+    await this.page.locator('section.flex.flex-wrap.items-center.gap-2\\.5.pt-4').first().waitFor({ state: 'visible' });
+
+    // Find all enabled size variant buttons
+    const enabledButtons = await this.page.locator('section.flex.flex-wrap.items-center.gap-2\\.5.pt-4 button:not([disabled])');
+
+    // Check the count of enabled buttons
+    const enabledButtonCount = await enabledButtons.count();
+
+    if (enabledButtonCount > 0) {
+        let addToCartButtonEnabled = false;
+
+        while (!addToCartButtonEnabled) {
+            // Select a random enabled button
+            const randomIndex = Math.floor(Math.random() * enabledButtonCount);
+
+            // Click the randomly selected enabled button
+            await enabledButtons.nth(randomIndex).click();
+            console.log(`Clicked enabled button with index: ${randomIndex}`);
+
+            // Check if the Add to Cart button is enabled
+            addToCartButtonEnabled = await this.addtoCartButton.isEnabled();
+
+            if (addToCartButtonEnabled) {
+                console.log('Add to Cart button is enabled.');
+                return; // Exit the function once the Add to Cart button is enabled
+            }
+        }
+    } else {
+        console.log('No enabled buttons found');
+    }
+}
+
+async validateSelectSizeValue() {
+    await this.clickOnPDPSizeVariantButton();
+    const selectedSizeValue = await this.page.locator('p:has-text("Size") + strong.font-bold').textContent();
+    expect(selectedSizeValue).toBeTruthy();
+
+}
+
+async validateProductAvailabilityMessage() {
+    await this.clickOnMultiplePDPSizeVariantButton();
+    await this.availabilityText.waitFor({ state: 'visible' });
+    await expect(this.availabilityText).toBeVisible();
+    // Locate the p element with the text "Availability:"
+    const pElement = await this.page.locator('p:has-text("Availability:")');
+    // Locate the strong element that follows the p element
+    const strongElement = pElement.locator('xpath=following-sibling::strong');
+    // Get the text content of the strong element
+    const strongText = await strongElement.textContent();
+    expect(strongText).toBeTruthy();
+}
 
 }

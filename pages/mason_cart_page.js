@@ -3,7 +3,7 @@ import test, { expect } from 'playwright/test';
 const cartProductNameLinkLocator = 'p.text-base.font-bold.leading-\\[20\\.8px\\].text-black';
 const cartItemTotalPriceLocator = 'p:has-text("Total Price:") strong';
 const cartAvailabilityLocator = 'p:has-text("Availability")';
-const cartArrivesByLocator = 'p:has-text("Arrives by") strong';
+const cartArrivesByLocator = 'p:has-text("Arrives by") + strong';
 const cartDeleviringTo = 'section.-ml-1.mt-1.flex p';
 const cartEditButton = 'button:has-text("Edit")';
 const cartRemoveButton = 'button:has-text("Remove")';

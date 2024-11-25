@@ -1,6 +1,7 @@
 import test, { expect } from 'playwright/test';
 import { allowedNodeEnvironmentFlags } from 'process';
 import { PDPPage } from '../pages/mason_pdp_page';
+import { MasonPLPPage } from '../pages/mason_plp_page';
 
 const productStockLeft = 'strong.text-stoneberry-onlyLeft';
 const pdp_colorvariant_button_locator = 'section.flex.flex-wrap.items-center.gap-5 button[aria-label="choose color button"]';
@@ -102,6 +103,7 @@ exports.CartDrawerPage = class CartDrawerPage {
         // await this.plpQuickViewButton.click();
         const buttonCountPLP = await this.plpProducts.count();
         const pdpPage = new PDPPage(this.page);
+        const plpPage = new MasonPLPPage(this.page);
         if (buttonCountPLP > 0) {
             // Select a random button index on the PLP page
             const randomIndexPLP = Math.floor(Math.random() * buttonCountPLP);
@@ -118,16 +120,17 @@ exports.CartDrawerPage = class CartDrawerPage {
             // Check if the "Add to Cart" button in the cart drawer is enabled
             if (await addToCartButtonInDrawer.isEnabled()) {
                 // Click the "Add to Cart" button in the cart drawer
+                const plpPage = new MasonPLPPage(this.page);
                 const pdpPage = new PDPPage(this.page);
                 await pdpPage.clickOnPDPColorVariantButton();
-                await pdpPage.clickOnMultiplePDPSizeVariantButton();
+                await plpPage.clickOnMultiplePDPSizeVariantButton();
                 await addToCartButtonInDrawer.click();
                 await pdpPage.miniCartDrawer();
                 console.log('Item added to cart successfully');
             } else {
                 console.log('Add to Cart button in the cart drawer is disabled');
                 await pdpPage.clickOnPDPColorVariantButton();
-                await pdpPage.clickOnMultiplePDPSizeVariantButton();
+                await plpPage.clickOnMultiplePDPSizeVariantButton();
                 await addToCartButtonInDrawer.click();
                 await pdpPage.miniCartDrawer();
             }

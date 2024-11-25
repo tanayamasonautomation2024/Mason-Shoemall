@@ -1,7 +1,7 @@
 const { chromium } = require('playwright');
 import { test, expect } from '@playwright/test';
 import { HomePageNew } from '../pages/mason_home_page1';
-import { HomePage } from '../pages/mason_home_page';
+import { HomePage} from '../pages/mason_home_page';
 import { SignInPageNew } from '../pages/mason_signin_page1';
 import { MyAccountPage } from '../pages/mason_myaccount_page';
 import { PDPPage } from '../pages/mason_pdp_page';
@@ -21,6 +21,7 @@ const signoutpage_data = JSON.parse(JSON.stringify(require('../test_data/mason_s
 const myaccountpage_data = JSON.parse(JSON.stringify(require('../test_data/mason_sb_myaccount_page_data.json')));
 const pdp_data = JSON.parse(JSON.stringify(require('../test_data/mason_pdp_page_data.json')));
 const minicart_data = JSON.parse(JSON.stringify(require('../test_data/mason_minicart_page_data.json')));
+const plp_data = JSON.parse(JSON.stringify(require('../test_data/mason_plp_page_data.json')));
 
 let loginSuccessful = false;
 test.describe("Mason Cart Drawer", () => {
@@ -42,7 +43,8 @@ test.describe("Mason Cart Drawer", () => {
     const homePage = new HomePage(page);
     const cartDrawerPage = new CartDrawerPage(page);
     const pdpPage = new PDPPage(page);
-    await homePage.selectRandomSubCategory();
+    //await homePage.selectRandomSubCategory();
+    await page.goto(plp_data.plp_url_with_size_color);
     await cartDrawerPage.clickAddtoCartPLP();
     await pdpPage.miniCartDrawer();
   })

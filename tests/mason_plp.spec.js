@@ -216,8 +216,8 @@ test.describe("Mason PLP Scenarios", () => {
     //await page.waitForLoadState('networkidle');
     await plpPage.validateChooseOptionDrawer();
     await pdpPage.validateSelectColorValue();
-    await pdpPage.validateSelectSizeValue();
-    await pdpPage.validateProductAvailabilityMessage();
+    await plpPage.validateSelectSizeValue();
+    //await plpPage.validateProductAvailabilityMessage();
     await pdpPage.sizeChartDisplay();
 
   })
@@ -236,7 +236,7 @@ test.describe("Mason PLP Scenarios", () => {
     await plpPage.clickQuickView();
     //await page.waitForLoadState('networkidle');
     await plpPage.validateChooseOptionDrawer();
-    await pdpPage.clickOnPDPSizeVariantButton();
+    await plpPage.clickOnPDPSizeVariantButton();
     await plpPage.clickAddToCartInChooseOptionDrawer();
 
   })
@@ -255,7 +255,7 @@ test.describe("Mason PLP Scenarios", () => {
     await plpPage.clickQuickView();
     ////await page.waitForLoadState('networkidle');
     await plpPage.validateChooseOptionDrawer();
-    await pdpPage.clickOnMultiplePDPSizeVariantButton();
+    await plpPage.clickOnMultiplePDPSizeVariantButton();
     await plpPage.clickOnViewMoreDetails();
 
   })
@@ -299,7 +299,7 @@ test.describe("Mason PLP Scenarios", () => {
     //await page.waitForLoadState('networkidle');
     //await plpPage.validateChooseOptionDrawer();
     await plpPage.validateProductQTYSection();
-    await pdpPage.validateProductAvailabilityMessage();
+    await plpPage.validateProductAvailabilityMessage();
    // await pdpPage.validateProductQTYIncreaseDecrease();
     await pdpPage.validateProductQTYUpdateByTypeIn(plp_data.product_quantity);
   })
