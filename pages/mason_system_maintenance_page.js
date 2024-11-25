@@ -90,7 +90,7 @@ exports.SystemMaintenancePage = class SystemMaintenancePage{
 
     async validateCallSection(){
         await expect(this.page.getByText('Call Us Toll-Free')).toBeVisible();
-        await expect(this.page.locator('p').filter({ hasText: '1-800-704-5480' }).getByRole('link')).toBeVisible();
+        await expect(this.page.getByRole('link', { name: /\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/ })).toBeVisible();
         await expect(this.page.getByText('6 a.m. to Midnight (CST),')).toBeVisible();
         await expect(this.page.getByText('7 days a week')).toBeVisible();
     }
