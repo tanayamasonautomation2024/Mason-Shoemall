@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a class="hover:underline" title="Gloria Vanderbilt" href="/brands/gloria-vanderbilt"> Gloria Vanderbilt</a>
-Selected Brand: Gloria Vanderbilt

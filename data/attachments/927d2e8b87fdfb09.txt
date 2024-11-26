@@ -1,6 +1,0 @@
-Address verification modal did not appear or is not open.
-Address added successfully!
-First Name: Mathias Jakubowski
-Last Name: Mathias Jakubowski
-Address: 2 JJ Rd 
-City: Charlotte,  AR 72522-9645

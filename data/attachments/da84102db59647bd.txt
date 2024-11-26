@@ -1,6 +1,0 @@
-Clicked button with index: 0
-Clicked enabled button with index: 1 in section: 0
-Add to Cart button is enabled.
-Validation failed: Shipping is not green with check.
-Validation failed: Payment is not not green with check.
-Validation failed: Review is not highlighted
