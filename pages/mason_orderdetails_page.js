@@ -269,12 +269,12 @@ exports.OrderDetailsPage = class OrderDetailsPage {
 
     async clickCloseCancelOrderButton() {
         await this.orderDetailsCancelOrderModalCloseIcon.click();
-        await expect(this.page.getByText(order_SummaryText)).toBeVisible();
+        await (this.page.getByText(order_SummaryText)).waitFor({state:"visible"});
     }
 
     async clickCloseCancelItemModalButton() {
         await this.orderDetailsCancelItemModalCloseIcon.click();
-        await expect(this.page.getByText(order_SummaryText)).toBeVisible();
+        await (this.page.getByText(order_SummaryText)).waitFor({state:"visible"});
     }
 
     async clickCancelOrderCancelItemButton() {
@@ -283,13 +283,13 @@ exports.OrderDetailsPage = class OrderDetailsPage {
 
     async clickNoGoBackOrderButton() {
         await this.orderDetailsCancelOrderModalNoGoBackButton.click();
-        await expect(this.page.getByText(order_SummaryText)).toBeVisible();
+        await (this.page.getByText(order_SummaryText)).waitFor({state:"visible"});
     }
 
     async validateCancelOrderModal() {
         await this.page.getByRole('heading', { name: cancelOrderModal_HeadingText }).waitFor({ state: 'visible' });
         await expect(this.page.getByRole('heading', { name: cancelOrderModal_HeadingText })).toBeVisible();
-        await expect(this.page.getByText(cancelOrderModal_Text)).toBeVisible();
+        await (this.page.getByText(cancelOrderModal_Text)).waitFor({ state: 'visible' });
         await expect(this.orderDetailsCancelOrderModalCancelButton).toBeVisible();
         await expect(this.orderDetailsCancelOrderModalNoGoBackButton).toBeVisible();
         await expect(this.orderDetailsCancelOrderModalCloseIcon).toBeVisible();
@@ -328,7 +328,7 @@ exports.OrderDetailsPage = class OrderDetailsPage {
             }
 
             // Assert the visibility of the cancel button
-            await expect(cancelItemButton).toBeVisible();
+            await (cancelItemButton).waitFor({ state: 'visible' });
         }
     }
 
@@ -361,7 +361,7 @@ exports.OrderDetailsPage = class OrderDetailsPage {
             }
 
             // Assert the visibility of the canceled item
-            await expect(this.orderDetailsCanceledItemHeading).toBeVisible();
+            await (this.orderDetailsCanceledItemHeading).waitFor({ state: 'visible' });
         }
 
     }
@@ -480,7 +480,7 @@ exports.OrderDetailsPage = class OrderDetailsPage {
 
 
     async validateOrderDetailsShippingDetails() {
-        await expect(this.page.getByText(orderDetailsShippingSectionText, { exact: true })).toBeVisible();
+        await (this.page.getByText(orderDetailsShippingSectionText, { exact: true })).waitFor({ state: 'visible' });
         await expect(this.page.getByText(orderDetailsShippingSectionAddressText, { exact: true })).toBeVisible();
         await expect(this.page.getByText(orderDetailsShippingSectionShippingMethodText, { exact: true })).toBeVisible();
         const shippingAddressSection = this.page.locator(orderDetailsShippingAddress);
