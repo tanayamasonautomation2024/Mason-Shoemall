@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a title="OTBT" href="/brands/otbt" class="hover:underline"> OTBT</a>
-Selected Brand: OTBT

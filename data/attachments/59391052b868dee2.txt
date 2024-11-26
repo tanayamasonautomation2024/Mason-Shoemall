@@ -1,0 +1,4 @@
+134 items
+Selected filter: Fit + Flare  (5)
+Validating filter: "Fit + Flare" with item count: 5
+5 items

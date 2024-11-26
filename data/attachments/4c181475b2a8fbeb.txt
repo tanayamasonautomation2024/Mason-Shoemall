@@ -1,0 +1,11 @@
+Address verification modal did not appear or is not open.
+Address added successfully!
+First Name: Antonette Romaguera
+Last Name: Antonette Romaguera
+Address: 103 Nnptc Cir 
+City: Goose Creek,  SC 29445-6324
+Default Address First Name:Isai Schmitt
+First Non Default Address First Name:Hudson Rice
+Is displayed: false
+Address verification modal did not appear or is not open.
+Is displayed: false

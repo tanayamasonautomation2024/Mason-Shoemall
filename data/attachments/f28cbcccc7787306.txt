@@ -1,5 +1,0 @@
-133 items
-Selected filter: Sleeveless  (39)
-Validating filter: "Sleeveless" with item count: 39
-39 items
-[ 'Sleeveless  (39)' ]
