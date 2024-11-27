@@ -1,0 +1,3 @@
+134 items
+Selected filter: PUMA (1)
+Filter "PUMA" applied successfully with item count: 1.

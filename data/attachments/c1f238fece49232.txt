@@ -1,0 +1,11 @@
+Address Element Value: 138C Gg25 Rd
+City Element Value: Fall River
+State Element Value: KS
+ZipCode Element Value: 67047-4721
+PhoneNumber Element Value: (169) 294-8550
+Address verification modal did not appear or is not open.
+Address updated successfully!
+First Name: Javonte Wyman
+Last Name: Javonte Wyman
+Address: 103 Nnptc Cir 
+City: Goose Creek,  SC 29445-6324

@@ -1,0 +1,36 @@
+Error clicking on Credit/Debit Card button: page.waitForSelector: Test timeout of 270000ms exceeded.
+Call log:
+  - waiting for locator('button[value="CARD"]') to be visible
+
+    at GuestCheckOutPage.clickCreditCard (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_guestCheckout_page.js:706:38)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_loggedInUser_Checkout.spec.js:532:7 {
+  [Symbol(step)]: {
+    stepId: 'pw:api@41',
+    location: {
+      file: '/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_guestCheckout_page.js',
+      line: 706,
+      column: 38,
+      function: 'GuestCheckOutPage.clickCreditCard'
+    },
+    category: 'pw:api',
+    title: 'page.waitForSelector(button[value="CARD"])',
+    apiName: 'page.waitForSelector',
+    params: { selector: 'button[value="CARD"]' },
+    boxedStack: undefined,
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1732716225989,
+    error: {
+      message: 'Error: page.waitForSelector: Test timeout of 270000ms exceeded.\n' +
+        'Call log:\n' +
+        `\x1B[2m  - waiting for locator('button[value="CARD"]') to be visible\x1B[22m\n`,
+      stack: 'Error: page.waitForSelector: Test timeout of 270000ms exceeded.\n' +
+        'Call log:\n' +
+        `\x1B[2m  - waiting for locator('button[value="CARD"]') to be visible\x1B[22m\n` +
+        '\n' +
+        '    at GuestCheckOutPage.clickCreditCard (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_guestCheckout_page.js:706:38)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_loggedInUser_Checkout.spec.js:532:7',
+      cause: undefined
+    }
+  }
+}

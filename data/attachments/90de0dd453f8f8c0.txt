@@ -1,0 +1,51 @@
+Error during test execution: ExpectError: expect(received).toMatch(expected)
+
+Expected pattern: /Promo code\s*SALE50\s*has been applied to your order/i
+Received string:  "Promo code    has been applied to your order"
+    at GuestCheckOutPage.validateValidPromoCode (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_guestCheckout_page.js:1167:22)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:78:11
+    at expectWithTimeoutHandling (/home/runner/work/Mason-Shoemall/Mason-Shoemall/utils/errorHandling.js:7:5)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:76:9 {
+  matcherResult: {
+    message: '\x1B[2mexpect(\x1B[22m\x1B[31mreceived\x1B[39m\x1B[2m).\x1B[22mtoMatch\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m)\x1B[22m\n' +
+      '\n' +
+      'Expected pattern: \x1B[32m/Promo code\\s*SALE50\\s*has been applied to your order/i\x1B[39m\n' +
+      'Received string:  \x1B[31m"Promo code    has been applied to your order"\x1B[39m',
+    pass: false
+  },
+  [Symbol(step)]: {
+    stepId: 'expect@65',
+    category: 'expect',
+    title: 'expect.toMatch',
+    params: {
+      expected: /Promo code\s*SALE50\s*has been applied to your order/i
+    },
+    infectParentStepsWithError: undefined,
+    boxedStack: undefined,
+    location: {
+      file: '/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_guestCheckout_page.js',
+      line: 1167,
+      column: 22,
+      function: 'GuestCheckOutPage.validateValidPromoCode'
+    },
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1732713469906,
+    error: {
+      message: 'Error: \x1B[2mexpect(\x1B[22m\x1B[31mreceived\x1B[39m\x1B[2m).\x1B[22mtoMatch\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m)\x1B[22m\n' +
+        '\n' +
+        'Expected pattern: \x1B[32m/Promo code\\s*SALE50\\s*has been applied to your order/i\x1B[39m\n' +
+        'Received string:  \x1B[31m"Promo code    has been applied to your order"\x1B[39m',
+      stack: 'Error: \x1B[2mexpect(\x1B[22m\x1B[31mreceived\x1B[39m\x1B[2m).\x1B[22mtoMatch\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m)\x1B[22m\n' +
+        '\n' +
+        'Expected pattern: \x1B[32m/Promo code\\s*SALE50\\s*has been applied to your order/i\x1B[39m\n' +
+        'Received string:  \x1B[31m"Promo code    has been applied to your order"\x1B[39m\n' +
+        '    at GuestCheckOutPage.validateValidPromoCode (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_guestCheckout_page.js:1167:22)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:78:11\n' +
+        '    at expectWithTimeoutHandling (/home/runner/work/Mason-Shoemall/Mason-Shoemall/utils/errorHandling.js:7:5)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:76:9',
+      cause: undefined,
+      matcherResult: [Object]
+    }
+  }
+}

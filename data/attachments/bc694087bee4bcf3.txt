@@ -1,0 +1,3 @@
+Clicked enabled button with index: 3 in section: 0
+Add to Cart button is enabled.
+Remove button is not visible, proceeding to the next action...
