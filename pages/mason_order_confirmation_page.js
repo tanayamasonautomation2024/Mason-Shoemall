@@ -13,7 +13,7 @@ const orderConfirmationAccountNumber = 'section.mb-9.mt-8.lg\\:mb-6.lg\\:mt-0:ha
 const orderConfirmationShippingSectionText = 'Shipping';
 const orderConfirmationShippingSectionAddressText = 'Shipping Address';
 const orderConfirmationShippingSectionShippingMethodText = 'Shipping Method';
-const orderConfirmationPaymentMethodSection = 'section.flex.w-1\\/2.flex-col.gap-8';
+const orderConfirmationPaymentMethodSection = 'section.flex.flex-col.gap-8.md\\:w-1\\/2:has-text("Payment Method")';
 const orderConfirmationProductSection = 'section.w-full.px-4.md\\:max-w-\\[460px\\]';
 const orderConfirmationThankYouText = 'Thank you for your order,';
 const orderConfirmationThankYouDownPaymentText = 'Thank you for your down payment,';
@@ -246,6 +246,10 @@ exports.OrderConfirmationPage = class OrderConfirmationPage {
     }
 
     async validateOrderConfirmationBillingAddress() {
+
+        await this.page.evaluate(() => {
+            window.scrollTo(0, document.body.scrollHeight / 2);
+        });
         // Locate the billing address section
         const billingAddressSection = this.page.locator(orderConfirmationBillingAddress);
 
@@ -268,6 +272,10 @@ exports.OrderConfirmationPage = class OrderConfirmationPage {
     }
 
     async validateOrderConfirmationPayment() {
+
+        await this.page.evaluate(() => {
+            window.scrollTo(0, document.body.scrollHeight / 2);
+        });
         // Locate the Payment section
         const paymentSection = this.page.locator(orderConfirmationPaymentMethodSection);
 
