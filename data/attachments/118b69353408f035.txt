@@ -1,0 +1,78 @@
+Validated <p> tag content: PUMA Men's Essential Logo Fleece Jogger
+Validated <p> tag content: Item #: 721538MEHS
+Validated <p> tag content: Medium Grey Heather
+Validated <p> tag content: S-Regular
+Validated <p> tag content: 1 x $22.47 $44.95
+Validated <p> tag content: Total Price: $22.47
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/bltc6d533d87f3dcb03/66c57ff68d657be1373d1593/1282590-1-A0.jpg?width=150&quality=75
+Validated product image alt text: PUMA Men's Essential Logo Fleece Jogger
+Validated product detail: Medium Grey Heather
+Validated product detail: S-Regular
+Validated product detail: 1 x $22.47 $44.95
+Validated product detail: Total Price: $22.47
+Validated <p> tag content: PUMA Men's Essential Logo Fleece Jogger
+Validated <p> tag content: Item #: 721538MEHL
+Validated <p> tag content: Medium Grey Heather
+Validated <p> tag content: L-Regular
+Validated <p> tag content: 1 x $22.47 $44.95
+Validated <p> tag content: Total Price: $22.47
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/bltc6d533d87f3dcb03/66c57ff68d657be1373d1593/1282590-1-A0.jpg?width=150&quality=75
+Validated product image alt text: PUMA Men's Essential Logo Fleece Jogger
+Validated product detail: Medium Grey Heather
+Validated product detail: L-Regular
+Validated product detail: 1 x $22.47 $44.95
+Validated product detail: Total Price: $22.47
+Validated <p> tag content: PUMA Men's Essential Logo Fleece Jogger
+Validated <p> tag content: Item #: 721538MEH2XL
+Validated <p> tag content: Medium Grey Heather
+Validated <p> tag content: XXL-Regular
+Validated <p> tag content: 1 x $22.47 $44.95
+Validated <p> tag content: Total Price: $22.47
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/bltc6d533d87f3dcb03/66c57ff68d657be1373d1593/1282590-1-A0.jpg?width=150&quality=75
+Validated product image alt text: PUMA Men's Essential Logo Fleece Jogger
+Validated product detail: Medium Grey Heather
+Validated product detail: XXL-Regular
+Validated product detail: 1 x $22.47 $44.95
+Validated product detail: Total Price: $22.47
+Validated <p> tag content: PUMA Men's Essential Logo Fleece Jogger
+Validated <p> tag content: Item #: 721538MEH4XL
+Validated <p> tag content: Medium Grey Heather
+Validated <p> tag content: XXXXL-Regular
+Validated <p> tag content: 1 x $22.47 $44.95
+Validated <p> tag content: Total Price: $22.47
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/bltc6d533d87f3dcb03/66c57ff68d657be1373d1593/1282590-1-A0.jpg?width=150&quality=75
+Validated product image alt text: PUMA Men's Essential Logo Fleece Jogger
+Validated product detail: Medium Grey Heather
+Validated product detail: XXXXL-Regular
+Validated product detail: 1 x $22.47 $44.95
+Validated product detail: Total Price: $22.47
+Validated <p> tag content: K Jordan Asymmetric Satin Bow Blouse
+Validated <p> tag content: Item #: 721304GARS
+Validated <p> tag content: Garnet
+Validated <p> tag content: S
+Validated <p> tag content: 1 x $2.98 $34.95
+Validated <p> tag content: Total Price: $2.98
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blt5be9932006385ee0/67418bce4b74cdf3f2a0afd2/1294176-1-A0.jpg?width=150&quality=75
+Validated product image alt text: K Jordan Asymmetric Satin Bow Blouse
+Validated product detail: Garnet
+Validated product detail: S
+Validated product detail: 1 x $2.98 $34.95
+Validated product detail: Total Price: $2.98
+Validated <p> tag content: K Jordan Asymmetric Satin Bow Blouse
+Validated <p> tag content: Item #: 721304GARM
+Validated <p> tag content: Garnet
+Validated <p> tag content: M
+Validated <p> tag content: 1 x $2.98 $34.95
+Validated <p> tag content: Total Price: $2.98
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blt5be9932006385ee0/67418bce4b74cdf3f2a0afd2/1294176-1-A0.jpg?width=150&quality=75
+Validated product image alt text: K Jordan Asymmetric Satin Bow Blouse
+Validated product detail: Garnet
+Validated product detail: M
+Validated product detail: 1 x $2.98 $34.95
+Validated product detail: Total Price: $2.98

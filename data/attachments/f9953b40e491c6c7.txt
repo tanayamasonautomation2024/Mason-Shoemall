@@ -1,0 +1,11 @@
+Address verification modal did not appear or is not open.
+Address added successfully!
+First Name: Maribel Schroeder
+Last Name: Maribel Schroeder
+Address: 7 Yo Yo Rd 
+City: Cana,  VA 24317-3987
+Default Address First Name:Russel Pfannerstill
+First Non Default Address First Name:Osborne Vandervort
+Is displayed: false
+Address verification modal did not appear or is not open.
+Is displayed: false

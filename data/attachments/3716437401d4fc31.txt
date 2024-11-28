@@ -1,0 +1,13 @@
+Wish List | ShoeMall
+246
+Total product items: 246
+Path fill attribute for product 0: currentColor
+Path fill attribute for product 1: currentColor
+Path fill attribute for product 2: currentColor
+Path fill attribute for product 3: currentColor
+Path fill attribute for product 4: currentColor
+Path fill attribute for product 5: currentColor
+Path fill attribute for product 6: currentColor
+Path fill attribute for product 7: currentColor
+Path fill attribute for product 8: currentColor
+Path fill attribute for product 9: currentColor
