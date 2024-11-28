@@ -1161,6 +1161,7 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
     await this.page.locator('#promo-code').fill(enterPromoCode);
     const promoCode = await this.cartApplyPromoCodeTextBox.inputValue();
     await this.page.getByRole('button', { name: 'Apply Code' }).click();
+    await this.page.waitForTimeout(5000);
     await this.page.locator('p.text-forestGreen span').waitFor({ state: 'visible' });
     const spanText = await this.page.locator('p.text-forestGreen span').textContent();
     //expect(spanText).toContain(`Promo code ${promoCode} has been applied to your order`);
