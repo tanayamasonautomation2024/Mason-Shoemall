@@ -1,0 +1,5 @@
+134 items
+Selected filter: Womens Plus (78)
+Validating filter: "Womens Plus" with item count: 78
+78 items
+[ 'Womens Plus (78)' ]

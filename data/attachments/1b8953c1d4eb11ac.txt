@@ -1,4 +1,0 @@
-*First Name
-Enter a First Name.
-*Last Name
-Enter a Last Name.

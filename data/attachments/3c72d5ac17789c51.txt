@@ -1,2 +1,0 @@
-Product clicked successfully
-Number of similar items: 0

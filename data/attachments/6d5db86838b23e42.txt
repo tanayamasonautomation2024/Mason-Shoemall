@@ -1,5 +1,0 @@
-134 items
-Selected filter: Short Sleeve (28)
-Validating filter: "Short Sleeve" with item count: 28
-28 items
-[ 'Short Sleeve (28)' ]

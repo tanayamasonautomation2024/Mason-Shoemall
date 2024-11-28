@@ -1,4 +1,0 @@
-An error occurred during order placement: page.waitForURL: Test timeout of 210000ms exceeded.
-=========================== logs ===========================
-waiting for navigation to "**/thank-you" until "load"
-============================================================
