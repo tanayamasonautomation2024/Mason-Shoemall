@@ -1,0 +1,5 @@
+134 items
+Selected filter: 3/4 Sleeve (5)
+Validating filter: "3/4 Sleeve" with item count: 5
+5 items
+[ '3/4 Sleeve (5)' ]

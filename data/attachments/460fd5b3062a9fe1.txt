@@ -1,0 +1,46 @@
+Cart count element is not visible: locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('section.mt.absolute') to be visible
+
+    at PDPPage.getCartItemCount (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_pdp_page.js:916:36)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_sb_cart_guest.spec.js:44:41 {
+  name: 'TimeoutError',
+  [Symbol(step)]: {
+    stepId: 'pw:api@10',
+    location: {
+      file: '/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_pdp_page.js',
+      line: 916,
+      column: 36,
+      function: 'PDPPage.getCartItemCount'
+    },
+    category: 'pw:api',
+    title: 'locator.waitFor(section.mt.absolute)',
+    apiName: 'locator.waitFor',
+    params: {
+      selector: 'section.mt.absolute',
+      strict: true,
+      omitReturnValue: true,
+      state: 'visible',
+      timeout: 5000
+    },
+    boxedStack: undefined,
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1732853642357,
+    error: {
+      message: 'TimeoutError: locator.waitFor: Timeout 5000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('section.mt.absolute') to be visible\x1B[22m\n",
+      stack: 'TimeoutError: locator.waitFor: Timeout 5000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('section.mt.absolute') to be visible\x1B[22m\n" +
+        '\n' +
+        '    at PDPPage.getCartItemCount (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_pdp_page.js:916:36)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_sb_cart_guest.spec.js:44:41',
+      cause: undefined
+    }
+  }
+}
+Clicked enabled button with index: 1 in section: 0
+Add to Cart button is enabled.
+Content of the <strong> tag: $71.97

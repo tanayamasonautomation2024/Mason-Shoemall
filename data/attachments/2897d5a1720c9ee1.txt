@@ -1,5 +1,0 @@
-Error selecting checkbox: elementHandle.isEnabled: Element is not attached to the DOM
-Call log:
-  - waiting for locator(':scope')
-    - locator resolved to <input tabindex="0" type="checkbox" id="Brand-KanCan" aria-checked="false" aria-labelledby="Brand-KanCan" class="custom-checkbox focus:shadow:none mt-[1px] h-6 w-6 shadow-none hover:cursor-pointer focus:outline-none focus:ring-0 lg:h-4 lg:w-4"/>
-

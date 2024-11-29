@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a title="KEEN" href="/brands/keen" class="hover:underline"> KEEN</a>
-Selected Brand: KEEN
