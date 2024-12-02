@@ -211,7 +211,7 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
     await this.page.$(`//p[contains(text(), "${shipping_method}")]`);
     await this.page.getByText(secure_checkout_link, { exact: true }).waitFor({ state: "visible" });
     await (this.page.getByText(return_to_cart_link)).waitFor({ state: "visible" });
-    await expect(this.page.getByText(shipping_address, { exact: true })).toBeVisible();
+    await (this.page.getByText(shipping_address, { exact: true })).waitFor({ state: "visible" });
     for (const text of items_in_cart_texts) {
       try {
         await expect(this.page.getByText(text)).toBeVisible({ timeout });
@@ -220,8 +220,8 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
         // Continue checking the next text
       }
     }
-    await expect(this.page.getByText(order_summary)).toBeVisible();
-    await expect(this.page.getByText(order_total)).toBeVisible();
+    await (this.page.getByText(order_summary)).waitFor({ state: "visible" });
+    await (this.page.getByText(order_total)).waitFor({ state: "visible" });
     //await expect(this.page.getByRole('button', { name: continue_to_payment })).toBeVisible();
 
 
