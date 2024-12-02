@@ -1,8 +1,0 @@
-Address verification modal did not appear or is not open.
-Address added successfully!
-First Name: Cydney O'Hara
-Last Name: Cydney O'Hara
-Address: 100 Irish Ivy Ct 
-City: Boyd,  TX 76023-4067
-Default Address First Name:Emelia Mueller
-First Non Default Address First Name:Randall Bruen

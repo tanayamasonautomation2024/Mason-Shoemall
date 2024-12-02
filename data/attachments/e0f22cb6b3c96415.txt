@@ -1,0 +1,11 @@
+Address Element Value: 103 Nnptc Cir
+City Element Value: Goose Creek
+State Element Value: SC
+ZipCode Element Value: 29445-6324
+PhoneNumber Element Value: (738) 239-4244
+Address verification modal did not appear or is not open.
+Address updated successfully!
+First Name: Alexandro Langworth
+Last Name: Alexandro Langworth
+Address: 138C Gg25 Rd 
+City: Fall River,  KS 67047-4721
