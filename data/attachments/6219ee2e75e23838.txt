@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a title="Vince Camuto" class="hover:underline" href="/brands/vince-camuto"> Vince Camuto</a>
-Selected Brand: Vince Camuto

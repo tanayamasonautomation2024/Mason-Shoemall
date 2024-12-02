@@ -1,0 +1,5 @@
+121 items
+Selected filter: Midi Length (3)
+Validating filter: "Midi Length" with item count: 3
+3 items
+[ 'Midi Length (3)' ]
