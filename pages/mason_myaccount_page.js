@@ -185,7 +185,9 @@ exports.MyAccountPage = class MyAccountPage {
         await this.myaccount_makepayment_link.click();
     }
     async clickMyAccountOrderLink() {
+        await (this.myaccount_orders_link).waitFor({state:'visible'});
         await this.myaccount_orders_link.click();
+        await this.page.waitForTimeout(5000);
     }
     async clickMyAccountAddressLink() {
         await this.myaccount_addresses_link.click();

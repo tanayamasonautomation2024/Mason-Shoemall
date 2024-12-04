@@ -39,7 +39,7 @@
     "incorrect_password_message":"The password entered does not match the current account password.",
     "required_orderNumber_message":"Order Number is required",
     "required_zip_message":"Enter a zip code.",
-    "order_not_found_message":"We’re sorry, but we couldn’t find that order. Please verify your order number and billing zip code below, Contact Us for assistance.",
+    "order_not_found_message":"We’re sorry, but we couldn’t find that order. Please verify your order number and billing zip code below, or Contact Us for assistance.",
     "makepayment_securitycode_text1":"Security Code",
     "makepayment_securitycode_text2":"The Credit Card Security Code is an anti-fraud security feature to help verify that you are in possession of your credit card.",
     "makepayment_securitycode_text3":"For Visa, MasterCard or Discover, the three-digit Security Code is printed on the signature panel on the back of the card after the card's account number.",
