@@ -1,0 +1,41 @@
+An error occurred during order placement: page.waitForURL: Test timeout of 210000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "**/thank-you" until "load"
+============================================================
+Error during test execution: page.screenshot: Target page, context or browser has been closed
+    at GuestCheckOutPage.clickOnPlaceOrderButton (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_guestCheckout_page.js:1076:23)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:106:11
+    at expectWithTimeoutHandling (/home/runner/work/Mason-Shoemall/Mason-Shoemall/utils/errorHandling.js:7:5)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:105:9 {
+  [Symbol(step)]: {
+    stepId: 'pw:api@100',
+    location: {
+      file: '/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_guestCheckout_page.js',
+      line: 1076,
+      column: 23,
+      function: 'GuestCheckOutPage.clickOnPlaceOrderButton'
+    },
+    category: 'pw:api',
+    title: 'page.screenshot',
+    apiName: 'page.screenshot',
+    params: {
+      path: 'screenshots/order-error-1733285630988.png',
+      fullPage: true,
+      mask: undefined,
+      type: 'png'
+    },
+    boxedStack: undefined,
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1733285630992,
+    error: {
+      message: 'Error: page.screenshot: Target page, context or browser has been closed',
+      stack: 'Error: page.screenshot: Target page, context or browser has been closed\n' +
+        '    at GuestCheckOutPage.clickOnPlaceOrderButton (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_guestCheckout_page.js:1076:23)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:106:11\n' +
+        '    at expectWithTimeoutHandling (/home/runner/work/Mason-Shoemall/Mason-Shoemall/utils/errorHandling.js:7:5)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_CheckoutScenarios.auth.spec.js:105:9',
+      cause: undefined
+    }
+  }
+}

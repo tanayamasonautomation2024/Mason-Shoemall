@@ -1,5 +1,0 @@
-121 items
-Add to Bag or Personalize button found.
-Clicked button with index: 0
-Clicked enabled button with index: 9
-Add to Cart button is enabled.

@@ -1,0 +1,5 @@
+Selected Brand: No aria-label
+URL: /brands/ugg
+Image Alt: UGG
+Image URL: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blte272ea7435c7b334/66d87cec2504001adcf526e8/SM082824_Home_TopBrands_4X_1.jpg
+Navigation successful: https://www-stg2.shoemall.com/brands/ugg

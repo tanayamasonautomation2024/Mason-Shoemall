@@ -1,0 +1,5 @@
+120 items
+Selected filter: Under $10 (3)
+Validating filter: "Under $10" with item count: 3
+3 items
+[ 'Under $10 (3)' ]
