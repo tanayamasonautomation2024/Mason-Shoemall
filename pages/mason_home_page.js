@@ -409,7 +409,7 @@ exports.HomePage = class HomePage {
         // const menuLink = mainMenuLocator.locator('a.cursor-pointer');
         // await menuLink.first().hover();
 
-        const mainMenuItemList = ['Women', 'Men', 'Kids', 'Boot Shop'];
+        const mainMenuItemList = ['Women Link', 'Men Link', 'Kids Link', 'Boot Shop Link'];
             const l1Category = mainMenuItemList[Math.floor(Math.random() * mainMenuItemList.length)];
             // Locate the main menu item by matching the L1 category text
             const mainMenuItems = await this.page.locator('#mainMenu ul[role="menu"] > li');

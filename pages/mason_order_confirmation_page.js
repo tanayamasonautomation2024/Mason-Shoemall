@@ -239,7 +239,7 @@ exports.OrderConfirmationPage = class OrderConfirmationPage {
         const shippingMethodValue = await shippingAddressSection.locator('p').nth(3).textContent();
         expect(shippingMethodValue.trim()).toBeTruthy();
 
-        const shippingAddressPhoneNumber = await shippingAddressSection.locator('div.pt-2\\.5').textContent();
+        const shippingAddressPhoneNumber = await shippingAddressSection.locator('p.gbmask.pt-2\\.5').textContent();
         expect(shippingAddressPhoneNumber.trim()).toBeTruthy();
 
 
@@ -266,7 +266,7 @@ exports.OrderConfirmationPage = class OrderConfirmationPage {
         const emailText = await billingAddressSection.locator('p').nth(3).textContent();
         expect(emailText.trim()).toBeTruthy();
 
-        const billingAddressPhoneNumber = await billingAddressSection.locator('div.pt-2\\.5').textContent();
+        const billingAddressPhoneNumber = await billingAddressSection.locator('p.gbmask.pt-2\\.5').nth(1).textContent();
         expect(billingAddressPhoneNumber.trim()).toBeTruthy();
 
     }
