@@ -1,5 +1,0 @@
-No "Pending Shipment" status found in products for order: Orders
-No "Pending Shipment" status found in products for order: Addresses
-No "Pending Shipment" status found in products for order: My Profile
-No "Pending Shipment" status found in products for order: Saved Credit Cards
-No "Pending Shipment" status found in products for order: Wish List

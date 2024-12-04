@@ -1,0 +1,2 @@
+Payment method SVG is visible.
+Card number text is visible.

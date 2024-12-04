@@ -1,6 +1,0 @@
-120 items
-Selected filter: Jessica Simpson (1)
-Selected filter: K Jordan (32)
-Filter "Jessica Simpson" applied successfully with item count: 1.
-Validating filter: "K Jordan" with item count: 32
-33 items
