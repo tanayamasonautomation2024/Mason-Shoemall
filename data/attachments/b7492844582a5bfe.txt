@@ -1,0 +1,39 @@
+Validated <p> tag content: Deer Stags Archer Jr (Boys' Toddler-Youth)
+Validated <p> tag content: Item #: 836913BRN135M
+Validated <p> tag content: Brown
+Validated <p> tag content: 13.5 Toddler M   Medium
+Validated <p> tag content: 1 x $54.95
+Validated <p> tag content: Total Price: $54.95
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blt50ce570c693d342a/674176a467f1a757bc376093/1278960-2-A0.jpg?width=150&quality=75&dpr=2.5
+Validated product image alt text: Deer Stags Archer Jr (Boys' Toddler-Youth)
+Validated product detail: Brown
+Validated product detail: 13.5 Toddler M   Medium
+Validated product detail: 1 x $54.95
+Validated product detail: Total Price: $54.95
+Validated <p> tag content: PUMA Men's Basketball Short
+Validated <p> tag content: Item #: 723178RCUM
+Validated <p> tag content: Racing Blue
+Validated <p> tag content: M
+Validated <p> tag content: 1 x $29.95
+Validated <p> tag content: Total Price: $29.95
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/bltda52e58d154d02d4/6741ab4f41e6e16f156bcc3a/1304777-6-A0.jpg?width=150&quality=75&dpr=2.5
+Validated product image alt text: PUMA Men's Basketball Short
+Validated product detail: Racing Blue
+Validated product detail: M
+Validated product detail: 1 x $29.95
+Validated product detail: Total Price: $29.95
+Validated <p> tag content: Silver Jeans Suki Bermuda
+Validated <p> tag content: Item #: 728744DKW290
+Validated <p> tag content: Dark Wash
+Validated <p> tag content: 29
+Validated <p> tag content: 1 x $84.00
+Validated <p> tag content: Total Price: $84.00
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blt61b2edcde7051473/6742d2a935d2274bb3f2fd29/1375567-1-A0.jpg?width=150&quality=75&dpr=2.5
+Validated product image alt text: Silver Jeans Suki Bermuda
+Validated product detail: Dark Wash
+Validated product detail: 29
+Validated product detail: 1 x $84.00
+Validated product detail: Total Price: $84.00

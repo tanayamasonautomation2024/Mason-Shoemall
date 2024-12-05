@@ -1,8 +1,0 @@
-Found 2 list items.
-Number of div elements containing 'Best-Seller': 0
-Regular Price - '$74.99'
-Regular Price - '$74.99'
-Regular Price - '$64.99'
-Regular Price - '$149.99'
-Regular Price - '$61.99'
-"View More" link is not present.

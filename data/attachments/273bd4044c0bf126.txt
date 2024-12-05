@@ -1,0 +1,4 @@
+120 items
+Selected filter: Womens Plus (68)
+Validating filter: "Womens Plus" with item count: 68
+68 items

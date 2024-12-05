@@ -1,5 +1,0 @@
-120 items
-Selected filter: Under $100 (18)
-Validating filter: "Under $100" with item count: 18
-20 items
-[ 'Under $100 (18)' ]
