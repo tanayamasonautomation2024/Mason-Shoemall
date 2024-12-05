@@ -1,0 +1,78 @@
+Validated <p> tag content: Executive Imperials Weather Guard Spray (Unisex)
+Validated <p> tag content: Item #: 673763NON
+Validated <p> tag content: N/A
+Validated <p> tag content: One Size
+Validated <p> tag content: 1 x $6.95
+Validated <p> tag content: Total Price: $6.95
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blta42ce83aecfe598c/6741c06068e5406db08f5300/1309527-1-A0.jpg?width=150&quality=75&dpr=1.5
+Validated product image alt text: Executive Imperials Weather Guard Spray (Unisex)
+Validated product detail: N/A
+Validated product detail: One Size
+Validated product detail: 1 x $6.95
+Validated product detail: Total Price: $6.95
+Validated <p> tag content: Scala Collezione Women's Cotton Brim Hat
+Validated <p> tag content: Item #: 527015WHT
+Validated <p> tag content: White
+Validated <p> tag content: One Size
+Validated <p> tag content: 1 x $39.95
+Validated <p> tag content: Total Price: $39.95
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/bltba27771a24be851e/66c531eaad6bbf3f9d6f6f4b/1057544-3-A0.jpg?width=150&quality=75&dpr=1.5
+Validated product image alt text: Scala Collezione Women's Cotton Brim Hat
+Validated product detail: White
+Validated product detail: One Size
+Validated product detail: 1 x $39.95
+Validated product detail: Total Price: $39.95
+Validated <p> tag content: Shoekeeper Refill Shoe Stretcher Spray
+Validated <p> tag content: Item #: 010064
+Validated <p> tag content: N/A
+Validated <p> tag content: One Size
+Validated <p> tag content: 1 x $7.95
+Validated <p> tag content: Total Price: $7.95
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blt3febe012f7a5d497/6740df593bb5652495fd44a4/1008735-1-A0.jpg?width=150&quality=75&dpr=1.5
+Validated product image alt text: Shoekeeper Refill Shoe Stretcher Spray
+Validated product detail: N/A
+Validated product detail: One Size
+Validated product detail: 1 x $7.95
+Validated product detail: Total Price: $7.95
+Validated <p> tag content: Snow-Proof Mink Oil Paste
+Validated <p> tag content: Item #: 010026
+Validated <p> tag content: N/A
+Validated <p> tag content: One Size
+Validated <p> tag content: 1 x $5.95
+Validated <p> tag content: Total Price: $5.95
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/bltbb7b6907e50ba05e/6740df593bad91db3c4eed9b/1008727-1-A0.jpg?width=150&quality=75&dpr=1.5
+Validated product image alt text: Snow-Proof Mink Oil Paste
+Validated product detail: N/A
+Validated product detail: One Size
+Validated product detail: 1 x $5.95
+Validated product detail: Total Price: $5.95
+Validated <p> tag content: Snow-Proof Boot And Shoe Oil
+Validated <p> tag content: Item #: 010025
+Validated <p> tag content: N/A
+Validated <p> tag content: One Size
+Validated <p> tag content: 1 x $6.95
+Validated <p> tag content: Total Price: $6.95
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blt1a1153e0574e930d/6740e66cfb023213fefcb6d7/1008744-1-A0.jpg?width=150&quality=75&dpr=1.5
+Validated product image alt text: Snow-Proof Boot And Shoe Oil
+Validated product detail: N/A
+Validated product detail: One Size
+Validated product detail: 1 x $6.95
+Validated product detail: Total Price: $6.95
+Validated <p> tag content: Sneaker Wipes
+Validated <p> tag content: Item #: 010071
+Validated <p> tag content: N/A
+Validated <p> tag content: One Size
+Validated <p> tag content: 1 x $5.99
+Validated <p> tag content: Total Price: $5.99
+Validated <p> tag content: Changed your mind?
+Validated product image is visible: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blt47988059e1a29068/6740e66cc19a074cd0e2c91b/1008739-1-A0.jpg?width=150&quality=75&dpr=1.5
+Validated product image alt text: Sneaker Wipes
+Validated product detail: N/A
+Validated product detail: One Size
+Validated product detail: 1 x $5.99
+Validated product detail: Total Price: $5.99

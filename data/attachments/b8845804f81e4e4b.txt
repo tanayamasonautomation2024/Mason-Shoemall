@@ -1,0 +1,11 @@
+Address verification modal did not appear or is not open.
+Address added successfully!
+First Name: Alena Bosco
+Last Name: Alena Bosco
+Address: 11 Falmouth Pl 
+City: Albertson,  NY 11507-2003
+Default Address First Name:Nils Wolff
+First Non Default Address First Name:Waino Beer
+Is displayed: false
+Address verification modal did not appear or is not open.
+Is displayed: false

@@ -1,5 +1,0 @@
-120 items
-Selected filter: Columbia (3)
-Validating filter: "Columbia" with item count: 3
-3 items
-[ 'Columbia (3)' ]
