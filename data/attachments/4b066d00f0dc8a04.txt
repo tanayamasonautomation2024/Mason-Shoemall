@@ -1,2 +1,0 @@
-No enabled buttons found
-Clicked button with index: 0

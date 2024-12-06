@@ -1,5 +1,0 @@
-124 items
-Selected filter: Midi Length (2)
-Validating filter: "Midi Length" with item count: 2
-2 items
-[ 'Midi Length (2)' ]

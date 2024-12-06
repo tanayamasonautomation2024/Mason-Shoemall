@@ -1,7 +1,0 @@
-124 items
-Selected filter: Under $50 (26)
-Selected filter: Misses (28)
-Validating filter: "Under $50" with item count: 26
-28 items
-Validating filter: "Misses" with item count: 28
-28 items
