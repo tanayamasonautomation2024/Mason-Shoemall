@@ -1,0 +1,4 @@
+getByText('Your Password must contain at least')
+The section for password_criteria1 - ^1 number$ contains the class 'text-forestGreen'.
+The section for password_criteria2 - ^8 characters$ contains the class 'text-forestGreen'.
+The section for password_criteria3 - ^1 letter$ contains the class 'text-forestGreen'.

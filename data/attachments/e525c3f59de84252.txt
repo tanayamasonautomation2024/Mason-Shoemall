@@ -1,0 +1,2 @@
+Initial Selected Product Color: Black
+New Selected Product Color: Navy

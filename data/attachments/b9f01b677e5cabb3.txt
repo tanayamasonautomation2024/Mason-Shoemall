@@ -1,0 +1,8 @@
+Item 1: Image and name "All Women’s" are valid.
+Item 2: Image and name "Women’s Boots" are valid.
+Item 3: Image and name "Women’s Athletic Shoes" are valid.
+Item 4: Image and name "Women’s Slip-Ons" are valid.
+Item 5: Image and name "All Men’s" are valid.
+Item 6: Image and name "Men’s Boots" are valid.
+Item 7: Image and name "Men’s Athletic Shoes" are valid.
+Item 8: Image and name "Men’s Slip-Ons" are valid.

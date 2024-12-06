@@ -1,0 +1,11 @@
+Address Element Value: 11 Falmouth Pl
+City Element Value: Albertson
+State Element Value: NY
+ZipCode Element Value: 11507-2003
+PhoneNumber Element Value: (507) 645-4926
+Address verification modal did not appear or is not open.
+Address updated successfully!
+First Name: Rhoda Shields
+Last Name: Rhoda Connelly
+Address: 103 Nnptc Cir 
+City: Goose Creek,  SC 29445-6324
