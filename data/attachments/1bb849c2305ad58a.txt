@@ -1,4 +1,0 @@
-123 items
-Selected filter: Dress (6)
-Validating filter: "Dress" with item count: 6
-6 items

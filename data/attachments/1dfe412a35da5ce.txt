@@ -1,6 +1,0 @@
-Address verification modal did not appear or is not open.
-Address added successfully!
-First Name: Cecilia Dickinson
-Last Name: Cecilia Dickinson
-Address: 7 Yo Yo Rd 
-City: Cana,  VA 24317-3987

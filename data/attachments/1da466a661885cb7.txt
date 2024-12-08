@@ -1,5 +1,0 @@
-123 items
-Selected filter: Under $50 (25)
-Validating filter: "Under $50" with item count: 25
-28 items
-[ 'Under $50 (25)' ]
