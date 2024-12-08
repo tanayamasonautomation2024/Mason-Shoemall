@@ -1,5 +1,0 @@
-139 items
-Selected filter: Masseys (60)
-Validating filter: "Masseys" with item count: 60
-60 items
-[ 'Masseys (60)' ]

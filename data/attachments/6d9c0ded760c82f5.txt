@@ -1,0 +1,4 @@
+141 items
+Selected filter: Masseys (61)
+Validating filter: "Masseys" with item count: 61
+61 items

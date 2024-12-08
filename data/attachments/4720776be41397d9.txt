@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a title="Pink Floyd" class="hover:underline" href="/brands/pink-floyd"> Pink Floyd</a>
-Selected Brand: Pink Floyd

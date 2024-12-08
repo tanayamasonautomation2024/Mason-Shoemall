@@ -1,0 +1,6 @@
+Address verification modal did not appear or is not open.
+Address added successfully!
+First Name: Eldridge Hirthe
+Last Name: Eldridge Hirthe
+Address: 138C Gg25 Rd 
+City: Fall River,  KS 67047-4721
