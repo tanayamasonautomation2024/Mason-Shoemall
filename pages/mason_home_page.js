@@ -240,7 +240,7 @@ exports.HomePage = class HomePage {
     }
 
     async navigateToCategoryL1() {
-        //const mainMenuItemList = ['Women', 'Men', 'Kids', 'Boot Shop'];
+        //const mainMenuItemList = ['Women', 'Men', 'Boot Shop'];
         const mainMenuItemList = ['Women'];
         const l1Category = mainMenuItemList[Math.floor(Math.random() * mainMenuItemList.length)];
         // Locate the main menu item by matching the L1 category text
@@ -265,7 +265,7 @@ exports.HomePage = class HomePage {
 
     async hoverOnL1(){
        
-            const mainMenuItemList = ['Women', 'Men', 'Kids', 'Boot Shop'];
+            const mainMenuItemList = ['Boot Shop'];
             const l1Category = mainMenuItemList[Math.floor(Math.random() * mainMenuItemList.length)];
             // Locate the main menu item by matching the L1 category text
             const mainMenuItems = await this.page.locator('#mainMenu ul[role="menu"] > li');
@@ -309,7 +309,7 @@ exports.HomePage = class HomePage {
 
     async ensureNoOverlayWhenClickedOutside() {
         // Array of main menu items
-        const mainMenuItems = ['Women', 'Men', 'Kids'];
+        const mainMenuItems = ['Boot Shop'];
 
         // Select a random main menu item
         const randomMainMenuItem = mainMenuItems[Math.floor(Math.random() * mainMenuItems.length)];

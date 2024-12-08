@@ -61,7 +61,7 @@ exports.NewUserMyAccountPage = class NewUserMyAccountPage{
         this.newuser_myaccount_wishlistpage_breadcrumb=page.getByText(newuser_myaccount_wishlistpage_breadcrumb);
         this.newuser_myaccount_wishlistpage_headertext=page.locator(`h1:has-text("${newuser_myaccount_wishlistpage_headertext}")`);
         this.newuser_myaccount_wishlistpage_norecentcctext=page.getByText(newuser_myaccount_wishlistpage_norecentcctext);
-        this.newuser_myaccount_wishlistpage_wishlistimgicon=page.locator('section').filter({ hasText: /^Wish List$/ }).getByRole('img');
+        this.newuser_myaccount_wishlistpage_wishlistimgicon=page.locator('section').filter({ hasText: /^Wish List$/ }).locator('svg');
     }
 
     async validateNewUserStoneBerryCreditSection(firstLinkName,secondLinkName){
