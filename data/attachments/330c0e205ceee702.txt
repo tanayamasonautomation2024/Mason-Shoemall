@@ -1,0 +1,24 @@
+Link text is correct: All Women’s
+Is image visible: true
+Alt text is correct: Image: All Women’s
+Link text is correct: Women’s Athletic Shoes
+Is image visible: true
+Alt text is correct: Image: Women’s Athletic Shoes
+Link text is correct: Women’s Boots
+Is image visible: true
+Alt text is correct: Image: Women’s Boots
+Link text is correct: Women’s Slip-Ons
+Is image visible: true
+Alt text is correct: Image: Women’s Slip-Ons
+Link text is correct: All Men’s
+Is image visible: true
+Alt text is correct: Image: All Men’s
+Link text is correct: Men’s Athletic Shoes
+Is image visible: true
+Alt text is correct: Image: Men’s Athletic Shoes
+Link text is correct: Men’s Boots
+Is image visible: true
+Alt text is correct: Image: Men’s Boots
+Link text is correct: Men’s Slip-Ons
+Is image visible: true
+Alt text is correct: Image: Men’s Slip-Ons
