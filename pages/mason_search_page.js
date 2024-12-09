@@ -56,7 +56,7 @@ exports.SearchPage = class SearchPage {
         // Locate and validate the breadcrumb item containing the search value ("Results for" + search_value)
         const breadcrumbText = `Results for"${search_value}"`;
         const breadcrumbLocator = this.page.locator(`ol.mb-2 li:has-text("Results for\\"${search_value}\\"")`);
-        await expect(breadcrumbLocator).toBeVisible();
+        await (breadcrumbLocator).waitFor({state:'visible'});
         await expect(this.page.locator('span').filter({ hasText: `"${search_value}"` })).toBeVisible();
 
     }
@@ -104,7 +104,7 @@ exports.SearchPage = class SearchPage {
 
     async validateNeedHelpsection() {
         // await this.page.waitForTimeout(2000);
-        await expect(this.need_help).toBeVisible({ timeout: 10000 });
+        await (this.need_help).waitFor({state:'visible'});
         await expect(this.view_faq).toBeVisible();
         await expect(this.chat_with_us).toBeVisible();
         await expect(this.email).toBeVisible();
@@ -237,7 +237,7 @@ exports.SearchPage = class SearchPage {
     async validatePopularSearchItemsCount() {
         // Verify the popular search terms container is visible
         const popularSearchTermsContainer = await this.page.locator(popular_search_container);
-        await expect(popularSearchTermsContainer).toBeVisible();
+        await (popularSearchTermsContainer).waitFor({state:'visible'});
 
         // Get all popular search term elements
         const popularSearchTerms = popularSearchTermsContainer.locator(popular_search_terms);
