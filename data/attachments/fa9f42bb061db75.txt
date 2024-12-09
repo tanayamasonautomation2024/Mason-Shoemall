@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a title="TFX" href="/brands/tfx" class="hover:underline"> TFX</a>
-Selected Brand: TFX
