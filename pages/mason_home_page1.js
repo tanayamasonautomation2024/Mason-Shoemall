@@ -708,7 +708,7 @@ exports.HomePageNew = class HomePageNew {
 
     async selectRandomSubCategory() {
         // Array of main menu items
-        const mainMenuItems = ['Women', 'Men', 'Kids', 'Boot Shop'];
+        const mainMenuItems = ['Boot Shop'];
 
         // Select a random main menu item
         const randomMainMenuItem = mainMenuItems[Math.floor(Math.random() * mainMenuItems.length)];
