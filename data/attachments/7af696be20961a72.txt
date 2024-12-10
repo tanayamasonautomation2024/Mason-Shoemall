@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a title="Zigi Soho" class="hover:underline" href="/brands/zigi-soho"> Zigi Soho</a>
-Selected Brand: Zigi Soho

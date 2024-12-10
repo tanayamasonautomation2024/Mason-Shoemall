@@ -1,0 +1,7 @@
+136 items
+Selected filter: Under $10 (3)
+Selected filter: Misses (3)
+Validating filter: "Under $10" with item count: 3
+3 items
+Validating filter: "Misses" with item count: 3
+3 items

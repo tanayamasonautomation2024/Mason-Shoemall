@@ -1,4 +1,0 @@
-141 items
-Selected filter: Under $150 (19)
-Validating filter: "Under $150" with item count: 19
-19 items
