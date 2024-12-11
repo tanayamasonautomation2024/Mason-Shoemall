@@ -1,5 +1,0 @@
-136 items
-Selected filter: Cotton (44)
-Validating filter: "Cotton" with item count: 44
-44 items
-[ 'Cotton (44)' ]

@@ -1,0 +1,11 @@
+Address Element Value: 7 Yo Yo Rd
+City Element Value: Cana
+State Element Value: VA
+ZipCode Element Value: 24317-3987
+PhoneNumber Element Value: (309) 930-4609
+Address verification modal did not appear or is not open.
+Address updated successfully!
+First Name: Bertha Reynolds
+Last Name: Bertha Reynolds
+Address: 2 JJ Rd 
+City: Charlotte,  AR 72522-9645
