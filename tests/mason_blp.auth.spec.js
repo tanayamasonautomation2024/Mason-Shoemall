@@ -30,6 +30,7 @@ test.describe("Mason BLP Page", () => {
   test("Validate navigation to BLP from PDP and ensure breadcrumbs are shown in BLP", async ({ page }) => {
     const blpPage = new MasonBLPPage(page);
     await page.goto(process.env.BLP_PDP_URL);
+    await page.waitForTimeout(2000);
     await blpPage.validateNavigationFromPDP();
 
   })

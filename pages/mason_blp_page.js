@@ -116,8 +116,7 @@ exports.MasonBLPPage = class MasonBLPPage {
         console.log(`Image URL: ${src}`);
 
         // Ensure the 'Top Brands' heading is visible
-        await expect(this.page.getByRole('heading', { name: 'Top Brands' })).toBeVisible();
-
+        await (this.page.getByRole('heading', { name: 'Top Brands' })).waitFor({state:'visible'});
         // Click the link and wait for navigation to complete
         await Promise.all([
             this.page.waitForNavigation({ waitUntil: 'networkidle' }), // Wait for the navigation
@@ -157,7 +156,7 @@ exports.MasonBLPPage = class MasonBLPPage {
     async validateNavigationFromBIP(randomAlphabet) {
         try {
             // Verify the presence of the alphabet heading
-            await expect(this.page.getByRole('heading', { name: randomAlphabet, exact: true })).toBeVisible();
+            await (this.page.getByRole('heading', { name: randomAlphabet, exact: true })).waitFor({state:'visible'});
             const brandListElements = await this.page.$$('#' + randomAlphabet + ' + section ul.brandIndexList li');
             // Randomly select one <li> element
             const randomIndex = Math.floor(Math.random() * brandListElements.length);

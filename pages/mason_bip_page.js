@@ -35,7 +35,7 @@ exports.MasonBIPPage = class MasonBIPPage{
         const bannerSection = this.page.locator('.mt-6').first();
 
         // Verify the banner section is visible
-        await expect(bannerSection).toBeVisible();
+        await (bannerSection).waitFor({state:'visible'});
 
         // Check if the banner section contains an image or video
         const bannerImage = bannerSection.locator('img');
@@ -51,7 +51,7 @@ exports.MasonBIPPage = class MasonBIPPage{
         }
 
         // Verify the banner element is visible
-        await expect(bannerElement).toBeVisible();
+        await (bannerElement).waitFor({state:'visible'});
 
         // Check if the banner element is full-width
         const viewportWidth = await this.page.evaluate(() => window.innerWidth);
@@ -68,12 +68,12 @@ exports.MasonBIPPage = class MasonBIPPage{
     }
 
 async validateTopBrandsSection(){
-    await expect(this.top_brands).toBeVisible();
+    await (this.top_brands).waitFor({state:'visible'});
     // Locate the brand logos section
     const brandLogosSection = this.page.locator(brand_logo_section);
 
     // Verify the brand logos section is visible
-    await expect(brandLogosSection).toBeVisible();
+    await (brandLogosSection).waitFor({state:'visible'});
 
     // Locate the list of brand logos
     const brandLogos = brandLogosSection.locator('ul > li');
@@ -114,8 +114,8 @@ async validateTopBrandsSection(){
    
 // Function to verify alphabet links
 async validateAlphabetLinks(page) {
-    await expect(this.brand_index).toBeVisible();
-    await expect(this.alphabets_link).toBeVisible();
+    await (this.brand_index).waitFor({state:'visible'});
+    await (this.alphabets_link).waitFor({state:'visible'});
   }
 
 async validateAlphabetHeader(){
@@ -124,7 +124,7 @@ async validateAlphabetHeader(){
   for (let charCode = 65; charCode <= 90; charCode++) {
     const letter = String.fromCharCode(charCode);
     try {
-        await expect(this.page.getByRole('heading', { name: `${letter}`, exact: true })).toBeVisible();
+        await (this.page.getByRole('heading', { name: `${letter}`, exact: true })).waitFor({state:'visible'});
         presentAlphabets.push(letter); 
     } catch (error) {
         console.log(`Alphabet '${letter}' is not present.`);
