@@ -1,9 +1,9 @@
 const { chromium } = require('playwright');
 import { test, expect } from '@playwright/test';
 import { HomePageNew } from '../pages/mason_home_page1';
+import { HomePage } from '../pages/mason_home_page';
 import { SignInPageNew } from '../pages/mason_signin_page1';
 import { MyAccountPage } from '../pages/mason_myaccount_page';
-import { HomePage } from '../pages/mason_home_page';
 import { allure } from 'allure-playwright';
 import fs from 'fs';
 require('dotenv').config();

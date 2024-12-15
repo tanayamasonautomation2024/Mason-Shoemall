@@ -26,6 +26,7 @@ test.describe("Mason Checkout - Guest Users - Scenarios", () => {
       await page.goto(process.env.WEB_URL);
       await page.waitForTimeout(3000);
       await page.goto(checkout_data.add_to_cart_pdp_url);
+      await page.waitForTimeout(3000);
     } catch (error) {
       // Handle the error here
       console.error("An error occurred in test.beforeEach:", error);

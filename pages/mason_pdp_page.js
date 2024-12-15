@@ -925,27 +925,24 @@ exports.PDPPage = class PDPPage {
     }
 
     async validateSimilarItem() {
-       // await this.page.waitForSelector('section[id="similarItems"]');
-        // Locate the 'Related Items' section
-        await this.page.evaluate(() => {
-            window.scrollTo(0, document.body.scrollHeight / 2);
-        });
-        const similarItemsSection = this.page.locator('section[id="relatedItems"]');
+       
+        const similarItemsSection = this.page.locator('section[id="similarItems"]').first();
+        await this.slowlyScrollToElement(similarItemsSection);
         
         // Scroll the 'Related Items' section into view if it's not already visible
         await similarItemsSection.scrollIntoViewIfNeeded();
-       await this.page.waitForSelector('section[id="relatedItems"]');
+       await this.page.waitForSelector('section[id="similarItems"]');
         // Locate the 'Similar Items' section
         //const similarItemsSection = this.page.locator('section[id="similarItems"]');
         //const similarItemsSection = this.page.locator('section[id="relatedItems"]');
 
         // Assert that the 'Similar Items' header is present
        // const similarItemsHeader = this.page.locator('strong:text("Similar Items")');
-       const similarItemsHeader = this.page.locator('strong:text("Related Products")');
+       const similarItemsHeader = this.page.locator('strong:text("Similar Items")');
         await expect(similarItemsHeader).toBeVisible();
 
         // Locate all similar item products
-        const similarItems = similarItemsSection.locator('.swiper-slide');
+        const similarItems = similarItemsSection.locator('div.swiper');
 
         // Count the number of similar items
         const itemCount = await similarItems.count();
@@ -958,7 +955,7 @@ exports.PDPPage = class PDPPage {
             const item = similarItems.nth(i);
 
             // Extract the product title
-            const productTitle = await item.locator('h3[class*="min-h-10"]').innerText();
+            const productTitle = await item.locator('h3[class*="my-5"]').innerText();
             console.log(`Product Title: ${productTitle}`);
 
             // Validate the product title is not empty
@@ -1004,6 +1001,32 @@ exports.PDPPage = class PDPPage {
             // Validate the extracted product ID
             await expect(additionalInfo.id).not.toBeNull();
         }
+    }
+
+    async slowlyScrollToElement(locator) {
+        const scrollStep = 300; // Pixels to scroll per step
+        const timeout = 120000; // Maximum time to wait (in ms)
+        const checkInterval = 1000; // Time between each check (in ms)
+    
+        const startTime = Date.now();
+        
+        while (Date.now() - startTime < timeout) {
+            // Scroll the page by a small amount
+            await this.page.evaluate((scrollStep) => {
+                window.scrollBy(0, scrollStep);
+            }, scrollStep);
+    
+            // Wait for a short interval before checking again
+            await this.page.waitForTimeout(checkInterval);
+    
+            // Check if the element is visible
+            const isVisible = await locator.isVisible();
+            if (isVisible) {
+                console.log("Element is visible!");
+                return;
+            }
+        }
+        throw new Error("Timed out waiting for the element to become visible.");
     }
 
     async validateRecentlyViewedItem() {

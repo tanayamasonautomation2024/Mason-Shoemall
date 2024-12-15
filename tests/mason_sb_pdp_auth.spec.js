@@ -60,6 +60,7 @@ test.describe("Mason PDP", () => {
     }
     const pdpPage = new PDPPage(page);
     await page.goto(pdp_data.pdp_url_carousel);
+    await page.waitForTimeout(3000);
     await pdpPage.clickLeftRightCarouselButton();
   })
 
