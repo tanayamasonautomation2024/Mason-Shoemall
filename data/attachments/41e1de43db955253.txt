@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a title="Tommy Hilfiger" class="hover:underline" href="/brands/tommy-hilfiger"> Tommy Hilfiger</a>
-Selected Brand: Tommy Hilfiger
