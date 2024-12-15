@@ -1,5 +1,0 @@
-137 items
-Selected filter: Nylon (8)
-Validating filter: "Nylon" with item count: 8
-8 items
-[ 'Nylon (8)' ]

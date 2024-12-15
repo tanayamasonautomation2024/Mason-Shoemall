@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a title="Maidenform®" class="hover:underline" href="/brands/maidenform"> Maidenform®</a>
-Selected Brand: Maidenform®

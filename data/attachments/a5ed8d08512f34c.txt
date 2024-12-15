@@ -1,2 +1,0 @@
-Found 2 list items.
-Number of div elements containing 'Best-Seller': 0
