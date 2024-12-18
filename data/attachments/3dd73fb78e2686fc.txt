@@ -1,0 +1,33 @@
+Error navigating to a brands under alphabet 'S': locator.waitFor: Target page, context or browser has been closed
+    at MasonBLPPage.validateNavigationFromBIP (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_blp_page.js:159:91)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_blp.auth.spec.js:46:19 {
+  [Symbol(step)]: {
+    stepId: 'pw:api@48',
+    location: {
+      file: '/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_blp_page.js',
+      line: 159,
+      column: 91,
+      function: 'MasonBLPPage.validateNavigationFromBIP'
+    },
+    category: 'pw:api',
+    title: "locator.getByRole('heading', { name: 'S', exact: true }).waitFor",
+    apiName: 'locator.waitFor',
+    params: {
+      selector: 'internal:role=heading[name="S"s]',
+      strict: true,
+      omitReturnValue: true,
+      state: 'visible'
+    },
+    boxedStack: undefined,
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1734513060611,
+    error: {
+      message: 'Error: locator.waitFor: Target page, context or browser has been closed',
+      stack: 'Error: locator.waitFor: Target page, context or browser has been closed\n' +
+        '    at MasonBLPPage.validateNavigationFromBIP (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_blp_page.js:159:91)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_blp.auth.spec.js:46:19',
+      cause: undefined
+    }
+  }
+}

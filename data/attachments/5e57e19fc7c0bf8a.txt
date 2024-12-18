@@ -1,5 +1,0 @@
-Selected Brand: No aria-label
-URL: /brands/brooks
-Image Alt: Brooks
-Image URL: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blt4b7519aa5ae4ec72/6756648cece1d73e021364ca/SM010724_4XBrand_Lifestyle_4.jpg
-Navigation successful: https://www-stg2.shoemall.com/brands/brooks
