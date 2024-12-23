@@ -37,7 +37,7 @@ exports.MyAccountAddressPage = class MyAccountAddressPage{
     }
 
     async noAddressMessageForNewUser(){
-        await expect(this.noAddressMessage).toBeVisible();
+        await (this.noAddressMessage).waitFor({state:'visible'});
     }
     
 
