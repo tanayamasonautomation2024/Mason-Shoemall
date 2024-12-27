@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a title="Keds" href="/brands/keds" class="hover:underline"> Keds</a>
-Selected Brand: Keds
