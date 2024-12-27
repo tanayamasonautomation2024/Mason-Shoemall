@@ -29,7 +29,7 @@ exports.MyAccountSavedCCPage = class MyAccountSavedCCPage{
     }
 
     async noCardMessageForNewUser(){
-        await expect(this.noCardMessage).toBeVisible();
+        await (this.noCardMessage).waitFor({state:'visible'});
     }
     
 
