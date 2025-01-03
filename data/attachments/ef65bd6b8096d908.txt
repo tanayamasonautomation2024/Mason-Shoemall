@@ -19,7 +19,7 @@ Call log:
     boxedStack: undefined,
     steps: [],
     complete: [Function: complete],
-    endWallTime: 1735829649227,
+    endWallTime: 1735897191041,
     error: {
       message: 'Error: locator.click: Test timeout of 90000ms exceeded.\n' +
         'Call log:\n' +
