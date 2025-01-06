@@ -12,7 +12,8 @@ exports.CreateAccountPage = class CreateAccountPage{
         this.create_account_password_show_link=page.getByRole('link', { name: createAccount_locator.create_account_password_show_link });
         this.create_account_password_hide_link=page.getByRole('link', { name: createAccount_locator.create_account_password_hide_link });
         this.create_account_email_textbox=page.getByLabel(createAccount_locator.create_account_email_textbox);
-        this.create_account_password_textbox=page.getByLabel(createAccount_locator.create_account_password_textbox);
+        //this.create_account_password_textbox=page.getByLabel(createAccount_locator.create_account_password_textbox);
+        this.create_account_password_textbox=page.locator(createAccount_locator.create_account_password_textbox);
         this.create_account_password_info=page.getByLabel(createAccount_locator.create_account_password_info);
         this.create_an_account_button=page.getByRole('button',{name: createAccount_locator.create_an_account_button});
 
@@ -87,9 +88,17 @@ exports.CreateAccountPage = class CreateAccountPage{
     }
 
     async enterPasswordOnCreateAccountPage(password){
-        this.create_account_password_textbox.click();
-        this.create_account_password_textbox.fill(password);
-    }
+        // this.create_account_password_textbox.click({ timeout: 10000 });
+         //this.create_account_password_textbox.fill(password);
+         await this.page.waitForSelector('input#password', { state: 'visible' });
+ 
+ // Fill the password input field
+         await this.page.fill('input#password', password);
+ }
+ 
+     async readPasswordFromTextboxAndValidate(password){
+         await expect(this.create_account_password_textbox).toHaveValue(password);
+     }
 
     async readPasswordFromTextboxAndValidate(password){
         await expect(this.create_account_password_textbox).toHaveValue(password);

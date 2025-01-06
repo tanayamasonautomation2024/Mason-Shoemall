@@ -4,7 +4,7 @@
   "create_account_firstname_textbox":"*First Name",
   "create_accountLastname_id":"label[for='lastName']",
   "create_account_email_textbox":"*Email Address",
-  "create_account_password_textbox":"*Password",
+  "create_account_password_textbox":"label[for='password']",
   "create_account_password_info":"tooltip",
   "create_an_account_button":"Create Account",
   "create_account_password_show_link":"Show",
