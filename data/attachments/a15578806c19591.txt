@@ -1,0 +1,36 @@
+An error occurred in test.beforeEach: locator.click: Test timeout of 90000ms exceeded.
+Call log:
+  - waiting for locator('//img[@alt=\'My Account\']')
+
+    at HomePage.clickOnHomePageSignIn (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_home_page.js:68:36)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_createAccount.auth.spec.js:32:24 {
+  [Symbol(step)]: {
+    stepId: 'pw:api@11',
+    location: {
+      file: '/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_home_page.js',
+      line: 68,
+      column: 36,
+      function: 'HomePage.clickOnHomePageSignIn'
+    },
+    category: 'pw:api',
+    title: "locator.click(//img[@alt='My Account'])",
+    apiName: 'locator.click',
+    params: { selector: "//img[@alt='My Account']", strict: true },
+    boxedStack: undefined,
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1736228186187,
+    error: {
+      message: 'Error: locator.click: Test timeout of 90000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('//img[@alt=\\'My Account\\']')\x1B[22m\n",
+      stack: 'Error: locator.click: Test timeout of 90000ms exceeded.\n' +
+        'Call log:\n' +
+        "\x1B[2m  - waiting for locator('//img[@alt=\\'My Account\\']')\x1B[22m\n" +
+        '\n' +
+        '    at HomePage.clickOnHomePageSignIn (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_home_page.js:68:36)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_createAccount.auth.spec.js:32:24',
+      cause: undefined
+    }
+  }
+}

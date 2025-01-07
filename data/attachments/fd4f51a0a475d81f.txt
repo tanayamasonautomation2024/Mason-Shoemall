@@ -1,0 +1,28 @@
+Error validating brands under alphabet 'undefined': expect.toBeVisible: Target page, context or browser has been closed
+    at MasonBIPPage.validateBrandsUnderRandomAlphabet (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_bip_page.js:162:93)
+    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_bip.auth.spec.js:59:19 {
+  [Symbol(step)]: {
+    stepId: 'expect@48',
+    category: 'expect',
+    title: 'expect.toBeVisible',
+    params: undefined,
+    infectParentStepsWithError: undefined,
+    boxedStack: undefined,
+    location: {
+      file: '/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_bip_page.js',
+      line: 162,
+      column: 93,
+      function: 'MasonBIPPage.validateBrandsUnderRandomAlphabet'
+    },
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1736226160887,
+    error: {
+      message: 'Error: expect.toBeVisible: Target page, context or browser has been closed',
+      stack: 'Error: expect.toBeVisible: Target page, context or browser has been closed\n' +
+        '    at MasonBIPPage.validateBrandsUnderRandomAlphabet (/home/runner/work/Mason-Shoemall/Mason-Shoemall/pages/mason_bip_page.js:162:93)\n' +
+        '    at /home/runner/work/Mason-Shoemall/Mason-Shoemall/tests/mason_bip.auth.spec.js:59:19',
+      cause: undefined
+    }
+  }
+}
