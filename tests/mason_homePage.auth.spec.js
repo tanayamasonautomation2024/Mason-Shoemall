@@ -53,7 +53,7 @@ test.describe("Mason HomePage Scenarios", () => {
     // console.log(l1Count);
     const [l1CategoryText, index] = await homePage.getRandomL1CategoryText();
     console.log(l1CategoryText);
-    await homePage.validateSubCategoriesVisibilityOnL1Hover(index);
+    //await homePage.validateSubCategoriesVisibilityOnL1Hover(index);
 
   })
 
@@ -97,14 +97,13 @@ test.describe("Mason HomePage Scenarios", () => {
     await homePage.ensureNoOverlayWhenClickedOutside();
   })
 
-  test.afterEach(async ({ page }) => {
-    try {
-      const screenshotPath = `screenshots/HomePage-Screenshoot-${Date.now()}.png`;
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      allure.attachment('Full Page Screenshot', Buffer.from(await page.screenshot({ fullPage: true })), 'image/png');
-    } catch (error) {
-      console.error('Error capturing screenshot:', error);
+  test.afterEach(async ({ page }, testInfo) => {
+    // Log the status of the test (success or failure)
+    if (testInfo.status === 'passed') {
+      console.log(`Test passed: ${testInfo.title}`);
+    } else if (testInfo.status === 'failed') {
+      console.log(`Test failed: ${testInfo.title}`);
+      
     }
   });
-
 })

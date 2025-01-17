@@ -19,7 +19,7 @@ const orderDetailsOrderSummaryShipping = 'Shipping:';
 const orderDetailsOrderSummaryEstSurcharge = 'Shipping Surcharge:';
 const orderDetailsOrderSummarySalesTax = 'Sales Tax:';
 const orderDetailsOrderSummaryOrderTotal = 'Order Total:';
-const tooltipButton = 'button[aria-label="tooltip"]';
+const tooltipButton = 'button[aria-label="Help information"]';
 const orderDetailsShippingSectionText = 'Shipping';
 const orderDetailsShippingSectionAddressText = 'Shipping Address';
 const orderDetailsShippingSectionShippingMethodText = 'Shipping Method';
@@ -974,7 +974,7 @@ exports.OrderDetailsPage = class OrderDetailsPage {
         // Step 1: Initialize variables
         let hasReturnedOrder = false;
         let pageCounter = 0;
-        const maxPages = 5; // Safety check to prevent infinite loops
+        const maxPages = 2; // Safety check to prevent infinite loops
 
         // Step 2: Define locators
         const orderSectionsLocator = this.page.locator(order_Section);

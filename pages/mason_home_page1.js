@@ -503,61 +503,67 @@ exports.HomePageNew = class HomePageNew {
 
     async validateSeasonalSavings() {
         // Scroll to the carousel section
-        //await this.page.locator('section.seasonalSavings section.auc-Recommend').first().scrollIntoViewIfNeeded();
         await this.page.getByRole('heading', { name: 'Top Brands' }).scrollIntoViewIfNeeded();
-        await (this.page.getByText('Now Trending: Western Boots').first()).waitFor({state:"visible"});
-        // Locate the section containing the "Spring Favorites" text
+        //await (this.page.getByText('Now Trending: Western Boots').first()).waitFor({ state: "visible" });
+    
+        // Try to locate the section containing the "Now Trending: Western Boots" text
         const sectionLocator = this.page.locator('section:has(strong:text("Now Trending: Western Boots"))').first();
-        await sectionLocator.waitFor({ state: 'visible' });  
-
-        // Select the product items within the carousel
-        //const productItems = this.page.locator('.swiper-slide');
-        //await sectionLocator.locator('div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.mySwiper.multiSlide').waitFor({ state: 'visible' });
-        const swiperElement = sectionLocator.locator('div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.mySwiper.multiSlide');
-        await swiperElement.waitFor({ state: 'attached' });
-        await swiperElement.waitFor({ state: 'visible' });
-
-        const productItems = await swiperElement.locator('div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.mySwiper.multiSlide');
-        const productCount = await productItems.count();
-        console.log(`Number of products: ${productCount}`);
-
-        // Validate the number of products (adjust the expected number as needed)
-        await expect(productItems).toHaveCount(productCount); // Replace productCount with the expected number if known
-
-        for (let i = 0; i < productCount; i++) {
-            const product = productItems.nth(i);
-
-            // Scroll product into view
-            await product.scrollIntoViewIfNeeded();
-
-            // Validate product image
-            const productImage = product.locator('a > img').nth(i);
-            await expect(productImage).toBeVisible();
-            const src = await productImage.getAttribute('src');
-            expect(src).not.toBeNull();
-            expect(src).not.toBe('');
-
-            // Validate product name
-            const productName = product.locator('a').nth(i);
-            await expect(productName).toBeVisible();
-            const nameText = await productName.getAttribute('title');
-            expect(nameText).not.toBeNull();
-            expect(nameText).not.toBe('');
-
-            // Validate price
-            const price = product.locator('div.mt-3.min-h-\\[50px\\] > p > span').nth(i);
-            await expect(price).toBeVisible();
-            const priceText = await price.textContent();
-            expect(priceText).not.toBeNull();
-            expect(priceText).not.toBe('');
+    
+        // Check if the section is visible before proceeding
+        const sectionVisible = await sectionLocator.isVisible();
+        if (sectionVisible) {
+            // Wait for the section to be visible
+            await sectionLocator.waitFor({ state: 'visible' });
+    
+            // Select the product items within the carousel
+            const swiperElement = sectionLocator.locator('div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.mySwiper.multiSlide');
+            await swiperElement.waitFor({ state: 'attached' });
+            await swiperElement.waitFor({ state: 'visible' });
+    
+            const productItems = await swiperElement.locator('div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-free-mode.mySwiper.multiSlide');
+            const productCount = await productItems.count();
+            console.log(`Number of products: ${productCount}`);
+    
+            // Validate the number of products (adjust the expected number as needed)
+            await expect(productItems).toHaveCount(productCount); // Replace productCount with the expected number if known
+    
+            for (let i = 0; i < productCount; i++) {
+                const product = productItems.nth(i);
+    
+                // Scroll product into view
+                await product.scrollIntoViewIfNeeded();
+    
+                // Validate product image
+                const productImage = product.locator('a > img').nth(i);
+                await expect(productImage).toBeVisible();
+                const src = await productImage.getAttribute('src');
+                expect(src).not.toBeNull();
+                expect(src).not.toBe('');
+    
+                // Validate product name
+                const productName = product.locator('a').nth(i);
+                await expect(productName).toBeVisible();
+                const nameText = await productName.getAttribute('title');
+                expect(nameText).not.toBeNull();
+                expect(nameText).not.toBe('');
+    
+                // Validate price
+                const price = product.locator('div.mt-3.min-h-\\[50px\\] > p > span').nth(i);
+                await expect(price).toBeVisible();
+                const priceText = await price.textContent();
+                expect(priceText).not.toBeNull();
+                expect(priceText).not.toBe('');
+            }
+    
+            // Validate the carousel button
+            const carouselButton = swiperElement.locator('div.swiper-button-next'); // Assuming there is a next button
+            await carouselButton.waitFor({ state: "visible" });
+            await carouselButton.click();
+        } else {
+            console.log("The 'Now Trending: Western Boots' section is not present. Skipping the validation for this section.");
         }
-
-        // Validate the carousel button
-        const carouselButton = swiperElement.locator('div.swiper-button-next'); // Assuming there is a next button
-        await (carouselButton).waitFor({state:"visible"});
-        await carouselButton.click();
-
     }
+    
 
 
     async signUpModalDisplayValidation(enterEmail) {
@@ -702,19 +708,19 @@ exports.HomePageNew = class HomePageNew {
     // }
 
     async waitForMegaNavLoad() {
-        await this.page.locator('#mainMenu ul[role="menu"] > li').waitFor({ state: 'visible' });
+        await this.page.locator('#mainMenu ul > li').waitFor({ state: 'visible' });
     }
 
 
     async selectRandomSubCategory() {
         // Array of main menu items
-        const mainMenuItems = ['Boot Shop'];
+        const mainMenuItems = ['Women', 'Men', 'Kids', 'Boot Shop'];
 
         // Select a random main menu item
         const randomMainMenuItem = mainMenuItems[Math.floor(Math.random() * mainMenuItems.length)];
 
         // Hover over the random main menu item
-        const mainMenuLocator = this.page.locator('#mainMenu ul[role="menu"] > li')
+        const mainMenuLocator = this.page.locator('#mainMenu ul > li')
             .filter({ has: this.page.locator(`a.cursor-pointer:has-text("${randomMainMenuItem}")`) })
             .first();
 

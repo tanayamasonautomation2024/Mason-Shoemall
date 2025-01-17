@@ -73,15 +73,15 @@ exports.HomePage = class HomePage {
     }
 
     async categoryL1ToBeVisibleOnDepartmentHover() {
-        await this.page.locator('#mainMenu ul[role="menu"] > li').first().waitFor({ state: 'visible' });
-        const mainMenuItems = await this.page.locator('#mainMenu ul[role="menu"] > li').first();
+        await this.page.locator('#mainMenu ul > li').first().waitFor({ state: 'visible' });
+        const mainMenuItems = await this.page.locator('#mainMenu ul > li').first();
         // Wait for the L1 categories to become visible
         await expect(mainMenuItems).toBeVisible();
     }
 
 
     async countAllL1Categories() {
-        const mainMenuItems = await this.page.locator('#mainMenu ul[role="menu"] > li');
+        const mainMenuItems = await this.page.locator('#mainMenu ul > li');
         const l1Count = await mainMenuItems.count();
         return l1Count;
     }
@@ -104,7 +104,7 @@ exports.HomePage = class HomePage {
     // }
 
     async checkIfCategoryL1isBold(categoryText) {
-        const elements = await this.page.locator('#mainMenu ul[role="menu"] > li');
+        const elements = await this.page.locator('#mainMenu ul > li');
 
         let found = false;
 
@@ -128,7 +128,7 @@ exports.HomePage = class HomePage {
     }
 
     async getRandomL1CategoryText() {
-        const elements = await this.page.locator('#mainMenu ul[role="menu"] > li');
+        const elements = await this.page.locator('#mainMenu ul > li');
 
         // Wait for the first element to be visible
         await elements.first().waitFor({ state: 'visible' });
@@ -169,7 +169,7 @@ exports.HomePage = class HomePage {
 
     async validateSubCategoriesVisibilityOnL1Hover(index) {
         // Locate the main menu items
-        const mainMenuItems = await this.page.locator('#mainMenu ul[role="menu"] > li');
+        const mainMenuItems = await this.page.locator('#mainMenu ul > li');
 
         // Ensure the index is within the range
         const mainMenuItemCount = await mainMenuItems.count();
@@ -218,7 +218,7 @@ exports.HomePage = class HomePage {
 
     async ensureGreyOverlayOnCategoryHover() {
         // Hover over a random main menu category item
-        const mainMenuItems = await this.page.locator('#mainMenu ul[role="menu"] > li');
+        const mainMenuItems = await this.page.locator('#mainMenu ul > li');
         const randomIndex = Math.floor(Math.random() * await mainMenuItems.count());
         const mainMenuItem = mainMenuItems.nth(randomIndex);
 
@@ -240,11 +240,11 @@ exports.HomePage = class HomePage {
     }
 
     async navigateToCategoryL1() {
-        //const mainMenuItemList = ['Women', 'Men', 'Boot Shop'];
+        //const mainMenuItemList = ['Women', 'Men', 'Kids', 'Boot Shop'];
         const mainMenuItemList = ['Women'];
         const l1Category = mainMenuItemList[Math.floor(Math.random() * mainMenuItemList.length)];
         // Locate the main menu item by matching the L1 category text
-        const mainMenuItems = await this.page.locator('#mainMenu ul[role="menu"] > li');
+        const mainMenuItems = await this.page.locator('#mainMenu ul > li');
         const matchingMenuItem = mainMenuItems.locator(`a:has-text("${l1Category}")`);
 
         // Wait for the L1 category link to be visible and click it
@@ -265,10 +265,10 @@ exports.HomePage = class HomePage {
 
     async hoverOnL1(){
        
-            const mainMenuItemList = ['Boot Shop'];
+            const mainMenuItemList = ['Women', 'Men', 'Kids', 'Boot Shop'];
             const l1Category = mainMenuItemList[Math.floor(Math.random() * mainMenuItemList.length)];
             // Locate the main menu item by matching the L1 category text
-            const mainMenuItems = await this.page.locator('#mainMenu ul[role="menu"] > li');
+            const mainMenuItems = await this.page.locator('#mainMenu ul > li');
             const matchingMenuItem = mainMenuItems.locator(`a:has-text("${l1Category}")`);
     
             // Wait for the L1 category link to be visible and click it
@@ -309,13 +309,13 @@ exports.HomePage = class HomePage {
 
     async ensureNoOverlayWhenClickedOutside() {
         // Array of main menu items
-        const mainMenuItems = ['Boot Shop'];
+        const mainMenuItems = ['Women', 'Men', 'Kids'];
 
         // Select a random main menu item
         const randomMainMenuItem = mainMenuItems[Math.floor(Math.random() * mainMenuItems.length)];
 
         // Hover over the random main menu item
-        const mainMenuLocator = this.page.locator('#mainMenu ul[role="menu"] > li')
+        const mainMenuLocator = this.page.locator('#mainMenu ul > li')
             .filter({ has: this.page.locator(`a.cursor-pointer:has-text("${randomMainMenuItem}")`) })
             .first();
 
@@ -412,7 +412,7 @@ exports.HomePage = class HomePage {
         const mainMenuItemList = ['Boot Shop'];
             const l1Category = mainMenuItemList[Math.floor(Math.random() * mainMenuItemList.length)];
             // Locate the main menu item by matching the L1 category text
-            const mainMenuItems = await this.page.locator('#mainMenu ul[role="menu"] > li');
+            const mainMenuItems = await this.page.locator('#mainMenu ul > li');
             const matchingMenuItem = mainMenuItems.locator('a.cursor-pointer', { hasText: l1Category, exact: true });
     
             // Wait for the L1 category link to be visible and click it

@@ -26,7 +26,6 @@ test.describe("Mason Checkout - Guest Users - Scenarios", () => {
       await page.goto(process.env.WEB_URL);
       await page.waitForTimeout(3000);
       await page.goto(checkout_data.add_to_cart_pdp_url);
-      await page.waitForTimeout(3000);
     } catch (error) {
       // Handle the error here
       console.error("An error occurred in test.beforeEach:", error);
@@ -192,14 +191,13 @@ test.describe("Mason Checkout - Guest Users - Scenarios", () => {
   //   await expect(page.getByRole('heading', { name: 'My Account' })).toBeVisible();
   // })
 
-  test.afterEach(async ({ page }) => {
-    try {
-      const screenshotPath = `screenshots/GuestCheckout-Screenshoot-${Date.now()}.png`;
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      allure.attachment('Full Page Screenshot', Buffer.from(await page.screenshot({ fullPage: true })), 'image/png');
-    } catch (error) {
-      console.error('Error capturing screenshot:', error);
+  test.afterEach(async ({ page }, testInfo) => {
+    // Log the status of the test (success or failure)
+    if (testInfo.status === 'passed') {
+      console.log(`Test passed: ${testInfo.title}`);
+    } else if (testInfo.status === 'failed') {
+      console.log(`Test failed: ${testInfo.title}`);
+      
     }
   });
-
 })

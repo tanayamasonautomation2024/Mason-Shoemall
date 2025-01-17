@@ -30,7 +30,6 @@ test.describe("Mason BLP Page", () => {
   test("Validate navigation to BLP from PDP and ensure breadcrumbs are shown in BLP", async ({ page }) => {
     const blpPage = new MasonBLPPage(page);
     await page.goto(process.env.BLP_PDP_URL);
-    await page.waitForTimeout(2000);
     await blpPage.validateNavigationFromPDP();
 
   })
@@ -47,14 +46,14 @@ test.describe("Mason BLP Page", () => {
 
   })
 
-  test.afterEach(async ({ page }) => {
-    try {
-      const screenshotPath = `screenshots/BLP-Screenshoot-${Date.now()}.png`;
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      allure.attachment('Full Page Screenshot', Buffer.from(await page.screenshot({ fullPage: true })), 'image/png');
-    } catch (error) {
-      console.error('Error capturing screenshot:', error);
+  // After each test: log success or failure and optionally capture a screenshot
+  test.afterEach(async ({ page }, testInfo) => {
+    // Log the status of the test (success or failure)
+    if (testInfo.status === 'passed') {
+      console.log(`Test passed: ${testInfo.title}`);
+    } else if (testInfo.status === 'failed') {
+      console.log(`Test failed: ${testInfo.title}`);
+      
     }
   });
-
 })

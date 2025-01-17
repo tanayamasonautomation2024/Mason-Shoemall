@@ -406,50 +406,79 @@ exports.PDPPage = class PDPPage {
     }
 
     async clickOnMultiplePDPSizeVariantButton() {
-        await this.page.waitForTimeout(5000);
-        await this.page.locator('section.flex.flex-wrap.items-center.gap-2\\.5.pt-4').first().waitFor({ state: 'visible' });
-        // Locate all sections that contain the size variants
-        const sections = await this.page.locator('section.flex.flex-wrap.items-center.gap-2\\.5.pt-4');
-
-        // Get the total number of sections
-        const sectionCount = await sections.count();
-
-        for (let i = 0; i < sectionCount; i++) {
-            // Wait for the current section to be visible
-            await sections.nth(i).waitFor({ state: 'visible' });
-
-            // Find all enabled size variant buttons within the current section
-            const enabledButtons = await sections.nth(i).locator('button:not([disabled])');
-
-            // Check the count of enabled buttons
-            const enabledButtonCount = await enabledButtons.count();
-
-            if (enabledButtonCount > 0) {
-                let addToCartButtonEnabled = false;
-
-                while (!addToCartButtonEnabled) {
-                    // Select a random enabled button
-                    const randomIndex = Math.floor(Math.random() * enabledButtonCount);
-
-                    // Click the randomly selected enabled button
-                    await enabledButtons.nth(randomIndex).click();
-                    console.log(`Clicked enabled button with index: ${randomIndex} in section: ${i}`);
-
-                    // Check if the Add to Cart button is enabled
-                    addToCartButtonEnabled = await this.addtoCartButton.isEnabled();
-
-                    if (addToCartButtonEnabled) {
-                        console.log('Add to Cart button is enabled.');
-                        return; // Exit the function once the Add to Cart button is enabled
+        try {
+            // Wait for the first section to be visible before proceeding
+            await this.page.waitForTimeout(5000);
+            await this.page.locator('section.flex.flex-wrap.items-center.gap-2\\.5.pt-4').first().waitFor({ state: 'visible' });
+    
+            // Locate all sections that contain the size variant buttons
+            const sections = await this.page.locator('section.flex.flex-wrap.items-center.gap-2\\.5.pt-4');
+            
+            // Get the total number of sections
+            const sectionCount = await sections.count();
+    
+            // Iterate through each section
+            for (let i = 0; i < sectionCount; i++) {
+                // Wait for the current section to be visible
+                await sections.nth(i).waitFor({ state: 'visible' });
+    
+                // Find all enabled size variant buttons within the current section
+                const enabledButtons = await sections.nth(i).locator('button:not([disabled])');
+                
+                // Check the count of enabled buttons
+                const enabledButtonCount = await enabledButtons.count();
+    
+                // Proceed if there are enabled buttons
+                if (enabledButtonCount > 0) {
+                    let addToCartButtonEnabled = false;
+                    let retryCount = 0;
+                    const maxRetries = 5;
+    
+                    // Track the indices of the buttons that have already been clicked
+                    const clickedIndices = new Set();
+    
+                    // Keep trying to click a random button until Add to Cart is enabled or retry limit is reached
+                    while (!addToCartButtonEnabled && retryCount < maxRetries) {
+                        // Select a random enabled button, ensuring we don't click the same one twice
+                        let randomIndex;
+                        do {
+                            randomIndex = Math.floor(Math.random() * enabledButtonCount);
+                        } while (clickedIndices.has(randomIndex));
+    
+                        // Click the randomly selected enabled button
+                        await enabledButtons.nth(randomIndex).click();
+                        clickedIndices.add(randomIndex);
+                        console.log(`Clicked enabled button with index: ${randomIndex} in section: ${i}`);
+    
+                        // Check if the Add to Cart button is enabled
+                        addToCartButtonEnabled = await this.addtoCartButton.isEnabled();
+    
+                        if (addToCartButtonEnabled) {
+                            console.log('Add to Cart button is enabled.');
+                            return; // Exit the function once the Add to Cart button is enabled
+                        }
+    
+                        retryCount++;
+                        console.log(`Retry count: ${retryCount}`);
                     }
+    
+                    // If retry count exceeds limit, log a message
+                    if (retryCount >= maxRetries) {
+                        console.log('Max retries reached without enabling Add to Cart button in section:', i);
+                    }
+                } else {
+                    console.log(`No enabled buttons found in section: ${i}`);
                 }
-            } else {
-                console.log(`No enabled buttons found in section: ${i}`);
             }
+    
+            // If no enabled buttons were found in any section
+            console.log('No enabled buttons found in any section');
+        } catch (error) {
+            // Catch any errors that occur during execution
+            console.error('Error during clicking size variants: ', error);
         }
-
-        console.log('No enabled buttons found in any section');
     }
+    
 
 
 
@@ -461,7 +490,7 @@ exports.PDPPage = class PDPPage {
     }
 
     async validatePricingSection() {
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForTimeout(5000);
         // Define the locator for pricing sections
         await this.page.locator('.flex.items-center.gap-x-1.pt-30').waitFor({ state: 'visible' });
         // Define the locator for pricing sections

@@ -186,14 +186,13 @@ test.describe("Mason MyAccount Wishlist", () => {
     await myaccountWishListPage.validateCartCountChange();
   })
 
-  test.afterEach(async ({ page }) => {
-    try {
-      const screenshotPath = `screenshots/Wishlist-Screenshoot-${Date.now()}.png`;
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      allure.attachment('Full Page Screenshot', Buffer.from(await page.screenshot({ fullPage: true })), 'image/png');
-    } catch (error) {
-      console.error('Error capturing screenshot:', error);
+  test.afterEach(async ({ page }, testInfo) => {
+    // Log the status of the test (success or failure)
+    if (testInfo.status === 'passed') {
+      console.log(`Test passed: ${testInfo.title}`);
+    } else if (testInfo.status === 'failed') {
+      console.log(`Test failed: ${testInfo.title}`);
+      
     }
   });
-
 })

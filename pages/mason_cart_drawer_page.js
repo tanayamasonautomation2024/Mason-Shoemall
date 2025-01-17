@@ -98,9 +98,6 @@ exports.CartDrawerPage = class CartDrawerPage {
         // Get the count of buttons on the PLP page
         //await this.addtoCartButtonPLP.first().waitFor({ state: 'visible' });
         await this.plpProducts.first().waitFor({ state: 'visible' });
-        //await this.page.waitForLoadState('networkidle');
-        // await this.plpProducts.first().hover();
-        // await this.plpQuickViewButton.click();
         const buttonCountPLP = await this.plpProducts.count();
         const pdpPage = new PDPPage(this.page);
         const plpPage = new MasonPLPPage(this.page);

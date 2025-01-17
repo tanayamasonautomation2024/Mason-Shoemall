@@ -45,7 +45,6 @@ test.describe("Mason Cart Drawer", () => {
     const pdpPage = new PDPPage(page);
     //await homePage.selectRandomSubCategory();
     await page.goto(plp_data.plp_url_with_size_color);
-    await page.waitForTimeout(3000);
     await cartDrawerPage.clickAddtoCartPLP();
     await pdpPage.miniCartDrawer();
   })
@@ -56,7 +55,6 @@ test.describe("Mason Cart Drawer", () => {
     const cartDrawerPage = new CartDrawerPage(page);
     const pdpPage = new PDPPage(page);
     await page.goto(pdp_data.pdp_url);
-    await page.waitForTimeout(3000);
     await pdpPage.clickOnPDPColorVariantButton();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();
@@ -80,7 +78,6 @@ test.describe("Mason Cart Drawer", () => {
     const homePage = new HomePageNew(page);
     const cartDrawerPage = new CartDrawerPage(page);
     await page.goto(pdp_data.pdp_url);
-    await page.waitForTimeout(3000);
     await pdpPage.clickOnPDPColorVariantButton();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();
@@ -95,7 +92,6 @@ test.describe("Mason Cart Drawer", () => {
     const homePage = new HomePageNew(page);
     const cartDrawerPage = new CartDrawerPage(page);
     await page.goto(pdp_data.pdp_url);
-    await page.waitForTimeout(3000);
     await pdpPage.clickOnPDPColorVariantButton();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();
@@ -110,7 +106,6 @@ test.describe("Mason Cart Drawer", () => {
     const homePage = new HomePageNew(page);
     const cartDrawerPage = new CartDrawerPage(page);
     await page.goto(pdp_data.pdp_url);
-    await page.waitForTimeout(3000);
     await pdpPage.clickOnPDPColorVariantButton();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();
@@ -124,7 +119,6 @@ test.describe("Mason Cart Drawer", () => {
     const pdpPage = new PDPPage(page);
     const cartDrawerPage = new CartDrawerPage(page);
     await page.goto(pdp_data.pdp_url_limitedStocks);
-    await page.waitForTimeout(3000);
     await pdpPage.selectSize('S','1')
     await pdpPage.addtoCart();
     await cartDrawerPage.clickQtyIncreaseButton();
@@ -139,7 +133,6 @@ test.describe("Mason Cart Drawer", () => {
     const homePage = new HomePageNew(page);
     const cartDrawerPage = new CartDrawerPage(page);
     await page.goto(pdp_data.pdp_url);
-    await page.waitForTimeout(3000);
     await pdpPage.clickOnPDPColorVariantButton();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();
@@ -154,7 +147,6 @@ test.describe("Mason Cart Drawer", () => {
     const homePage = new HomePageNew(page);
     const cartDrawerPage = new CartDrawerPage(page);
     await page.goto(pdp_data.pdp_url_limitedStocks);
-    await page.waitForTimeout(3000);
     await pdpPage.selectSize('S','1');
     await pdpPage.addtoCart();
     await cartDrawerPage.miniCartQtyUpdateByTypeIn();
@@ -169,7 +161,6 @@ test.describe("Mason Cart Drawer", () => {
     const cartDrawerPage = new CartDrawerPage(page);
     const cartItemCount = await pdpPage.getCartItemCount();
     await page.goto(pdp_data.pdp_url);
-    await page.waitForTimeout(3000);
     await pdpPage.clickOnPDPColorVariantButton();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();
@@ -190,7 +181,6 @@ test.describe("Mason Cart Drawer", () => {
     const homePage = new HomePageNew(page);
     const cartDrawerPage = new CartDrawerPage(page);
     await page.goto(pdp_data.pdp_url);
-    await page.waitForTimeout(3000);
     await pdpPage.clickOnPDPColorVariantButton();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();
@@ -210,7 +200,6 @@ test.describe("Mason Cart Drawer", () => {
     // await homePage.selectRandomSubCategory();
     // await cartDrawerPage.clickAddtoCartPLP();
     await page.goto(pdp_data.pdp_url);
-    await page.waitForTimeout(3000);
     await pdpPage.clickOnPDPColorVariantButton();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();
@@ -218,14 +207,13 @@ test.describe("Mason Cart Drawer", () => {
     await pdpPage.closeMiniCartDrawer();
   })
 
-  test.afterEach(async ({ page }) => {
-    try {
-      const screenshotPath = `screenshots/CartDrawer-Screenshoot-${Date.now()}.png`;
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      allure.attachment('Full Page Screenshot', Buffer.from(await page.screenshot({ fullPage: true })), 'image/png');
-    } catch (error) {
-      console.error('Error capturing screenshot:', error);
+  test.afterEach(async ({ page }, testInfo) => {
+    // Log the status of the test (success or failure)
+    if (testInfo.status === 'passed') {
+      console.log(`Test passed: ${testInfo.title}`);
+    } else if (testInfo.status === 'failed') {
+      console.log(`Test failed: ${testInfo.title}`);
+      
     }
   });
-
 })

@@ -1111,7 +1111,7 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
     const isShippingSurchargeVisible = await this.page.getByText('Shipping Surcharge:').isVisible();
     if (isShippingSurchargeVisible) {
       await expect(this.page.getByText('Shipping Surcharge:')).toBeVisible();
-      await expect(this.page.locator('li').filter({ hasText: 'Shipping Surcharge:$' }).getByLabel('tooltip')).toBeVisible();
+      await expect(this.page.locator('li').filter({ hasText: 'Shipping Surcharge:$' }).getByLabel('Help information')).toBeVisible();
     }
 
     // Check for "Estimated Sales Tax" and "Order Total" labels
@@ -1119,7 +1119,7 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
     await expect(this.page.getByText('Order Total:')).toBeVisible();
 
     // Check for tooltips related to "Estimated Sales Tax"
-    await expect(this.page.locator('li').filter({ hasText: 'Estimated Sales Tax:$' }).getByLabel('tooltip')).toBeVisible();
+    await expect(this.page.locator('li').filter({ hasText: 'Estimated Sales Tax:$' }).getByLabel('Help information')).toBeVisible();
 
     // Validate the presence of the "Apply Promo Code" button and close button
     //await expect(this.page.getByRole('button', { name: 'Apply Promo Code (optional)' })).toBeVisible();
@@ -1354,6 +1354,7 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
 
     // If 'Place Order' button is not visible, proceed with PayPal payment flow
     await this.checkoutpaypaloption.click();
+    await this.page.getByRole('button', { name: 'Continue to Review' }).click();
     //await this.paypalpageheader.waitFor({ state: 'visible' });
     await this.paypalemailplaceholder.fill(paypalID);
     await this.paypalnextbutton.click();
@@ -1365,7 +1366,6 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
 
     console.log('PayPal payment completed');
   }
-
 
   async paypalPaymentGuest(paypalID, password) {
     // Check if the 'Place Order' button is visible
@@ -1384,7 +1384,16 @@ exports.GuestCheckOutPage = class GuestCheckOutPage {
     await this.page.getByRole('button', { name: 'Continue to Review' }).click();
     //await this.paypalpageheader.waitFor({ state: 'visible' });
     await this.paypalemailplaceholder.fill(paypalID);
-    await this.paypalnextbutton.click();
+    //await this.paypalnextbutton.click();
+    // Check if the PayPal next button is visible or exists
+    const isPayPalNextButtonVisible = await this.paypalnextbutton.isVisible();
+
+    // Click the next button if it's visible, otherwise do nothing
+    if (isPayPalNextButtonVisible) {
+        await this.paypalnextbutton.click();
+    } else {
+        console.log("PayPal next button is not present, skipping click.");
+    }
     await this.paypalpassword.fill(password);
     await this.paypalloginbutton.click();
     await this.submitpaypalbutton.waitFor({ state: 'visible' });

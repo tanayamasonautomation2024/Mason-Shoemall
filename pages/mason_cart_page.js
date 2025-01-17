@@ -423,8 +423,8 @@ exports.CartPage = class CartPage {
             expect(availabilityText).toBeTruthy();
 
             // Verify the arrives by
-            const arrivesBy = productItem.locator(cartArrivesByLocator).first();
-            await expect(arrivesBy).toBeVisible();
+            const arrivesBy = this.page.locator(cartArrivesByLocator).first();
+            await (arrivesBy).waitFor({state:"visible"});
             const arriversByText = await arrivesBy.textContent();
             expect(arriversByText).toBeTruthy();
 

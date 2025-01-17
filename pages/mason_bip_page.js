@@ -44,8 +44,6 @@ exports.MasonBIPPage = class MasonBIPPage{
         }
     }
 
-    
-
     async validateBannerSection() {
         // Locate the banner section
         const bannerSection = this.page.locator('.mt-6').first();

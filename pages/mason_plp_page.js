@@ -628,8 +628,12 @@ exports.MasonPLPPage = class MasonPLPPage {
     }
 
     async closeChooseOptionDrawer() {
-        await this.page.locator('section').filter({ hasText: /^Choose Options$/ }).getByRole('button').click();
-
+        // await (this.page.getByRole('button', { name: 'Choose Options' }).getByRole('button')).waitFor({state:'visible'});
+        // await this.page.getByRole('button', { name: 'Choose Options' }).getByRole('button').click();
+        const chooseOptionsButton = await this.page.locator('section.bg-white button:has-text("Choose Options")');
+        await chooseOptionsButton.waitFor({ state: 'visible', timeout: 10000 });
+        await expect(chooseOptionsButton).toBeVisible();
+        await chooseOptionsButton.click();
     }
 
     async validateImageInChooseOptionDrawer() {

@@ -116,7 +116,8 @@ exports.MasonBLPPage = class MasonBLPPage {
         console.log(`Image URL: ${src}`);
 
         // Ensure the 'Top Brands' heading is visible
-        await (this.page.getByRole('heading', { name: 'Top Brands' })).waitFor({state:'visible'});
+        await expect(this.page.getByRole('heading', { name: 'Top Brands' })).toBeVisible();
+
         // Click the link and wait for navigation to complete
         await Promise.all([
             this.page.waitForNavigation({ waitUntil: 'networkidle' }), // Wait for the navigation
@@ -128,7 +129,7 @@ exports.MasonBLPPage = class MasonBLPPage {
         if (currentUrl === new URL(href, this.page.url()).href) {
             console.log(`Navigation successful: ${currentUrl}`);
         } else {
-            console.error(`Navigation failed. Expected ${new URL(href, this.page.url()).href}, but got ${currentUrl}`);
+            console.error(`Navigation failed. Expected ${new URL(href, page.url()).href}, but got ${currentUrl}`);
         }
 
 
@@ -149,14 +150,14 @@ exports.MasonBLPPage = class MasonBLPPage {
         await this.page.getByLabel('Breadcrumb').getByText(textAfterShopAll).waitFor({ state: 'visible' });
         await expect(this.page.getByLabel('Breadcrumb').getByText(textAfterShopAll)).toBeVisible();
         //await expect(this.page.locator('div').filter({ hasText: /^Global Banner Stoneberry$/ }).first()).toBeVisible();
-        await expect(this.page.locator('strong').filter({ hasText: textAfterShopAll })).toBeVisible();
+        await (this.page.locator('strong').filter({ hasText: textAfterShopAll })).waitFor({state:'visible'});
         //await expect(this.page.getByRole('main').getByLabel('Brands').getByText(textAfterShopAll)).toBeVisible(); 
     }
 
     async validateNavigationFromBIP(randomAlphabet) {
         try {
             // Verify the presence of the alphabet heading
-            await (this.page.getByRole('heading', { name: randomAlphabet, exact: true })).waitFor({state:'visible'});
+            await expect(this.page.getByRole('heading', { name: randomAlphabet, exact: true })).toBeVisible();
             const brandListElements = await this.page.$$('#' + randomAlphabet + ' + section ul.brandIndexList li');
             // Randomly select one <li> element
             const randomIndex = Math.floor(Math.random() * brandListElements.length);

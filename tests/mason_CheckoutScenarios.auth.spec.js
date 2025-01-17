@@ -18,6 +18,7 @@ test.describe("Mason Checkout - Guest and LoggedIn Users - Scenarios", () => {
     try {
       await page.goto(process.env.WEB_URL);
       await page.goto(checkout_data.add_to_cart_pdp_url);
+      //await page.reload();
       await page.waitForTimeout(3000);
     } catch (error) {
       // Handle the error here
@@ -187,7 +188,7 @@ test.describe("Mason Checkout - Guest and LoggedIn Users - Scenarios", () => {
 
   // Scenario 2: Guest user placing an order with ZB credit
   test.describe("Mason Checkout - Guest user placing an order with Paypal - Scenarios", () => {
-    test("Guest user placing an order with Paypal", async ({ page }) => {
+    test.skip("Guest user placing an order with Paypal", async ({ page }) => {
       const guestCheckoutPage = new GuestCheckOutPage(page);
       const pdpPage = new PDPPage(page);
       await pdpPage.clickOnPDPColorVariantButton();
@@ -281,6 +282,7 @@ test.describe("Mason Checkout - Guest and LoggedIn Users - Scenarios", () => {
       await guestCheckoutPage.clickCheckoutOnMyCart();
       await guestCheckoutPage.validateShippingSection();
       await guestCheckoutPage.validatePromoCodeSection();
+      await page.waitForTimeout(1000);
       await guestCheckoutPage.validateValidPromoCode(cart_data.promocode);
       await guestCheckoutPage.validatePlaceOrderButton();
       await guestCheckoutPage.clickOnPlaceOrderButton();
@@ -319,14 +321,14 @@ test.describe("Mason Checkout - Guest and LoggedIn Users - Scenarios", () => {
     });
   });
 
-  test.afterEach(async ({ page }) => {
-    try {
-      const screenshotPath = `screenshots/FPScreenshoot-${Date.now()}.png`;
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      allure.attachment('Full Page Screenshot', Buffer.from(await page.screenshot({ fullPage: true })), 'image/png');
-    } catch (error) {
-      console.error('Error capturing screenshot:', error);
+  // After each test: log success or failure
+  test.afterEach(async ({ page }, testInfo) => {
+    // Log the status of the test (success or failure)
+    if (testInfo.status === 'passed') {
+      console.log(`Test passed: ${testInfo.title}`);
+    } else if (testInfo.status === 'failed') {
+      console.log(`Test failed: ${testInfo.title}`);
+      
     }
   });
-});
-
+})

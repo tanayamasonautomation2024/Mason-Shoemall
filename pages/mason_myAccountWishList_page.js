@@ -64,7 +64,7 @@ exports.MyAccountWishListPage = class MyAccountWishListPage{
 
     async validateTheWishListedItem(){
         //await this.page.reload();
-        await this.page.waitForTimeout(3000); 
+        await this.page.waitForTimeout(5000); 
         await this.page.waitForLoadState('load'); 
         // Select all <li> elements containing product images
         const productItems = await this.page.$$(myaccountpage_locator.wishlist_items);

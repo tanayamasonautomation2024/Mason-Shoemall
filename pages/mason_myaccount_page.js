@@ -208,7 +208,7 @@ exports.MyAccountPage = class MyAccountPage {
     }
     async clickMyAccountMyProfileLink() {
         await this.myaccount_myprofile_link.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForTimeout(5000);
         await this.myaccount_myprofile_contactinformation.waitFor({ state: 'visible' });
         await this.page.waitForURL('**/account/myprofile');
 
@@ -1219,7 +1219,7 @@ exports.MyAccountPage = class MyAccountPage {
 
     async clickCancelForEditCreditStatementAddress() {
         await this.myaccount_sbc_creditstatement_canceladdressbutton.click();
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForTimeout(5000);
     }
 
     async validateEditCreditStatementAddress() {
@@ -2106,7 +2106,7 @@ exports.MyAccountPage = class MyAccountPage {
         await this.page.locator("//img[@alt='My Account']").click();
         await this.page.getByRole('link', { name: 'My Account' }).click({});
         await this.page.waitForSelector('h1.ml-2\\.5');
-        await (this.page.getByRole('heading', { name: 'My Account' })).waitFor({state:'visible'});
+        await expect(this.page.getByRole('heading', { name: 'My Account' })).toBeVisible();
     }
 
     async clickMyAccountOrderStatusLink() {

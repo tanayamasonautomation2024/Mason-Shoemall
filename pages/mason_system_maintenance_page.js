@@ -15,6 +15,7 @@ exports.SystemMaintenancePage = class SystemMaintenancePage{
         this.logo_image=page.getByRole('img', { name: logo_name }).first();
         this.system_maintenance_subtitle=page.getByRole('heading', { name: system_maintenance_subtitle });
         this.system_maintenance_text=page.getByText(system_maintenance_text);
+        this.call_number = page.getByRole('link', { name: /Call Us Toll-Free\d{1}-\d{3}-\d{3}-\d{4}/ });
         
     }
 
@@ -79,7 +80,7 @@ exports.SystemMaintenancePage = class SystemMaintenancePage{
 
 
     async validateEmailSection(){
-        await expect(this.page.getByText(email)).toBeVisible();
+        await (this.page.getByText(email)).waitFor({state:"visible"});
         await expect(this.page.getByText(email_text)).toBeVisible();
         await expect(this.page.getByRole('link', { name: mail_id })).toBeVisible();
     }

@@ -1,10 +1,10 @@
 const { chromium } = require('playwright');
 import { test, expect } from '@playwright/test';
 import { HomePageNew } from '../pages/mason_home_page1';
+import { HomePage } from '../pages/mason_home_page';
 import { SignInPageNew } from '../pages/mason_signin_page1';
 import { MyAccountPage } from '../pages/mason_myaccount_page';
 import { CartDrawerPage } from '../pages/mason_cart_drawer_page';
-import { HomePage } from '../pages/mason_home_page';
 import { allure } from 'allure-playwright';
 require('dotenv').config();
 
@@ -64,7 +64,7 @@ test.describe("Mason Guest User Home Page", () => {
   //Global Persistent Header (Guest) - Mega Menu Navigation-SB-GPH002
   test("GPH-Mega Menu Navigation - Verify Mega Menu Navigation opens on hovering within the CTA", async ({ page }, testInfo) => {
     //test.slow();
-    const homePage = new HomePageNew(page);
+    const homePage = new HomePage(page);
     await homePage.selectRandomSubCategory();
 
   })
@@ -235,14 +235,13 @@ test.describe("Mason Guest User Home Page", () => {
     await cartDrawerPage.clickAddtoCartPLP();
   })
 
-  test.afterEach(async ({ page }) => {
-    try {
-      const screenshotPath = `screenshots/HomePage-Screenshot-${Date.now()}.png`;
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      allure.attachment('Full Page Screenshot', Buffer.from(await page.screenshot({ fullPage: true })), 'image/png');
-    } catch (error) {
-      console.error('Error capturing screenshot:', error);
+  test.afterEach(async ({ page }, testInfo) => {
+    // Log the status of the test (success or failure)
+    if (testInfo.status === 'passed') {
+      console.log(`Test passed: ${testInfo.title}`);
+    } else if (testInfo.status === 'failed') {
+      console.log(`Test failed: ${testInfo.title}`);
+      
     }
   });
-
 })

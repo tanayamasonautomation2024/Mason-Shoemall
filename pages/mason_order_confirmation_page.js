@@ -5,7 +5,7 @@ const orderConfirmationOrderSummaryShipping = 'Shipping:';
 const orderConfirmationOrderSummaryEstSurcharge = 'Shipping Surcharge:';
 const orderConfirmationOrderSummarySalesTax = 'Sales Tax:';
 const orderConfirmationOrderSummaryOrderTotal = 'Order Total:';
-const tooltipButton = 'button[aria-label="tooltip"]';
+const tooltipButton = 'button[aria-label="Help information"]';
 const orderConfirmationShippingAddress = 'section.grid.lg\\:grid-cols-2:has-text("Shipping Address")';
 const orderConfirmationBillingAddress = 'section.pt-8.md\\:pt-0:has-text("Billing Address")';
 const orderConfirmationBillingAddressContactInfo = 'section.pt-8.md\\:pt-0:has-text("Contact Info")';

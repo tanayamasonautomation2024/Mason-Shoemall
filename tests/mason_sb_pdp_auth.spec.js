@@ -1,6 +1,7 @@
 const { chromium } = require('playwright');
 import { test, expect } from '@playwright/test';
 import { HomePageNew } from '../pages/mason_home_page1';
+import { HomePage } from '../pages/mason_home_page';
 import { SignInPageNew } from '../pages/mason_signin_page1';
 import { MyAccountPage } from '../pages/mason_myaccount_page';
 import { PDPPage } from '../pages/mason_pdp_page';
@@ -17,7 +18,6 @@ const signoutpage_data = JSON.parse(JSON.stringify(require('../test_data/mason_s
 const myaccountpage_data = JSON.parse(JSON.stringify(require('../test_data/mason_sb_myaccount_page_data.json')));
 const pdp_data = JSON.parse(JSON.stringify(require('../test_data/mason_pdp_page_data.json')));
 const plp_data = JSON.parse(JSON.stringify(require('../test_data/mason_plp_page_data.json')));
-
 
 let loginSuccessful = false;
 test.describe("Mason PDP", () => {
@@ -60,7 +60,6 @@ test.describe("Mason PDP", () => {
     }
     const pdpPage = new PDPPage(page);
     await page.goto(pdp_data.pdp_url_carousel);
-    await page.waitForTimeout(3000);
     await pdpPage.clickLeftRightCarouselButton();
   })
 
@@ -196,6 +195,7 @@ test.describe("Mason PDP", () => {
     }
     const pdpPage = new PDPPage(page);
     await page.goto(pdp_data.pdp_url);
+    //await pdpPage.validateSimilarItem();
     await pdpPage.clickOnMultiplePDPSizeVariantButton();
     await pdpPage.addtoCart();
     await pdpPage.miniCartDrawer();
@@ -206,22 +206,22 @@ test.describe("Mason PDP", () => {
   //Navigation to PDP from PLP, product image link, or configured link-SB-PDP005
   test("Navigation to PDP from PLP - Verify that Clicking on product image, name, or link redirected to the PDP", async ({ page }, testInfo) => {
     //test.slow();
-    await page.goto(plp_data.plp_url);
     const cartDrawerPage = new CartDrawerPage(page);
-    await cartDrawerPage.navigateToPDPFromPLP();
     const pdpPage = new PDPPage(page);
+    await page.goto(plp_data.plp_url);
+    await cartDrawerPage.navigateToPDPFromPLP();
+    
     await pdpPage.validateSimilarItem();
   })
   
 
-  test.afterEach(async ({ page }) => {
-    try {
-      const screenshotPath = `screenshots/PDP-Screenshoot-${Date.now()}.png`;
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      allure.attachment('Full Page Screenshot', Buffer.from(await page.screenshot({ fullPage: true })), 'image/png');
-    } catch (error) {
-      console.error('Error capturing screenshot:', error);
+  test.afterEach(async ({ page }, testInfo) => {
+    // Log the status of the test (success or failure)
+    if (testInfo.status === 'passed') {
+      console.log(`Test passed: ${testInfo.title}`);
+    } else if (testInfo.status === 'failed') {
+      console.log(`Test failed: ${testInfo.title}`);
+      
     }
   });
-
 })
