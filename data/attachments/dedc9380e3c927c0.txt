@@ -1,0 +1,1 @@
+Test passed: Account - Create Account - Validate the default check of Email Update checkbox in Create Account Page for Guest Users 

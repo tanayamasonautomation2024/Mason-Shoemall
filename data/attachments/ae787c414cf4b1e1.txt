@@ -1,0 +1,1 @@
+Test passed: Account - Create Account - Validate generation of Create Account Drawer for Guest Users 

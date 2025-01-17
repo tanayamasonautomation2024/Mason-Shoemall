@@ -1,0 +1,1 @@
+Test passed: Account - Create Account - Validate the mandatory Fields in Create Account Page for Guest Users 

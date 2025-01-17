@@ -1,0 +1,3 @@
+Brand title is not available.
+Banner section is not available.
+Test passed: Validate the full-width banner present below the page title which supports images and videos

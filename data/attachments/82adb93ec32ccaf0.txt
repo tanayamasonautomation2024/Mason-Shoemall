@@ -1,3 +1,0 @@
-Alphabet 'X' is not present.
-Selected Link: JSHandle@<a title="Osiris" href="/brands/osiris" class="hover:underline"> Osiris</a>
-Selected Brand: Osiris

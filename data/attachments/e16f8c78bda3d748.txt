@@ -1,0 +1,3 @@
+Brand title is not available.
+Alphabet 'X' is not present.
+Test passed: Validate under each alphabets the brand name starting with that letter is present

@@ -1,0 +1,3 @@
+Password type: text
+text
+Test passed: Account - Create Account - Validate the Password Hide/Show in Create Account Page for Guest Users 

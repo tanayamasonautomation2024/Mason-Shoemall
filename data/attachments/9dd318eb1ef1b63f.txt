@@ -1,0 +1,2 @@
+Brand title is not available.
+Test passed: Validate the brands logos present below the full width banner

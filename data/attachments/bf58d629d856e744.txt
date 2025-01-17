@@ -1,0 +1,1 @@
+Test passed: MegaNav - Validate User is redirected to L1 when clicked on the hyperlink

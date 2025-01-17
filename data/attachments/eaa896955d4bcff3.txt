@@ -1,0 +1,6 @@
+Selected Brand: No aria-label
+URL: /brands/hoka
+Image Alt: HOKA
+Image URL: https://images.shoemall.com/v3/assets/blt6fecf8e2048edaa1/blte272ea7435c7b334/675664264745cb4d761158fd/SM010724_4XBrand_Lifestyle_1.jpg
+Navigation successful: https://www-stg2.shoemall.com/brands/hoka
+Test passed: Validate navigation to BLP from Top Brands in homepage and breadcrumbs are shown in BLP
